@@ -1,0 +1,920 @@
+
+> dangerous-dwarf@0.0.1 dev
+> astro dev --host 0.0.0.0 --port 4321
+
+16:22:21 [@astrojs/cloudflare] Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+16:22:21 [@astrojs/cloudflare] If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+16:22:21 [WARN] [adapter] Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
+16:22:21 [types] Generated 0ms
+16:22:21 [content] Syncing content
+16:22:21 [content] Astro config changed
+16:22:21 [content] Clearing content store
+16:22:21 [content] Synced content
+16:22:21 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.16.6 ready in 904 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  http://192.168.1.129:4321/
+           http://172.18.0.1:4321/
+           http://172.19.0.1:4321/
+
+16:22:21 watching for file changes...
+16:22:21 [ERROR] [vite] Error: The following dependencies are imported but could not be resolved:
+
+  next-themes (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  vaul (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/drawer.tsx)
+  next/image (imported by /root/maw-workspace/soul-brews-web-core/src/components/image-with-fallback.tsx)
+  @/hooks/use-toast (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/toaster.tsx)
+  cmdk (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/command.tsx)
+  react-day-picker (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/calendar.tsx)
+  sonner (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  react-resizable-panels (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/resizable.tsx)
+  recharts (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/chart.tsx)
+  input-otp (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/input-otp.tsx)
+  react-hook-form (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/form.tsx)
+  embla-carousel-react (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/carousel.tsx)
+  @/hooks/use-mobile (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sidebar.tsx)
+
+Are they installed?
+    at file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47014:28
+16:22:22 [200] HEAD / 84ms
+16:22:41 [200] / 3ms
+16:23:02 [200] HEAD / 2ms
+16:28:05 [200] HEAD / 2ms
+16:33:09 [200] HEAD / 2ms
+16:35:07 [200] / 2ms
+16:35:07 [200] /about 56ms
+16:35:07 [200] /services 4ms
+16:35:07 [200] /gallery 6ms
+16:35:08 [200] /gear 4ms
+16:35:08 [200] /ai-lab 4ms
+16:35:08 [200] /bartender 4ms
+16:35:08 [200] /free-tools 9ms
+16:35:08 [200] /contact 4ms
+16:35:08 [200] /blog 9ms
+16:38:08 [glob-loader] Reloaded data from why-hire-a-pro-photographer.md
+16:38:13 [200] HEAD / 2ms
+16:38:36 [glob-loader] Reloaded data from premium-profile-photo-prep.md
+16:42:34 [200] HEAD / 2ms
+16:42:51 Configuration file updated. Restarting...
+16:42:51 [@astrojs/cloudflare] Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+16:42:51 [@astrojs/cloudflare] If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+16:42:51 [WARN] [adapter] Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
+16:42:52 [vite] Re-optimizing dependencies because vite config has changed
+16:42:52 [content] Syncing content
+16:42:52 [content] Synced content
+16:42:52 [types] Generated 328ms
+16:42:52 [vite] Re-optimizing dependencies because vite config has changed
+16:42:52 [ERROR] [vite] Error: The following dependencies are imported but could not be resolved:
+
+  next-themes (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  @/hooks/use-toast (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/toaster.tsx)
+  react-day-picker (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/calendar.tsx)
+  sonner (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  next/image (imported by /root/maw-workspace/soul-brews-web-core/src/components/image-with-fallback.tsx)
+  vaul (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/drawer.tsx)
+  embla-carousel-react (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/carousel.tsx)
+  react-resizable-panels (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/resizable.tsx)
+  input-otp (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/input-otp.tsx)
+  cmdk (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/command.tsx)
+  recharts (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/chart.tsx)
+  react-hook-form (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/form.tsx)
+  @/hooks/use-mobile (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sidebar.tsx)
+
+Are they installed?
+    at file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47014:28
+16:43:17 [200] HEAD / 79ms
+16:43:35 [200] / 2ms
+16:43:35 [200] /about 42ms
+16:43:35 [200] /services 4ms
+16:43:35 [200] /gallery 6ms
+16:43:35 [200] /gear 4ms
+16:43:35 [200] /ai-lab 4ms
+16:43:35 [200] /bartender 4ms
+16:43:35 [200] /free-tools 8ms
+16:43:35 [200] /contact 4ms
+16:43:35 [200] /command-center 6ms
+16:43:35 [200] /blog 9ms
+16:43:35 [200] /blog/why-hire-a-pro-photographer 10ms
+16:43:36 [200] /blog/premium-profile-photo-prep 4ms
+16:48:21 [200] HEAD / 1ms
+16:52:56 [ERROR] Syntax error "$"
+  Stack trace:
+    at /root/maw-workspace/soul-brews-web-core/src/components/terminal-console.tsx:97:67
+    [...] See full stack trace in the browser, or rerun with --verbose.
+16:53:25 [200] HEAD / 2ms
+16:58:28 [200] HEAD / 2ms
+17:03:32 [200] HEAD / 2ms
+17:08:36 [200] HEAD / 2ms
+17:13:40 [200] HEAD / 2ms
+17:18:44 [200] HEAD / 2ms
+17:23:48 [200] HEAD / 2ms
+17:28:52 [200] HEAD / 2ms
+17:33:56 [200] HEAD / 2ms
+17:39:00 [200] HEAD / 2ms
+17:44:04 [200] HEAD / 2ms
+17:49:07 [200] HEAD / 2ms
+17:54:11 [200] HEAD / 2ms
+17:59:15 [200] HEAD / 2ms
+18:04:19 [200] HEAD / 2ms
+18:09:23 [200] HEAD / 2ms
+18:14:27 [200] HEAD / 2ms
+18:19:31 [200] HEAD / 2ms
+18:24:34 [200] HEAD / 2ms
+18:29:38 [200] HEAD / 2ms
+18:34:42 [200] HEAD / 2ms
+18:39:46 [200] HEAD / 2ms
+18:44:50 [200] HEAD / 2ms
+18:49:54 [200] HEAD / 2ms
+18:54:57 [200] HEAD / 2ms
+19:00:01 [200] HEAD / 2ms
+19:05:05 [200] HEAD / 2ms
+19:10:09 [200] HEAD / 2ms
+19:15:13 [200] HEAD / 2ms
+19:20:17 [200] HEAD / 2ms
+19:25:20 [200] HEAD / 2ms
+19:30:24 [200] HEAD / 2ms
+19:35:28 [200] HEAD / 2ms
+19:40:32 [200] HEAD / 2ms
+19:45:36 [200] HEAD / 2ms
+19:50:39 [200] HEAD / 2ms
+19:55:43 [200] HEAD / 2ms
+20:00:47 [200] HEAD / 2ms
+20:05:51 [200] HEAD / 2ms
+20:10:55 [200] HEAD / 2ms
+20:15:58 [200] HEAD / 1ms
+20:21:02 [200] HEAD / 2ms
+20:26:06 [200] HEAD / 2ms
+20:31:10 [200] HEAD / 2ms
+20:36:14 [200] HEAD / 2ms
+20:41:17 [200] HEAD / 2ms
+20:46:21 [200] HEAD / 2ms
+20:51:25 [200] HEAD / 2ms
+20:56:31 [200] HEAD / 2ms
+21:01:35 [200] HEAD / 2ms
+21:06:39 [200] HEAD / 2ms
+21:11:43 [200] HEAD / 2ms
+21:16:46 [200] HEAD / 2ms
+21:21:50 [200] HEAD / 2ms
+21:26:54 [200] HEAD / 2ms
+21:31:58 [200] HEAD / 2ms
+21:37:02 [200] HEAD / 2ms
+21:42:05 [200] HEAD / 2ms
+21:47:09 [200] HEAD / 2ms
+21:52:13 [200] HEAD / 2ms
+21:57:17 [200] HEAD / 2ms
+22:02:20 [200] HEAD / 2ms
+22:07:24 [200] HEAD / 2ms
+22:12:28 [200] HEAD / 2ms
+22:17:32 [200] HEAD / 2ms
+22:22:36 [200] HEAD / 2ms
+22:27:39 [200] HEAD / 2ms
+22:32:43 [200] HEAD / 2ms
+22:37:47 [200] HEAD / 2ms
+22:42:51 [200] HEAD / 2ms
+22:47:54 [200] HEAD / 2ms
+22:52:58 [200] HEAD / 2ms
+22:58:02 [200] HEAD / 2ms
+23:03:06 [200] HEAD / 2ms
+23:08:10 [200] HEAD / 2ms
+23:13:13 [200] HEAD / 2ms
+23:18:18 [200] HEAD / 2ms
+23:23:22 [200] HEAD / 2ms
+23:28:26 [200] HEAD / 2ms
+23:33:30 [200] HEAD / 2ms
+23:38:34 [200] HEAD / 2ms
+23:43:38 [200] HEAD / 2ms
+23:48:42 [200] HEAD / 2ms
+23:53:45 [200] HEAD / 2ms
+23:58:49 [200] HEAD / 2ms
+00:03:53 [200] HEAD / 2ms
+00:08:57 [200] HEAD / 2ms
+00:14:01 [200] HEAD / 2ms
+00:19:05 [200] HEAD / 2ms
+00:24:09 [200] HEAD / 2ms
+00:29:13 [200] HEAD / 2ms
+00:34:17 [200] HEAD / 2ms
+00:39:21 [200] HEAD / 2ms
+00:44:25 [200] HEAD / 2ms
+00:49:29 [200] HEAD / 2ms
+00:54:32 [200] HEAD / 2ms
+00:59:36 [200] HEAD / 2ms
+01:04:40 [200] HEAD / 2ms
+01:09:45 [200] HEAD / 2ms
+01:14:48 [200] HEAD / 2ms
+01:19:52 [200] HEAD / 2ms
+01:24:56 [200] HEAD / 2ms
+01:30:00 [200] HEAD / 2ms
+01:35:04 [200] HEAD / 4ms
+01:40:08 [200] HEAD / 2ms
+01:45:12 [200] HEAD / 2ms
+01:50:16 [200] HEAD / 2ms
+01:55:20 [200] HEAD / 2ms
+02:00:25 [200] HEAD / 3ms
+02:05:29 [200] HEAD / 2ms
+02:10:33 [200] HEAD / 2ms
+02:13:29 Restarting...
+02:13:29 [content] Syncing content
+02:13:30 [content] Content config changed
+02:13:30 [content] Clearing content store
+02:13:30 [watch] public/favicon.svg
+02:13:30 [content] Synced content
+02:13:30 [vite] Re-optimizing dependencies because vite config has changed
+02:13:31 [content] Syncing content
+02:13:31 [content] Astro config changed
+02:13:31 [content] Clearing content store
+02:13:31 [content] Synced content
+02:13:31 [types] Generated 146ms
+02:13:31 [vite] Re-optimizing dependencies because vite config has changed
+02:13:31 [ERROR] [vite] Error: The following dependencies are imported but could not be resolved:
+
+  next-themes (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  next/image (imported by /root/maw-workspace/soul-brews-web-core/src/components/image-with-fallback.tsx)
+  input-otp (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/input-otp.tsx)
+  react-day-picker (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/calendar.tsx)
+  embla-carousel-react (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/carousel.tsx)
+  recharts (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/chart.tsx)
+  sonner (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  react-resizable-panels (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/resizable.tsx)
+  @/hooks/use-toast (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/toaster.tsx)
+  cmdk (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/command.tsx)
+  vaul (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/drawer.tsx)
+  react-hook-form (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/form.tsx)
+  @/hooks/use-mobile (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sidebar.tsx)
+
+Are they installed?
+    at file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47014:28
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: blog
+
+02:15:37 [200] HEAD / 49ms
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: blog
+
+02:20:39 [200] HEAD / 7ms
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: blog
+
+02:25:42 [200] HEAD / 21ms
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: blog
+
+02:30:44 [200] HEAD / 19ms
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: blog
+
+02:35:46 [200] HEAD / 18ms
+02:40:48 [200] HEAD / 8ms
+02:45:51 [200] HEAD / 36ms
+02:50:53 [200] HEAD / 18ms
+02:55:55 [200] HEAD / 15ms
+02:59:15 [content] Syncing content
+02:59:15 [content] Synced content
+02:59:27 [WARN] [glob-loader] Duplicate id "2026-01-03_post-022039" found in /root/maw-workspace/soul-brews-web-core/src/content/blog/2026-01-03_post-022039.md. Later items with the same id will overwrite earlier ones.
+02:59:27 [glob-loader] Reloaded data from 2026-01-03_post-022039.md
+02:59:39 [WARN] [glob-loader] Duplicate id "2026-01-03_post-022542" found in /root/maw-workspace/soul-brews-web-core/src/content/blog/2026-01-03_post-022542.md. Later items with the same id will overwrite earlier ones.
+02:59:39 [glob-loader] Reloaded data from 2026-01-03_post-022542.md
+02:59:54 [WARN] [glob-loader] Duplicate id "2026-01-03_post-023044" found in /root/maw-workspace/soul-brews-web-core/src/content/blog/2026-01-03_post-023044.md. Later items with the same id will overwrite earlier ones.
+02:59:54 [glob-loader] Reloaded data from 2026-01-03_post-023044.md
+03:00:05 [WARN] [glob-loader] Duplicate id "2026-01-03_post-023546" found in /root/maw-workspace/soul-brews-web-core/src/content/blog/2026-01-03_post-023546.md. Later items with the same id will overwrite earlier ones.
+03:00:05 [glob-loader] Reloaded data from 2026-01-03_post-023546.md
+03:00:58 [200] HEAD / 23ms
+03:06:01 [200] HEAD / 17ms
+03:11:03 [200] HEAD / 20ms
+03:15:29 Configuration file updated. Restarting...
+03:15:29 [vite] Re-optimizing dependencies because vite config has changed
+03:15:30 [content] Syncing content
+03:15:30 [content] Astro config changed
+03:15:30 [content] Clearing content store
+03:15:30 [content] Synced content
+03:15:30 [types] Generated 261ms
+03:15:30 [vite] Re-optimizing dependencies because vite config has changed
+03:15:30 [ERROR] [vite] Error: The following dependencies are imported but could not be resolved:
+
+  @/hooks/use-toast (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/toaster.tsx)
+  next/image (imported by /root/maw-workspace/soul-brews-web-core/src/components/image-with-fallback.tsx)
+  recharts (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/chart.tsx)
+  embla-carousel-react (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/carousel.tsx)
+  react-resizable-panels (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/resizable.tsx)
+  react-day-picker (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/calendar.tsx)
+  input-otp (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/input-otp.tsx)
+  next-themes (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  vaul (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/drawer.tsx)
+  cmdk (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/command.tsx)
+  sonner (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  react-hook-form (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/form.tsx)
+  @/hooks/use-mobile (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sidebar.tsx)
+
+Are they installed?
+    at file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47014:28
+03:16:05 [200] HEAD / 45ms
+03:17:35 Configuration file updated. Restarting...
+03:17:35 [vite] Re-optimizing dependencies because vite config has changed
+03:17:35 [content] Syncing content
+03:17:35 [content] Astro config changed
+03:17:35 [content] Clearing content store
+03:17:36 [content] Synced content
+03:17:36 [types] Generated 213ms
+03:17:36 [vite] Re-optimizing dependencies because vite config has changed
+03:17:36 [ERROR] [vite] Error: The following dependencies are imported but could not be resolved:
+
+  next-themes (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  @/hooks/use-toast (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/toaster.tsx)
+  next/image (imported by /root/maw-workspace/soul-brews-web-core/src/components/image-with-fallback.tsx)
+  react-day-picker (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/calendar.tsx)
+  recharts (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/chart.tsx)
+  sonner (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  cmdk (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/command.tsx)
+  input-otp (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/input-otp.tsx)
+  react-resizable-panels (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/resizable.tsx)
+  vaul (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/drawer.tsx)
+  embla-carousel-react (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/carousel.tsx)
+  react-hook-form (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/form.tsx)
+  @/hooks/use-mobile (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sidebar.tsx)
+
+Are they installed?
+    at file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47014:28
+03:17:57 Configuration file updated. Restarting...
+03:17:57 [vite] Re-optimizing dependencies because vite config has changed
+03:17:57 [content] Syncing content
+03:17:57 [content] Synced content
+03:17:57 [types] Generated 211ms
+03:17:57 [vite] Re-optimizing dependencies because vite config has changed
+03:17:57 [ERROR] [vite] Error: The following dependencies are imported but could not be resolved:
+
+  next-themes (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  @/hooks/use-toast (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/toaster.tsx)
+  embla-carousel-react (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/carousel.tsx)
+  react-day-picker (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/calendar.tsx)
+  next/image (imported by /root/maw-workspace/soul-brews-web-core/src/components/image-with-fallback.tsx)
+  cmdk (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/command.tsx)
+  recharts (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/chart.tsx)
+  input-otp (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/input-otp.tsx)
+  vaul (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/drawer.tsx)
+  react-resizable-panels (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/resizable.tsx)
+  react-hook-form (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/form.tsx)
+  sonner (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sonner.tsx)
+  @/hooks/use-mobile (imported by /root/maw-workspace/soul-brews-web-core/src/components/ui/sidebar.tsx)
+
+Are they installed?
+    at file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///root/maw-workspace/soul-brews-web-core/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:47014:28
+03:21:08 [200] HEAD / 42ms
+03:26:10 [200] HEAD / 13ms
+03:31:13 [200] HEAD / 11ms
+03:36:16 [200] HEAD / 8ms
+03:41:19 [200] HEAD / 23ms
+03:46:21 [200] HEAD / 8ms
+03:51:23 [200] HEAD / 31ms
+03:56:26 [200] HEAD / 12ms
+Killed
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_22_13_655Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_27_16_059Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_32_18_309Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_37_20_556Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_42_22_802Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_47_25_059Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_52_27_299Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T08_57_29_551Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T09_39_22_027Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T09_44_24_272Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T09_49_26_517Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T09_54_28_860Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T09_59_31_312Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_04_33_658Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_09_36_063Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_14_38_510Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_19_40_864Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_24_43_153Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_29_45_406Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_34_47_657Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_39_49_911Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_44_52_203Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_49_54_453Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_54_56_705Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T10_59_58_957Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_05_01_197Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_10_03_450Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_15_05_701Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_20_07_951Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_25_10_349Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_30_12_695Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_35_14_943Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_40_17_295Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_45_19_645Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_50_21_887Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T11_55_24_342Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_00_26_752Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_05_29_098Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_10_31_447Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_15_33_786Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_20_36_030Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_25_38_381Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_30_40_836Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_35_43_182Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_40_45_534Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_45_47_889Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_50_50_250Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T12_55_52_604Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_00_55_578Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_05_58_050Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_11_00_405Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_16_02_863Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_21_05_115Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_26_07_618Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_31_10_166Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_36_12_599Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_41_15_213Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_46_17_676Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_51_20_055Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T13_56_22_518Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T14_01_24_881Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T14_06_27_370Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T14_11_29_712Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T14_16_32_495Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T14_21_35_027Z-debug-0.log
+npm error code ENOENT
+npm error syscall open
+npm error path /root/maw-workspace/soul-brews-web-core/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/root/maw-workspace/soul-brews-web-core/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-03T14_26_37_446Z-debug-0.log

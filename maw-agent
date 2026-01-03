@@ -1,0 +1,75 @@
+#!/bin/bash
+# MAW Agent Runner - Execute agents with Codex/OpenAI API
+# Usage: ./maw-agent <agent> "task"
+# Example: ./maw-agent planner "Create implementation plan for payment integration"
+
+AGENT="$1"
+TASK="$2"
+WORKFLOWS_DIR="/root/maw-workspace/.agent/workflows"
+PROJECT_DIR="/root/maw-workspace/clubs-xno1"
+
+if [ -z "$AGENT" ] || [ -z "$TASK" ]; then
+    echo "🔱 MAW Agent Runner"
+    echo ""
+    echo "Usage: ./maw-agent <agent> \"task\""
+    echo ""
+    echo "Available agents:"
+    echo "  planner    - Create implementation plans"
+    echo "  coder      - Write code from specs"
+    echo "  executor   - Execute bash commands"
+    echo "  context    - Find context in codebase"
+    echo ""
+    echo "Available commands:"
+    echo "  awaken     - Install Oracle commands in project"
+    echo "  oracle-init - Initialize Oracle philosophy"
+    echo "  soul-init  - Full ψ/ structure setup"
+    echo "  soul-lite  - Minimal ψ/ structure"
+    echo ""
+    echo "Example:"
+    echo "  ./maw-agent planner \"Add payment integration\""
+    echo "  ./maw-agent coder \"Implement the payment form based on the plan\""
+    exit 0
+fi
+
+# Check if agent/command exists
+AGENT_FILE=""
+case "$AGENT" in
+    planner) AGENT_FILE="$WORKFLOWS_DIR/planner.md" ;;
+    coder) AGENT_FILE="$WORKFLOWS_DIR/coder.md" ;;
+    executor) AGENT_FILE="$WORKFLOWS_DIR/executor.md" ;;
+    context) AGENT_FILE="$WORKFLOWS_DIR/context-finder.md" ;;
+    awaken) AGENT_FILE="$WORKFLOWS_DIR/awaken.md" ;;
+    oracle-init) AGENT_FILE="$WORKFLOWS_DIR/oracle-init.md" ;;
+    soul-init) AGENT_FILE="$WORKFLOWS_DIR/soul-init.md" ;;
+    soul-lite) AGENT_FILE="$WORKFLOWS_DIR/soul-lite.md" ;;
+    *)
+        echo "❌ Unknown agent: $AGENT"
+        exit 1
+        ;;
+esac
+
+if [ ! -f "$AGENT_FILE" ]; then
+    echo "❌ Agent file not found: $AGENT_FILE"
+    exit 1
+fi
+
+# Read agent prompt
+AGENT_PROMPT=$(cat "$AGENT_FILE")
+
+# Run with Codex
+echo "🔱 Running $AGENT agent..."
+echo "📋 Task: $TASK"
+echo ""
+
+cd "$PROJECT_DIR"
+
+# Use codex with the agent context
+codex "You are the $AGENT agent. Follow these instructions:
+
+$AGENT_PROMPT
+
+---
+NOW EXECUTE THIS TASK:
+$TASK
+
+Work in the project at: $PROJECT_DIR"

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { MoveLeft, Home } from 'lucide-react';
+
+const title = "404 - หน้าที่ท่านค้นหาหายไปในเงา | ClubsxAI";
+---
+
+<BaseLayout title={title}>
+    <main class="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0A0A0A]">
+        {/* Animated Background Gradients */}
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#FF6B35]/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#FF6B35]/5 rounded-full blur-[120px]"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="mb-8">
+                <span class="text-[120px] md:text-[200px] font-black leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#FF6B35] to-[#FF6B35]/20 opacity-50 select-none">
+                    404
+                </span>
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                หน้าที่ท่านค้นหา <span class="text-[#FF6B35]">หายไปในอากาศ</span>
+            </h1>
+            
+            <p class="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                ดูเหมือนว่าเส้นทางนี้จะไม่มีอยู่ในแผนที่ของ ClubsxAI ครับ <br/>
+                ไม่ต้องกังวลไป บอสสามารถกลับไปยังฐานหลักได้เสมอ
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a 
+                    href="/" 
+                    class="flex items-center gap-2 bg-[#FF6B35] hover:bg-[#FF8F5C] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-[0_10px_30px_rgba(255,107,53,0.3)]"
+                >
+                    <Home size={18} />
+                    กลับหน้าแรก
+                </a>
+                
+                <button 
+                    onclick="window.history.back()"
+                    class="flex items-center gap-2 text-white/40 hover:text-white transition-colors py-4"
+                >
+                    <MoveLeft size={18} />
+                    ย้อนกลับไปก่อนหน้า
+                </button>
+            </div>
+        </div>
+
+        {/* Decorative Grid */}
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none opacity-20"></div>
+    </main>
+</BaseLayout>
+
+<style>
+    @keyframes pulse {
+        0%, 100% { opacity: 0.1; transform: scale(1); }
+        50% { opacity: 0.2; transform: scale(1.1); }
+    }
+    .animate-pulse {
+        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+</style>

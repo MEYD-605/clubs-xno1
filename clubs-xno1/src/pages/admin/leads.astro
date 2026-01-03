@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import { getAllLeads } from '../../lib/db';
+
+export const prerender = false;
+
+const db = (Astro.locals as any).runtime?.env?.DB;
+let leads = [];
+
+if (db) {
+  leads = await getAllLeads(db);
+} else {
+  // Mock data for initial UI build
+  leads = [
+    { id: 1, name: "Jessica Smith", email: "jessica@example.com", phone: "+66 89 123 4567", service_type: "Premium Portrait", created_at: "2026-01-03 15:30", status: "new", priority_score: 85, oracle_insight: "High conversion likely: Specific date mentioned." },
+    { id: 2, name: "Michael Chen", email: "chen@tech.com", phone: "+66 81 222 3333", service_type: "Commercial Product", created_at: "2026-01-03 14:15", status: "contacted", priority_score: 45, oracle_insight: "Informational inquiry about equipment." },
+    { id: 3, name: "Somsak P.", email: "somsak@bangkok.th", phone: "+66 85 999 8888", service_type: "Event Coverage", created_at: "2026-01-03 10:00", status: "new", priority_score: 92, oracle_insight: "Urgent: Wedding event in 2 weeks!" },
+  ];
+}
+
+const statusColors: Record<string, string> = {
+  'new': 'bg-[#FF6B35] text-black',
+  'contacted': 'bg-blue-500 text-white',
+  'booked': 'bg-purple-500 text-white',
+  'completed': 'bg-green-500 text-white',
+  'cancelled': 'bg-zinc-700 text-zinc-400',
+};
+---
+
+<BaseLayout 
+  title="Leads Management | ClubsxAI"
+  description="Manage your business leads and inquiries."
+>
+  <Navbar client:load />
+
+  <main class="min-h-screen pt-24 bg-black text-white p-6">
+    <div class="container mx-auto">
+      <header class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-12">
+        <div>
+            <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-2">
+                <a href="/admin" class="hover:text-white transition-colors">Dashboard</a>
+                <span>/</span>
+                <span class="text-white/40">Leads</span>
+            </nav>
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent italic">
+                Leads Management 📈
+            </h1>
+        </div>
+        <div class="flex gap-3">
+            <button class="px-6 py-2 rounded-xl bg-white/5 border border-white/10 text-sm hover:bg-white/10 transition-all font-medium">Filter</button>
+            <button class="px-6 py-2 rounded-xl bg-white text-black text-sm hover:bg-zinc-200 transition-all font-bold">Export CSV</button>
+        </div>
+      </header>
+
+      <!-- Leads Table Container -->
+      <div class="glass-card rounded-3xl border border-white/10 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="text-zinc-500 text-xs uppercase tracking-widest bg-white/5 border-b border-white/5">
+                <th class="px-6 py-5">Full Name</th>
+                <th class="px-6 py-5">Contact Info</th>
+                <th class="px-6 py-5">Interest</th>
+                <th class="px-6 py-5">Oracle AI Priority</th>
+                <th class="px-6 py-5">Date Received</th>
+                <th class="px-6 py-5 text-center">Status</th>
+                <th class="px-6 py-5"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              {leads.map(lead => (
+                <tr class="hover:bg-white/[0.02] transition-colors group">
+                  <td class="px-6 py-6">
+                    <div class="font-bold text-base">{lead.name}</div>
+                    <div class="text-xs text-[#FF6B35] font-medium tracking-tight">VIP CLIENT</div>
+                  </td>
+                  <td class="px-6 py-6 font-mono text-xs">
+                    <div class="text-zinc-300">{lead.email}</div>
+                    <div class="text-zinc-500 mt-1">{lead.phone}</div>
+                  </td>
+                  <td class="px-6 py-6">
+                    <span class="text-zinc-400 text-sm">{lead.service_type}</span>
+                  </td>
+                  <td class="px-6 py-6">
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-1.5 w-16 bg-white/5 rounded-full overflow-hidden">
+                                <div class={`h-full ${lead.priority_score > 80 ? 'bg-[#FF6B35]' : lead.priority_score > 50 ? 'bg-blue-400' : 'bg-zinc-600'}`} style={`width: ${lead.priority_score}%`}></div>
+                            </div>
+                            <span class={`text-xs font-bold font-mono ${lead.priority_score > 80 ? 'text-[#FF6B35]' : 'text-white'}`}>{lead.priority_score}%</span>
+                        </div>
+                        <div class="text-[10px] text-zinc-500 max-w-[180px] leading-tight italic line-clamp-2">
+                            "{lead.oracle_insight || 'Analysis pending...'}"
+                        </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-6 font-mono text-xs text-zinc-500">
+                    {new Date(lead.created_at).toLocaleString('th-TH')}
+                  </td>
+                  <td class="px-6 py-6 text-center">
+                    <span class={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${statusColors[lead.status.toLowerCase()]}`}>
+                      {lead.status}
+                    </span>
+                  </td>
+                  <td class="px-6 py-6 text-right">
+                    <button class="text-white/40 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Pagination Placeholder -->
+      <div class="mt-8 flex justify-center items-center gap-4 text-sm">
+          <button class="p-2 rounded-lg border border-white/10 text-white/40 hover:text-white disabled:opacity-30" disabled>Previous</button>
+          <span class="text-zinc-500">Page <span class="text-white">1</span> of 12</span>
+          <button class="p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-all">Next</button>
+      </div>
+    </div>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import FloatingButtons from '../components/floating-buttons';
+import GalleryPreview from '../components/gallery-preview';
+import FacebookFeed from '../components/facebook-feed';
+import '../styles/globals.css';
+
+const title = "Gallery | ClubsxAI Studio";
+const description = "Browse our portfolio of premium portrait photography. ดูผลงานถ่ายภาพจาก ClubsxAI ราคาเริ่มต้น 1,500.- ส่งงานใน 24 ชม.";
+const keywords = "ผลงานถ่ายภาพ, Gallery Portrait, Portfolio, ภาพถ่ายพรีเมียม, ราคาช่างภาพ, ตัวอย่างงานถ่ายภาพ, ClubsxAI Gallery";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+    <Navbar client:load />
+    
+    <main class="min-h-screen pt-16 md:pt-20">
+      <section class="section-padding gradient-mesh">
+        <div class="container mx-auto container-narrow text-center">
+          <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Portfolio</p>
+          <h1 class="text-display-lg mb-6">Selected Works</h1>
+          <p class="text-body-lg">
+            Collection of moments, feelings, and vibes captured through my lens.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Gallery Grid -->
+      <section class="section-padding">
+        <div class="container mx-auto container-wide">
+           <GalleryPreview client:visible />
+        </div>
+      </section>
+
+      <!-- Facebook Feed Section -->
+      <section class="section-padding gradient-dark">
+        <div class="container mx-auto container-wide">
+          <div class="text-center mb-12">
+            <h2 class="text-display-md mb-4">Latest from Facebook</h2>
+            <p class="text-body-lg">Updates and behind the scenes from our community</p>
+          </div>
+          <FacebookFeed client:visible />
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-padding" style="background: #FF6B35;">
+        <div class="container mx-auto container-narrow text-center">
+          <h2 class="text-display-md mb-6 text-white">Love what you see?</h2>
+          <p class="text-xl mb-8 text-white/90">
+            Let's create something beautiful together. Book your session today.
+          </p>
+          <a href="/contact" class="inline-block bg-white text-[#FF6B35] px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl">
+            จองคิวถ่ายภาพ - เริ่มต้นที่ 1,500.-
+          </a>
+          <p class="text-white/80 font-medium mt-6">🚀 ส่งรูปด่วนภายใน 24 ชม. ทุกแพ็กเกจ (วันถัดไป)</p>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+</BaseLayout>

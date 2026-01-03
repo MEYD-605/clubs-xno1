@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-21T02:05:04+07:00",
+  "query": "สวัสดี ทดสอบระบบ\n",
+  "primary": {
+    "type": "codex-gpt5.2",
+    "response": "สวัสดีครับ ระบบตอบกลับได้ปกติ  \nอยากให้ทดสอบแบบไหนต่อ—เช่น ให้ผมรันคำสั่งใน repo, แก้ไฟล์ตัวอย่าง, หรือเช็กการทำงานของเครื่องมือ (`shell_command`/`apply_patch`)?\n"
+  },
+  "learner": {
+    "type": "local-ollama",
+    "response": "\n"
+  },
+  "meta": {
+    "node": "clubsxno1",
+    "oracle_expiry": "2025-01-06"
+  }
+}

@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import FloatingButtons from '../components/floating-buttons';
+import '../styles/globals.css';
+
+const title = "Service Packages & Pricing | ClubsxAI Studio";
+const description = "Premium photography packages starting at 1,500฿. Portrait, Graduation, Event, and Commercial. Next-day 24h delivery guaranteed in Bangkok.";
+const keywords = "ราคาถ่ายรูป, แพ็คเกจถ่ายรูป, Portrait Package, Graduation Photography Bangkok, Wedding Price, Event Photographer, ClubsxAI Pricing";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+    <Navbar client:load />
+    
+    <main class="min-h-screen pt-16 md:pt-20 pb-16">
+      <!-- Hero -->
+      <section class="section-padding gradient-mesh text-center">
+        <div class="container mx-auto container-narrow">
+          <p class="text-accent text-sm uppercase tracking-widest mb-4">Pricing & Packages</p>
+          <h1 class="text-display-lg mb-6">Service <span class="text-accent italic font-serif">Menu</span></h1>
+          <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-6 py-3 rounded-full mb-8">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-sm font-medium">ส่งรูปด่วนภายใน 24 ชม. ทุกแพ็กเกจ (วันถัดไป)</span>
+          </div>
+          <p class="text-body-lg max-w-2xl mx-auto">
+            งานคุณภาพระดับพรีเมียม ส่งงานไว ไม่ต้องรอนาน พร้อมสำรองไฟล์ให้ปลอดภัย 3 เดือนเต็ม
+          </p>
+        </div>
+      </section>
+
+      <!-- 1. Portrait & Personal Branding -->
+	      <section class="section-padding">
+	        <div class="container mx-auto container-wide">
+	          <div class="flex flex-col md:flex-row gap-12 items-start">
+	            <div class="md:w-1/3 md:sticky md:top-32">
+	                <h2 class="text-display-sm mb-6">Portrait & <br/><span class="text-accent">Profiles</span></h2>
+	                <p class="text-body mb-8">ยกระดับภาพลักษณ์ด้วยแพ็กเกจที่เน้นตัวตน ไม่ว่าจะถ่ายโปรไฟล์ธุรกิจ หรือไลฟ์สไตล์ส่วนตัว</p>
+	                <div class="aspect-[3/4] rounded-2xl overflow-hidden glass-card border border-white/10 shadow-2xl">
+	                    <img loading="lazy" src="/images/bo_red_neon_portrait.png" alt="Portrait" width="682" height="1024" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"/>
+	                </div>
+	            </div>
+            <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- P1 -->
+                <div class="glass-card p-8 border-l-4 border-accent bg-white/[0.02]">
+                    <h3 class="text-xl font-bold mb-2">Short Session</h3>
+                    <p class="text-accent font-bold text-4xl mb-4">1,500.-</p>
+                    <ul class="text-sm text-body/80 space-y-3 mb-6">
+                        <li>⏱️ 1:30 ชม. / 2 ชุด</li>
+                        <li>🎨 ปรับสีแสงคุณภาพ 100%</li>
+                        <li>✨ รีทัชหน้าเนียนเรียว</li>
+                        <li>🚀 ส่งภายใน 24 ชม. (วันถัดไป)</li>
+                    </ul>
+                </div>
+                <!-- P2 -->
+                <div class="glass-card p-8 bg-white/[0.04] relative group">
+                    <div class="absolute -top-3 -right-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">EXECUTIVE CHOICE</div>
+                    <h3 class="text-xl font-bold mb-2">Standard Branding</h3>
+                    <p class="text-accent font-bold text-4xl mb-4">3,500.-</p>
+                    <ul class="text-sm text-body/80 space-y-3 mb-6">
+                        <li>⏱️ 4 ชม. / 4 ชุด</li>
+                        <li>🎨 ปรับสีแสงคุณภาพ 100%</li>
+                        <li>✨ รีทัชหน้าเนียนเรียว</li>
+                        <li>🚀 ส่งภายใน 24 ชม.</li>
+                    </ul>
+                    <a href="/services/premium-portrait-bangkok" class="text-xs text-accent font-bold border-b border-accent/30 pb-0.5 hover:border-accent transition-all">ดูรายละเอียดแพ็กเกจผู้บริหาร →</a>
+                </div>
+                <!-- P3 -->
+                <div class="glass-card p-8 col-span-full bg-accent/5 border border-accent/20">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                        <h3 class="text-2xl font-bold mb-2">Full Day Premium</h3>
+                        <p class="text-accent font-bold text-4xl">6,000.-</p>
+                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-body/80 mt-6">
+                        <li>⏱️ 8 ชม. / 5 ชุด</li>
+                        <li>✨ รีทัชเนียนเรียวทุกใบ</li>
+                        <li>👨‍👩‍👧‍👦 เพิ่มคน +700.- ต่อท่าน</li>
+                        <li>🚀 ส่งงานด่วน วันถัดไป</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Graduation & Couple -->
+	      <section class="section-padding bg-white/[0.02]">
+	        <div class="container mx-auto container-wide grid grid-cols-1 lg:grid-cols-2 gap-12">
+	            <!-- Grad -->
+	            <div class="glass-card p-6 sm:p-10">
+	                <h2 class="text-display-xs mb-6 text-blue-400">Graduation (นอกรอบ)</h2>
+	                <div class="space-y-4">
+	                    <div class="flex justify-between p-4 bg-white/5 rounded-xl">
+	                        <span>นอกรอบ (1:30 ชม.)</span>
+                        <span class="font-bold">1,500.-</span>
+                    </div>
+                    <div class="flex justify-between p-4 bg-white/5 rounded-xl">
+                        <span>ครึ่งวัน (4 ชม.)</span>
+                        <span class="font-bold">3,500.-</span>
+                    </div>
+                    <div class="flex justify-between p-4 border border-blue-400/30 bg-blue-400/5 rounded-xl">
+                        <span>เต็มวัน (8 ชม.)</span>
+                        <span class="font-bold">5,500.-</span>
+                    </div>
+                </div>
+                <p class="text-xs text-zinc-500 mt-4">* เพิ่มบัณฑิตได้ในราคาคนละ 700.-</p>
+	            </div>
+	            <!-- Couple -->
+	            <div class="glass-card p-6 sm:p-10">
+	                <h2 class="text-display-xs mb-6 text-pink-400">Couple & Romance</h2>
+	                <div class="space-y-4">
+	                    <div class="flex justify-between p-4 bg-white/5 rounded-xl">
+	                        <span>1:30 ชม. (1 ชุด)</span>
+                        <span class="font-bold">1,500.-</span>
+                    </div>
+                    <div class="flex justify-between p-4 bg-white/5 rounded-xl">
+                        <span>4 ชม. (2 ชุด)</span>
+                        <span class="font-bold">4,500.-</span>
+                    </div>
+                    <div class="flex justify-between p-4 border border-pink-400/30 bg-pink-400/5 rounded-xl">
+                        <span>8 ชม. (3-4 ชุด)</span>
+                        <span class="font-bold">7,000.-</span>
+                    </div>
+                </div>
+                <p class="text-xs text-zinc-500 mt-4">* เน้นอารมณ์โรแมนติก / เพิ่มชุดละ 500.-</p>
+            </div>
+        </div>
+      </section>
+
+      <!-- 3. Event & Ceremonies -->
+      <section class="section-padding">
+        <div class="container mx-auto container-wide">
+           <h2 class="text-display-sm mb-12 text-center">Event & <span class="text-orange-400">Ceremonies</span></h2>
+           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="glass-card p-8">
+                  <h4 class="font-bold text-xl mb-4">Essential Event</h4>
+                  <p class="text-sm text-body/60 mb-6">ช่างภาพ 1 คน | แขก &lt; 50 คน</p>
+                  <div class="space-y-3">
+                      <div class="flex justify-between"><span>ครึ่งวัน</span> <b>5,500.-</b></div>
+                      <div class="flex justify-between"><span>เต็มวัน</span> <b>8,500.-</b></div>
+                  </div>
+               </div>
+               <div class="glass-card p-8 border border-orange-500/30 bg-orange-500/5">
+                  <h4 class="font-bold text-xl mb-4 text-orange-400">Standard Pro</h4>
+                  <p class="text-sm text-body/60 mb-6">พร้อมไฟต่อเนื่อง + ผู้ช่วยช่างภาพ</p>
+                  <div class="space-y-3">
+                      <div class="flex justify-between"><span>ครึ่งวัน (แขก &lt; 100)</span> <b>7,500.-</b></div>
+                      <div class="flex justify-between"><span>เต็มวัน (แขก &lt; 100)</span> <b>10,000.-</b></div>
+                  </div>
+               </div>
+               <div class="glass-card p-8 border-t-2 border-zinc-700">
+                  <h4 class="font-bold text-xl mb-4">Premium Team</h4>
+                  <p class="text-sm text-body/60 mb-6">ช่างภาพ 2 คน + ผู้ช่วย & ไฟรอบงาน</p>
+                  <div class="space-y-3">
+                      <div class="flex justify-between"><span>ครึ่งวัน (5 ชม.)</span> <b>12,000.-</b></div>
+                      <div class="flex justify-between"><span>เต็มวัน (10 ชม.)</span> <b>18,000.-</b></div>
+                  </div>
+               </div>
+           </div>
+           
+           <!-- Special Ordination -->
+           <div class="mt-12 glass-card p-8 border border-orange-500/20 bg-orange-500/5 rounded-3xl">
+                <h4 class="font-bold mb-4">✨ พิเศษสำหรับงานบวชอุปสมบท</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-zinc-500 text-sm">บวชเช้า ถึง 11:30</p>
+                        <p class="text-2xl font-bold">4,500.-</p>
+                    </div>
+                    <div>
+                        <p class="text-zinc-500 text-sm">บวชเช้า ถึงบ่าย 2 (เลี้ยงเที่ยง)</p>
+                        <p class="text-2xl font-bold">6,500.-</p>
+                    </div>
+                </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- 4. Commercial & Food -->
+      <section class="section-padding bg-zinc-950">
+        <div class="container mx-auto container-wide flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2">
+                <h2 class="text-display-sm mb-6 text-green-400">Food & Commercial</h2>
+                <p class="text-body mb-8 text-lg">เปลี่ยนเมนูอาหารให้ดูน่าทาน มีระดับ ด้วยการจัดไฟ Studio Light เซตใหญ่หน้างาน</p>
+                <div class="space-y-4 mb-6">
+                    <div class="glass-card p-5 flex justify-between items-center">
+                        <span>10 เมนู (2 ชม. + ไฟสตู)</span>
+                        <span class="font-bold text-xl">2,500.-</span>
+                    </div>
+                    <div class="glass-card p-5 flex justify-between items-center">
+                        <span>20 เมนู (4 ชม. + ไฟสตู)</span>
+                        <span class="font-bold text-xl">4,500.-</span>
+                    </div>
+                    <div class="glass-card p-5 flex justify-between items-center bg-green-400/10 border border-green-400/20">
+                        <span>50 เมนู (8 ชม. + ไฟสตู)</span>
+                        <span class="font-bold text-xl">7,500.-</span>
+                    </div>
+                </div>
+                <p class="text-xs text-zinc-500">* เมนูส่วนเกินละ 200.- / งานเสร็จภายใน 1 สัปดาห์</p>
+            </div>
+            <div class="lg:w-1/2 aspect-square rounded-3xl overflow-hidden glass-card">
+	                <img loading="lazy" src="/images/portfolio_bartender_cocktail_mix.jpg" alt="Commercial" width="1024" height="682" class="w-full h-full object-cover"/>
+            </div>
+        </div>
+      </section>
+
+      <!-- Policy & Payment -->
+      <section class="section-padding border-t border-white/5">
+        <div class="container mx-auto container-narrow">
+          <div class="glass-card p-12 bg-accent/5 rounded-[3rem] text-center border border-accent/20">
+              <h2 class="text-3xl font-bold mb-10 underline decoration-accent">Booking Information</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left mb-12">
+                  <div class="space-y-4">
+                      <h4 class="font-bold">🚀 การส่งงาน (Delivery)</h4>
+                      <p class="text-sm text-body/70">ส่งรูปภายใน 24 ชม. (วันถัดไป) พร้อมสำรองรูปให้ 3 เดือน</p>
+                      <h4 class="font-bold text-orange-400">⚡ รับงานเร่งด่วน</h4>
+                      <p class="text-sm text-body/70">ส่งงานภายใน 3 ชม. เพียงเพิ่ม 500 - 1,000.-</p>
+                  </div>
+                  <div class="space-y-4">
+                      <h4 class="font-bold">🎨 การตกแต่ง (Edit)</h4>
+                      <p class="text-sm text-body/70">ปรับแสงสี และรีทัชหน้าเนียนเรียวเป็นธรรมชาติทุกใบ</p>
+                      <h4 class="font-bold">💰 การชำระเงิน</h4>
+                      <p class="text-sm text-body/70">มัดจำเพื่อล็อคคิว และชำระส่วนที่เหลือหลังเสร็จงานทันที</p>
+                  </div>
+              </div>
+              
+              <!-- Card-style Bank Info -->
+              <div class="max-w-md mx-auto bg-white p-8 rounded-3xl text-zinc-900 shadow-2xl">
+                 <div class="flex justify-between items-start mb-6">
+                    <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase">Siam Commercial Bank</span>
+	                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Siam_Commercial_Bank_Logo.svg/1200px-Siam_Commercial_Bank_Logo.svg.png" alt="SCB" width="1200" height="1200" class="h-4"/>
+                 </div>
+                 <p class="text-left text-sm font-medium text-zinc-500">นายสุจริต มานิตยกุล</p>
+                 <p class="text-left text-3xl font-mono font-bold tracking-tighter my-2">929-222-349-2</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section-padding bg-zinc-950/50">
+        <div class="container mx-auto container-narrow">
+          <div class="text-center mb-16">
+            <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4">FAQ</p>
+            <h2 class="text-display-sm">คำถามที่พบบ่อย (FAQs)</h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card p-6">
+              <h4 class="font-bold mb-2 text-white">📅 จองคิวล่วงหน้ากี่วัน?</h4>
+              <p class="text-sm text-body/70">ควรจองล่วงหน้าอย่างน้อย 1-2 สัปดาห์ เพื่อให้ได้วันและเวลาที่บอสต้องการที่สุดครับ</p>
+            </div>
+            <div class="glass-card p-6">
+              <h4 class="font-bold mb-2 text-white">💰 มีค่ามัดจำไหม?</h4>
+              <p class="text-sm text-body/70">มีครับ ข้าพเจ้าขอเก็บมัดจำเพื่อล็อคคิวและเตรียมอุปกรณ์ ส่วนที่เหลือชำระหน้างานหลังจบงานได้เลย</p>
+            </div>
+            <div class="glass-card p-6">
+              <h4 class="font-bold mb-2 text-white">📸 แต่งรูปสไตล์ไหน?</h4>
+              <p class="text-sm text-body/70">ข้าพเจ้าเน้นโทนสี Moody Premium และรีทัชผิวเนียนเรียวเป็นธรรมชาติ (หน้าเนียน/เรียว) ทุกใบครับ</p>
+            </div>
+            <div class="glass-card p-6">
+              <h4 class="font-bold mb-2 text-white">📍 สถานที่ถ่ายภาพ?</h4>
+              <p class="text-sm text-body/70">ถ่ายได้ทุกที่ในกรุงเทพฯ ครับ ทั้งคาเฟ่ สวนสาธารณะ หรือโรงแรม (ต่างจังหวัดมีค่าเดินทางเพิ่มเติม)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas Section -->
+      <section class="section-padding">
+        <div class="container mx-auto container-wide text-center">
+          <div class="mb-12">
+            <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4">Coverage</p>
+            <h2 class="text-display-xs">พื้นที่ให้บริการในกรุงเทพฯ</h2>
+          </div>
+          <div class="flex flex-wrap justify-center gap-4">
+            {["สยาม / ปทุมวัน", "สุขุมวิท / ทองหล่อ", "อารีย์ / พญาไท", "จตุจักร / ลาดพร้าว", "พระราม 9 / รัชดา", "ไอคอนสยาม / ฝั่งธน"].map((area) => (
+              <span class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm hover:border-accent/40 transition-colors">
+                {area}
+              </span>
+            ))}
+          </div>
+          <p class="mt-8 text-sm text-body/60">และพื้นที่อื่นๆ ทั่วกรุงเทพฯ สอบถามเพิ่มเติมทาง Line ได้เลยครับ</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-24 text-center">
+         <div class="container mx-auto px-4">
+            <h2 class="text-display-md mb-8">Ready to capture your best self?</h2>
+            <a
+              href="/contact"
+              class="btn-primary text-xl px-16 py-6 rounded-full shadow-2xl shadow-accent/40 active:scale-95 transition-transform"
+              onclick="if (window.gtag) { window.gtag('event', 'book_now_click', { event_category: 'conversion', event_label: 'services_page_cta', value: 1 }); }"
+            >
+               เริ่มต้นเพียง 1,500.- จองคิวเลย
+            </a>
+         </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+</BaseLayout>

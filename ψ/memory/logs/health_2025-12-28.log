@@ -1,0 +1,13 @@
+# Health Check - 2025-12-28_23-59
+
+🏥 Infrastructure Health Check - อา. 28 ธ.ค. 2568 23:59:55 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 68% used
+✅ Memory: 11% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)

@@ -1,0 +1,350 @@
+🏥 Infrastructure Health Check - ส. 27 ธ.ค. 2568 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 74% used
+✅ Memory: 15% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+🏥 Infrastructure Health Check - อา. 28 ธ.ค. 2568 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 68% used
+✅ Memory: 2% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+🏥 Infrastructure Health Check - จ. 29 ธ.ค. 2568 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 68% used
+✅ Memory: 15% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+🏥 Infrastructure Health Check - อ. 30 ธ.ค. 2568 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 68% used
+✅ Memory: 39% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 49: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 51: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 49: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 51: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 49: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 51: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 59: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 59: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 59: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 Log saved to: /root/maw-workspace/ψ/memory/logs/health_2025-12-31.log
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+🏥 Infrastructure Health Check - พ. 31 ธ.ค. 2568 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 68% used
+✅ Memory: 60% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 49: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 51: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 49: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 49: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 51: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 51: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 59: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: line 59: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: line 59: [: : integer expression expected
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: retry: Resource temporarily unavailable
+/root/maw-workspace/scripts/health-check.sh: fork: Resource temporarily unavailable
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 Log saved to: /root/maw-workspace/ψ/memory/logs/health_2025-12-31.log
+bash: warning: shell level (1000) too high, resetting to 1
+bash: warning: shell level (1000) too high, resetting to 1
+🏥 Infrastructure Health Check - พฤ.  1 ม.ค. 2569 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+❄️  ComfyUI - Intentionally Offline
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 60% used
+✅ Memory: 3% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 Log saved to: /root/maw-workspace/ψ/memory/logs/health_2026-01-01.log
+🏥 Infrastructure Health Check - ศ.  2 ม.ค. 2569 09:00:01 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+❄️  ComfyUI - Intentionally Offline
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 61% used
+✅ Memory: 15% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 Log saved to: /root/maw-workspace/ψ/memory/logs/health_2026-01-02.log
+🏥 Infrastructure Health Check - ส.  3 ม.ค. 2569 09:00:02 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+❄️  ComfyUI - Intentionally Offline
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 63% used
+✅ Memory: 8% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 Log saved to: /root/maw-workspace/ψ/memory/logs/health_2026-01-03.log

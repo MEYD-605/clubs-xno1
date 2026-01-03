@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-21T01:49:34+07:00",
+  "query": "ช่วยวางแผนการแก้ปัญหา NPU ที่มองไม่เห็นใน OpenVINO ของ LXC 110 ครับ ปัจจุบันมี NPU device (/dev/accel0), VPU firmware, OpenVINO NPU plugin และ Level Zero loader แล้ว แต่ยังขาด Level Zero NPU plugin (libze_intel_vpu.so) ที่จำเป็นสำหรับการเชื่อมต่อ ระบบเป็น Ubuntu 24.04 ใน LXC container บน Proxmox กรุณาค้นหาข้อมูลผ่าน MCP Google และให้แผนการแก้ไขที่ชัดเจน\n",
+  "primary": {
+    "type": "codex",
+    "response": "What do you want me to do in this workspace?\n\nIf you’re not sure where to start, tell me:\n- The repo path (or confirm it’s in `/root`)\n- The goal (bug fix, feature, refactor, tests, etc.)\n- Any commands/errors you’re seeing (paste output)\n"
+  },
+  "learner": {
+    "type": "local-npu",
+    "response": "\n"
+  },
+  "meta": {
+    "node": "clubsxno1",
+    "oracle_expiry": "2025-01-06"
+  }
+}

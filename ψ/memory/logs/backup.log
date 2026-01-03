@@ -1,0 +1,120 @@
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2025-12-27
+840K	/root/backups/2025-12-27
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/logs/auto-heal.log: file changed as we read it
+tar: /root/maw-workspace/ψ: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2025-12-28
+816K	/root/backups/2025-12-28
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/logs/auto-heal.log: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2025-12-29
+832K	/root/backups/2025-12-29
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/logs/auto-heal.log: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2025-12-30
+852K	/root/backups/2025-12-30
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/logs/auto-heal.log: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2025-12-31
+868K	/root/backups/2025-12-31
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/logs/auto-heal.log: file changed as we read it
+tar: /root/maw-workspace/ψ: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2026-01-01
+892K	/root/backups/2026-01-01
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/logs/auto-heal.log: file changed as we read it
+tar: /root/maw-workspace/ψ: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2026-01-02
+932K	/root/backups/2026-01-02
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2026-01-03
+2.5M	/root/backups/2026-01-03
+📸 Creating infrastructure snapshot...
+✅ Network config backed up
+tar: Removing leading `/' from member names
+tar: /root/maw-workspace/ψ/memory/learnings: file changed as we read it
+tar: /root/maw-workspace/ψ: file changed as we read it
+✅ Oracle Soul backed up
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+✅ Agent knowledge backed up
+✅ Cron jobs backed up
+✅ Inventory report generated
+
+📦 Snapshot saved to: /root/backups/2026-01-04
+2.6M	/root/backups/2026-01-04

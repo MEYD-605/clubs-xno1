@@ -1,0 +1,141 @@
+---
+const { 
+  title = "ClubsxAI", 
+  description = "A Space Where Creativity Meets Precision", 
+  image = "/images/bo_snake_portrait_hero.jpg",
+  articleDate
+} = Astro.props;
+
+const siteUrl = "https://clubsxai.com";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PhotographyBusiness",
+      "@id": `${siteUrl}/#localBusiness`,
+      "name": "ClubsxAI",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "@id": `${siteUrl}/#logo`,
+        "inLanguage": "th-TH",
+        "url": `${siteUrl}/images/bo_red_neon_portrait.png`,
+        "width": 512,
+        "height": 512,
+        "caption": "ClubsxAI Studio"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": `${siteUrl}/#image`,
+        "url": `${siteUrl}/images/bo_snake_portrait_hero.jpg`,
+        "caption": "ClubsxAI Premium Studio"
+      },
+      "sameAs": [
+        "https://instagram.com/clubsbybo", 
+        "https://facebook.com/Clubsharephoto",
+        "https://tiktok.com/@clubsbybo"
+      ],
+      "priceRange": "฿฿",
+      "telephone": "0800416403",
+      "email": "barboxar.khunbo@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bangkok",
+        "addressLocality": "Bangkok",
+        "addressRegion": "BM",
+        "postalCode": "10310",
+        "addressCountry": "TH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.7563,
+        "longitude": 100.5018
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "22:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Photography Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Portrait Photography",
+              "description": "Premium personal branding and portrait session."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wedding & Event",
+              "description": "Professional coverage for weddings and corporate events."
+            }
+          },
+                    {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Studio Lab",
+              "description": "Futuristic AI-enhanced creative imaging."
+            }
+          }
+        ]
+      },
+      "description": "ClubsxAI - สตูดิโอถ่ายภาพระดับพรีเมียมในกรุงเทพฯ และ AI Creative Lab. รับถ่ายภาพ Portrait, Event และงาน Commercial ด้วยสไตล์ Neo-Brutalism x Soft Elegance."
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "ClubsxAI",
+      "description": description,
+      "publisher": { "@id": `${siteUrl}/#organization` },
+      "inLanguage": "th-TH"
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      "name": "Bo",
+      "image": {
+        "@type": "ImageObject",
+        "@id": `${siteUrl}/#personImage`,
+        "url": `${siteUrl}/images/bo_snake_portrait_hero.jpg`,
+        "caption": "Bo"
+      },
+      "jobTitle": "Founder",
+      "worksFor": { "@id": `${siteUrl}/#organization` }
+    }
+  ]
+};
+
+// Add Article schema if it's a blog post
+if (articleDate) {
+  schema["@graph"].push({
+    "@type": "BlogPosting",
+    "@id": `${canonicalUrl}/#article`,
+    "headline": title,
+    "datePublished": articleDate,
+    "dateModified": articleDate,
+    "author": { "@id": `${siteUrl}/#person` },
+    "publisher": { "@id": `${siteUrl}/#organization` },
+    "description": description,
+    "mainEntityOfPage": { "@id": canonicalUrl },
+    "image": {
+      "@type": "ImageObject",
+      "url": image.startsWith('http') ? image : `${siteUrl}${image}`
+    }
+  });
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

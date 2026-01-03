@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-21T01:52:22+07:00",
+  "query": "ทดสอบระบบ Codex orchestration ครับ\n",
+  "primary": {
+    "type": "codex",
+    "response": "พร้อมครับ อยากทดสอบส่วนไหนของ orchestration เป็นพิเศษ?\n\n- `shell_command`: รันคำสั่งในเทอร์มินัล (เช่น `ls`, `rg`, `python -c ...`)\n- `apply_patch`: สร้าง/แก้ไฟล์ใน workspace\n- `update_plan`: ทำแผนงานและอัปเดตสถานะทีละขั้น\n- ข้อจำกัดตอนนี้: เขียนได้เฉพาะใน workspace, และ network ถูกจำกัด (ไม่เรียกเน็ต)\n\nบอก “ให้ทำเดโมแบบไหน” ได้เลย เช่น “สร้างไฟล์ demo.txt แล้วใส่ข้อความ”, หรือ “รันคำสั่งเช็ค repo/เทส”\n"
+  },
+  "learner": {
+    "type": "local-npu",
+    "response": "\n"
+  },
+  "meta": {
+    "node": "clubsxno1",
+    "oracle_expiry": "2025-01-06"
+  }
+}

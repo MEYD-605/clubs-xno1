@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-21T02:04:59+07:00",
+  "query": "วางแผนการทำอาหารง่ายๆ 1 จาน\n",
+  "primary": {
+    "type": "codex",
+    "response": "model: gpt-5.2\nprovider: openai\napproval: never\nsandbox: workspace-write [workdir, /tmp, $TMPDIR]\nreasoning effort: high\nreasoning summaries: auto\nsession id: 019b3d26-8ffb-73e2-901e-529f7d9329f2\nวางแผนการทำอาหารง่ายๆ 1 จาน\nmcp startup: ready: datacommons\n"
+  },
+  "learner": {
+    "type": "local-npu",
+    "response": "\n"
+  },
+  "meta": {
+    "node": "clubsxno1",
+    "oracle_expiry": "2025-01-06"
+  }
+}

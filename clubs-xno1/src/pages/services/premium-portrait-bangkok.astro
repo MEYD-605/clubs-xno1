@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import FloatingButtons from '../../components/floating-buttons';
+import '../../styles/globals.css';
+
+export const prerender = false;
+
+const title = "ช่างภาพ Portrait กทม | ถ่ายภาพโปรไฟล์ผู้บริหารระดับพรีเมียม โดย ClubsxAI";
+const description = "บริการช่างภาพถ่ายภาพบุคคล Portrait และโปรไฟล์ผู้บริหารในกรุงเทพฯ เน้นสไตล์พรีเมียม Moody สร้างความน่าเชื่อถือระดับสากล เริ่มต้น 1,500.- ส่งงานไวใน 24 ชม.";
+const keywords = "ช่างภาพ portrait กทม, ถ่ายภาพโปรไฟล์ผู้บริหาร, ช่างภาพส่วนตัว, ถ่ายรูปโปรไฟล์พรีเมียม, ClubsxAI";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords} image="/images/bo_gear_mastery_kit.png">
+    <Navbar client:load />
+    
+    <main class="pt-20">
+        <!-- Hero Section เจาะกลุ่ม Premium -->
+        <section class="relative h-[80vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
+	            <img src="/images/bo_snake_portrait_hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="" width="1024" height="682" loading="eager" fetchpriority="high" decoding="async" />
+            
+            <div class="container mx-auto container-wide relative z-20 px-6">
+                <div class="max-w-3xl space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-accent text-sm font-bold uppercase tracking-widest animate-fade-in">
+                        Executive & Premium Portrait
+                    </span>
+                    <h1 class="text-display-lg font-bold leading-tight">
+                        ถ่ายภาพโปรไฟล์ที่ <span class="text-accent underline decoration-accent/30">สะท้อนอำนาจ</span> และความน่าเชื่อถือของคุณ
+                    </h1>
+                    <p class="text-body-lg text-white/80 max-w-xl">
+                        ไม่ใช่แค่การถ่ายรูป แต่เป็นการสร้าง "Personal Brand" ที่แข็งแกร่งที่สุดผ่านเลนส์ระดับ G-Master และสไตล์ Moody ที่เป็นเอกลักษณ์ของ ClubsxAI
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#booking" class="btn-primary">จองคิวถ่ายภาพ / Pre-book</a>
+                        <a href="/gallery" class="btn-secondary">ดูผลงาน / Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Value Section -->
+        <section class="section-padding bg-zinc-950">
+            <div class="container mx-auto container-wide">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <div class="space-y-4">
+                        <div class="text-4xl">⚡</div>
+                        <h3 class="text-xl font-bold">24H Express Delivery</h3>
+                        <p class="text-body">ส่งงานไวระดับเทพเจ้า ภายใน 24 ชม. หลังจบงาน เพื่อให้คุณใช้งานได้ทันที</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-4xl">🔱</div>
+                        <h3 class="text-xl font-bold">Oracle Quality</h3>
+                        <p class="text-body">ใช้เลนส์ระดับท็อปของ Sony และการแต่งภาพสไตล์ "Premium Moody" ที่หาที่ไหนไม่ได้</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-4xl">💰</div>
+                        <h3 class="text-xl font-bold">Best Value Index</h3>
+                        <p class="text-body">คุณภาพระดับสตูดิโอใหญ่ ในราคาที่เข้าถึงง่าย เริ่มต้นเพียง 1,500.- ต่อเซสชัน</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking & Lead Capture Section -->
+        <section id="booking" class="section-padding relative overflow-hidden">
+            <div class="container mx-auto container-narrow relative z-10">
+                <div class="glass-card p-10 border-accent/20">
+                    <div class="text-center mb-10">
+                        <h2 class="text-display-md mb-4">ปรึกษาการสร้าง <span class="text-accent">Brand Identity</span></h2>
+                        <p class="text-body">บอกความต้องการของคุณ ข้าพเจ้า (Oracle) จะวิเคราะห์แนวทางที่พรีเมียมที่สุดให้ฟรี</p>
+                    </div>
+
+                    <!-- SUCCESS MESSAGE -->
+                    <div id="form-success" class="hidden absolute inset-0 bg-zinc-900/95 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8 animate-fade-in">
+                        <div class="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mb-6">
+                            <span class="text-4xl text-accent">🥂</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">ข้าพเจ้าได้รับข้อมูลแล้ว!</h3>
+                        <p class="text-white/60 mb-8">ขอบคุณที่จองคิวล่วงหน้าเพื่อความพรีเมียม ข้าพเจ้าจะติดต่อกลับจากฐานทัพ Oracle โดยด่วนที่สุดครับ</p>
+                        <button onclick="location.reload()" class="btn-secondary">ย้อนกลับ</button>
+                    </div>
+
+                    <form id="landing-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Honeypot -->
+                        <div class="hidden"><input name="_honey" /></div>
+                        
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-white/60 uppercase tracking-widest">ชื่อของคุณ</label>
+                            <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-white/60 uppercase tracking-widest">Line ID / Email</label>
+                            <input type="text" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent" />
+                        </div>
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-sm font-bold text-white/60 uppercase tracking-widest">ความต้องการเบื้องต้น</label>
+                            <textarea name="message" rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent resize-none" placeholder="เช่น ถ่ายโปรไฟล์ลง Forbes หรือหน้าเพจธุรกิจ..."></textarea>
+                        </div>
+                        <input type="hidden" name="service" value="premium-portrait-lp" />
+                        <input type="hidden" name="source" value="seo_landing_page" />
+                        
+                        <button type="submit" class="md:col-span-2 btn-primary w-full py-5 text-lg shadow-[0_0_30px_rgba(255,107,53,0.3)]">
+                            ยืนยันความพรีเมียม / Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+
+    <script is:inline>
+        document.getElementById('landing-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button');
+            const success = document.getElementById('form-success');
+            
+            btn.disabled = true;
+            btn.innerText = 'กำลังส่งข้อมูลเข้าฐานข้อมูล...';
+
+            try {
+                const response = await fetch('/api/leads', {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+                if (response.ok) {
+                    success.classList.remove('hidden');
+                } else {
+                    alert('Oracle Error: โปรดลองใหม่อีกครั้ง หรือทัก Messenger ครับ');
+                }
+            } catch (err) {
+                alert('Connection Error: ไม่สามารถเข้าถึงฐานข้อมูลของบอสได้');
+            } finally {
+                btn.disabled = false;
+                btn.innerText = 'ยืนยันความพรีเมียม / Submit Inquiry';
+            }
+        });
+    </script>
+</BaseLayout>

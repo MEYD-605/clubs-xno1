@@ -1,0 +1,15 @@
+{
+  "last_sync": "2026-01-02T23:02:17.767648",
+  "leads": [
+    {
+      "name": "Master Bo",
+      "source": "Internal",
+      "status": "Prime"
+    },
+    {
+      "name": "New Client",
+      "source": "Facebook",
+      "status": "Interested"
+    }
+  ]
+}

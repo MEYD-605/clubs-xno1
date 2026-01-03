@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-21T02:12:41+07:00",
+  "query": "แนะนำเมนูอาหารไทย 1 จาน\n",
+  "primary": {
+    "type": "codex",
+    "response": "model: gpt-5.2\nprovider: openai\napproval: never\nsandbox: workspace-write [workdir, /tmp, $TMPDIR]\nreasoning effort: high\nreasoning summaries: auto\nsession id: 019b3d2d-9c4e-74a0-9157-43fb2653640b\nแนะนำเมนูอาหารไทย 1 จาน\nmcp startup: ready: datacommons\nผัดกะเพราไก่ไข่ดาว — รสจัดจ้าน หอมกะเพรา กินง่าย อิ่มครบในจานเดียว (สั่งเผ็ดได้ตามชอบ)\ntokens used\n10,847\nผัดกะเพราไก่ไข่ดาว — รสจัดจ้าน หอมกะเพรา กินง่าย อิ่มครบในจานเดียว (สั่งเผ็ดได้ตามชอบ)\n"
+  },
+  "learner": {
+    "type": "local-npu",
+    "response": "\n"
+  },
+  "meta": {
+    "node": "clubsxno1",
+    "oracle_expiry": "2025-01-06"
+  }
+}

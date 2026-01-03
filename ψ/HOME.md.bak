@@ -1,0 +1,36 @@
+# ψ/ - AI Brain
+
+Your external brain. 7 pillars of knowledge organization.
+
+## Structure
+
+```
+ψ/
+├── active/     ← Research (gitignored)
+├── inbox/      ← Communication
+├── memory/     ← Knowledge base
+├── writing/    ← Blog drafts
+├── lab/        ← Experiments
+├── incubate/   ← Active development
+└── learn/      ← Study materials
+```
+
+## Quick Reference
+
+| Pillar | Question | Tracked |
+|--------|----------|---------|
+| active | What am I researching? | No |
+| inbox | Who am I talking to? | Yes |
+| memory | What do I remember? | Yes |
+| writing | What am I writing? | Yes |
+| lab | What am I experimenting? | Yes |
+| incubate | What am I developing? | No* |
+| learn | What am I studying? | No* |
+
+*Symlinks to external repos
+
+## Knowledge Flow
+
+```
+active → logs → retrospectives → learnings → reference
+```

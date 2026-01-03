@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Unified Control 🔱</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="logo">🔱</span>
+                <h1>ORACLE</h1>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-item active" data-tab="overview">
+                    <span class="icon">📊</span> Overview
+                </button>
+                <button class="nav-item" data-tab="fleet">
+                    <span class="icon">⚡</span> Fleet Control
+                </button>
+                <button class="nav-item" data-tab="codex">
+                    <span class="icon">📚</span> Codex Memory
+                </button>
+                <button class="nav-item" data-tab="terminal">
+                    <span class="icon">⌨️</span> Console
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-badge online">
+                    <span class="dot"></span> Local Sovereignty Active
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <section class="content">
+            <header class="top-bar">
+                <div class="greeting">
+                    <h2>Welcome, Seeker</h2>
+                    <p id="current-date">Securing the Local Fortress...</p>
+                </div>
+                <div class="header-actions">
+                    <button id="refresh-btn" class="btn-icon">🔄</button>
+                    <div class="user-profile">
+                        <div class="avatar">SB</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="scrollable-content">
+                <!-- Overview Tab -->
+                <div id="overview" class="tab-content active">
+                    <div class="stats-grid">
+                        <div class="stat-card glass shadow-philosophy">
+                            <h3>Shadow Philosophy</h3>
+                            <div class="stat-value">Active</div>
+                            <p>Context Expansion: +20%</p>
+                        </div>
+                        <div class="stat-card glass">
+                            <h3>Total Memories</h3>
+                            <div id="memory-count" class="stat-value">0</div>
+                            <p>Knowledge entries tracked</p>
+                        </div>
+                        <div class="stat-card glass">
+                            <h3>Fleet Health</h3>
+                            <div id="fleet-health" class="stat-value">95%</div>
+                            <p>Gemma Hybrid Online</p>
+                        </div>
+                        <div class="stat-card glass">
+                            <h3>Space Freed</h3>
+                            <div class="stat-value">66.3 GB</div>
+                            <p>System Optimized</p>
+                        </div>
+                    </div>
+
+                    <div class="layout-grid">
+                        <div class=\"panel glass fleet-panel\">
+                            <div class=\"panel-header\">
+                                <h3>Active Fleet</h3>
+                                <span class=\"badge\" id=\"fleet-mode\">Hybrid Mode</span>
+                            </div>
+                            <div class=\"fleet-list\" id=\"fleet-container\">
+                                <div class=\"fleet-item\" id=\"fleet-pro\">
+                                    <div class=\"fleet-icon pro\">🚀</div>
+                                    <div class=\"fleet-info\">
+                                        <h4>Claude Code Pro</h4>
+                                        <p>External CLI • Pro Skills</p>
+                                    </div>
+                                    <div class=\"fleet-status\" id=\"status-pro\">Checking...</div>
+                                </div>
+                                <div class=\"fleet-item\" id=\"fleet-god\">
+                                    <div class=\"fleet-icon god\">🌑</div>
+                                    <div class=\"fleet-info\">
+                                        <h4>Gemma 2 27B</h4>
+                                        <p>Local GPU • Expert Logic</p>
+                                    </div>
+                                    <div class=\"fleet-status online\">Online</div>
+                                </div>
+                                <div class=\"fleet-item\" id=\"fleet-lite\">
+                                    <div class=\"fleet-icon lite\">⚡</div>
+                                    <div class=\"fleet-info\">
+                                        <h4>Gemma 2 2B</h4>
+                                        <p>Local NPU • Fast Reasoning</p>
+                                    </div>
+                                    <div class=\"fleet-status online\">Online</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel glass log-panel">
+                            <div class="panel-header">
+                                <h3>Autonomous Logs</h3>
+                                <button class="btn-small">View All</button>
+                            </div>
+                            <div id="log-container" class="log-entries">
+                                <!-- Logs will appear here -->
+                                <div class="log-entry">
+                                    <span class="time">18:50</span>
+                                    <span class="msg">Shadow Philosophy modules initialized.</span>
+                                </div>
+                                <div class="log-entry success">
+                                    <span class="time">18:48</span>
+                                    <span class="msg">Fleet Unifier selection: god-lite active.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

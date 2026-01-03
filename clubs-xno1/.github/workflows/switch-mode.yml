@@ -1,0 +1,14 @@
+name: Switch Jetson Mode
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "เลือกโหมด: llm | comfyui | all | stop | status"
+        required: true
+        default: "llm"
+jobs:
+  switch:
+    runs-on: [self-hosted, jetson, arm64]
+    steps:
+      - name: Run switch_mode
+        run: ~/switch_mode.sh ${{ github.event.inputs.mode }}

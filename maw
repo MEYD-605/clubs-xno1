@@ -1,0 +1,196 @@
+#!/bin/bash
+# MAW Command Center - Quick Access to All Tools
+# Usage: ./maw <command>
+
+case "$1" in
+    # === Original Commands ===
+    attach) tmux attach -t "$2" ;;
+    msg) tmux send-keys -t "$2" "$3" Enter ;;
+    list) git worktree list ;;
+    sync) git fetch origin && git rebase origin/main ;;
+    kill) tmux kill-session -t "$2" ;;
+    
+    # === Oracle Commands ===
+    oracle)
+        /root/maw-workspace/scripts/oracle-unified-report.sh
+        ;;
+    fix-nb)
+        /root/maw-workspace/scripts/fix-notebook-ssh.sh
+        ;;
+    recap)
+        cat ψ/WIP.md
+        ;;
+    rrr)
+        TS=$(date +"%Y-%m-%d_%H-%M")
+        FILE="ψ/memory/retrospectives/session_${TS}.md"
+        echo "# Session Retrospective: ${TS}" > "$FILE"
+        echo "## Summary" >> "$FILE"
+        echo "- [ ] Accomplished..." >> "$FILE"
+        echo "✅ Created retrospective at $FILE"
+        ;;
+    
+    # === Automation ===
+    health)
+        /root/maw-workspace/scripts/health-check.sh
+        ;;
+    backup)
+        /root/maw-workspace/scripts/proxmox-snapshot.sh
+        ;;
+    auto)
+        shift
+        /root/maw-workspace/maw-auto "$@"
+        ;;
+    
+    # === Infrastructure ===
+    lxc)
+        shift
+        /root/maw-workspace/scripts/lxc-manager.sh "$@"
+        ;;
+    dashboard)
+        /root/maw-workspace/scripts/generate-dashboard.sh
+        echo "📊 Dashboard generated: file:///root/maw-workspace/ψ/dashboard.html"
+        ;;
+    monitor)
+        /root/maw-workspace/scripts/lxc-manager.sh monitor
+        ;;
+    topology)
+        cat ψ/infrastructure/proxmox_topology.md 2>/dev/null || echo "Topology file not found"
+        ;;
+    plan)
+        cat ~/.gemini/antigravity/brain/fd0ab192-c4a7-44f4-9f08-17424f97fbb3/7day-plan.md 2>/dev/null || echo "Plan file not found"
+        ;;
+    video)
+        shift
+        python3 /root/oracle-video-master.py "$@"
+        ;;
+    
+    # === Oracle Self-Management ===
+    oracle-deploy)
+        echo "🔱 Oracle Auto-Deploy System"
+        python3 /root/oracle-auto-manager.py
+        if [ $? -eq 0 ]; then
+            echo "✅ Ready to deploy - run: cd /root/maw-workspace/clubs-xno1 && npm run deploy"
+        else
+            echo "❌ Fix issues before deployment"
+        fi
+        ;;
+    oracle-manage)
+        echo "🔱 Oracle Continuous Management"
+        PIDFILE="/tmp/maw-oracle-manage.pid"
+        LOGFILE="/root/maw-workspace/ψ/memory/logs/oracle-manage.log"
+        shift
+
+        if [ "$1" == "start" ]; then
+            if [ -f "$PIDFILE" ] && ps -p "$(cat "$PIDFILE")" >/dev/null 2>&1; then
+                echo "✅ Oracle manage is already running (PID: $(cat "$PIDFILE"))"
+                exit 0
+            fi
+            mkdir -p "$(dirname "$LOGFILE")"
+            nohup bash -lc "python3 /root/oracle-auto-manager.py --watch --interval 300 --ensure-dev --auto-content >> \"$LOGFILE\" 2>&1" >/dev/null 2>&1 &
+            echo $! > "$PIDFILE"
+            echo "✅ Oracle manage started (PID: $(cat "$PIDFILE"))"
+        elif [ "$1" == "stop" ]; then
+            if [ -f "$PIDFILE" ]; then
+                kill "$(cat "$PIDFILE")" 2>/dev/null || true
+                rm -f "$PIDFILE"
+                echo "🛑 Oracle manage stopped"
+            else
+                echo "⚠️ No oracle-manage PID file found"
+            fi
+        elif [ "$1" == "status" ]; then
+            if [ -f "$PIDFILE" ] && ps -p "$(cat "$PIDFILE")" >/dev/null 2>&1; then
+                echo "✅ Oracle manage is running (PID: $(cat "$PIDFILE"))"
+            else
+                echo "❌ Oracle manage is not running"
+            fi
+        else
+            while true; do
+                python3 /root/oracle-auto-manager.py --ensure-dev --auto-content
+                echo "⏳ Next check in 5 minutes..."
+                sleep 300
+            done
+        fi
+        ;;
+    oracle-auto)
+        shift
+        echo "🔱 Maw Oracle Autonomous System"
+        if [ "$1" == "start" ]; then
+            echo "🚀 Starting autonomous mode (continuous)..."
+            nohup python3 /root/maw-oracle-autonomous.py --continuous --interval 5 > /root/maw-oracle-autonomous.log 2>&1 &
+            echo $! > /tmp/maw-oracle-auto.pid
+            echo "✅ Oracle running autonomously (PID: $(cat /tmp/maw-oracle-auto.pid))"
+            echo "📄 Logs: /root/maw-oracle-autonomous.log"
+        elif [ "$1" == "stop" ]; then
+            if [ -f /tmp/maw-oracle-auto.pid ]; then
+                kill $(cat /tmp/maw-oracle-auto.pid) 2>/dev/null
+                rm /tmp/maw-oracle-auto.pid
+                echo "🛑 Oracle autonomous mode stopped"
+            else
+                echo "⚠️ No autonomous process found"
+            fi
+        elif [ "$1" == "status" ]; then
+            if [ -f /tmp/maw-oracle-auto.pid ] && ps -p $(cat /tmp/maw-oracle-auto.pid) > /dev/null; then
+                echo "✅ Oracle is running autonomously"
+            else
+                echo "❌ Oracle is not running"
+            fi
+        else
+            python3 /root/maw-oracle-autonomous.py "$@"
+        fi
+        ;;
+    oracle-dev)
+        echo "🌐 Soul-Brews Dev Server Helper"
+        shift
+        CMD="${1:-restart}"
+        PIDFILE="/tmp/soul-brews-web-dev.pid"
+        LOGFILE="/root/maw-workspace/ψ/memory/logs/soul-brews-web-dev.log"
+        PROJECT="/root/maw-workspace/clubs-xno1"
+
+        case "$CMD" in
+            status)
+                if [ -f "$PIDFILE" ] && ps -p "$(cat "$PIDFILE")" >/dev/null 2>&1; then
+                    echo "✅ Dev server running (PID: $(cat "$PIDFILE"))"
+                else
+                    echo "❌ Dev server not running (or PID file missing)"
+                fi
+                ;;
+            restart|start)
+                # If there's a STOPPED job-controlled dev server, kill it (it won't serve traffic).
+                ps -eo pid=,stat=,cmd= | rg -n "$PROJECT" | rg -n "astro dev|npm run dev" | awk '{print $1, $2}' | while read -r PID STAT; do
+                    if echo "$STAT" | grep -q "T"; then
+                        echo "🛑 Found STOPPED dev process (PID: $PID) — killing..."
+                        kill "$PID" 2>/dev/null || true
+                    fi
+                done
+
+                mkdir -p "$(dirname "$LOGFILE")"
+                nohup bash -lc "cd \"$PROJECT\" && npm run dev -- --host 0.0.0.0 --port 4321 >> \"$LOGFILE\" 2>&1" >/dev/null 2>&1 &
+                echo $! > "$PIDFILE"
+                echo "✅ Dev server started (PID: $(cat "$PIDFILE"))"
+                echo "📄 Logs: $LOGFILE"
+                ;;
+            *)
+                echo "Usage: ./maw oracle-dev [start|restart|status]"
+                ;;
+        esac
+        ;;
+    
+    # === Help ===
+    *)
+        echo "🔮 MAW Oracle Command Center"
+        echo ""
+        echo "Usage: ./maw <command>"
+        echo "  ./maw oracle         - Unified Oracle Report"
+        echo "  ./maw recap          - Work in Progress"
+        echo "  ./maw auto           - Auto-delegation"
+        echo "  ./maw health         - System Health"
+        echo "  ./maw video          - Video Generation Center 🔱"
+        echo "  ./maw oracle-deploy  - Deploy Readiness Check 🚀"
+        echo "  ./maw oracle-manage  - Continuous Self-Management 🤖 (start/stop/status)"
+        echo "  ./maw oracle-dev     - Ensure dev server 🌐 (start/restart/status)"
+        echo "  ./maw oracle-auto    - Autonomous Learning System 🧠"
+        echo "    ./maw oracle-auto start   - Start autonomous mode"
+        echo "    ./maw oracle-auto stop    - Stop autonomous mode"
+        echo "    ./maw oracle-auto status  - Check status"
+        ;;
+esac

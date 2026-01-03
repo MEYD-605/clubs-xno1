@@ -1,0 +1,13 @@
+# Health Check - 2026-01-02_19-19
+
+🏥 Infrastructure Health Check - ศ.  2 ม.ค. 2569 19:19:17 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+❄️  ComfyUI - Intentionally Offline
+❌ Homepage (LXC 220) - Down!
+⚠️  Portainer - Not accessible
+✅ Disk Space: 62% used
+✅ Memory: 13% used
+
+📦 LXC Container Status:
+⚠️  Cannot access Proxmox (not on host?)

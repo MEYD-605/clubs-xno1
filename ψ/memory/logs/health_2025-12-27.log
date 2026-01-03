@@ -1,0 +1,7 @@
+# Health Check - 2025-12-27_14-54
+
+🏥 Infrastructure Health Check - ส. 27 ธ.ค. 2568 14:54:36 +07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Ollama (LXC 110) - Running
+⚠️  ComfyUI - Not accessible
+❌ Homepage (LXC 220) - Down!

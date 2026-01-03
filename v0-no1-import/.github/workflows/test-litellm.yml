@@ -1,0 +1,22 @@
+name: test-litellm
+on:
+  workflow_dispatch: {}
+jobs:
+  call-litellm:
+    runs-on: [self-hosted, jetson, arm64]
+    steps:
+      - name: Load LiteLLM env
+        run: |
+          set -a; source ~/.config/litellm.env; set +a
+          echo "LITELLM_BASE=$LITELLM_BASE" >> $GITHUB_ENV
+          echo "LITELLM_KEY=$LITELLM_KEY"   >> $GITHUB_ENV
+          echo "LITELLM_MODEL=$LITELLM_MODEL" >> $GITHUB_ENV
+      - name: List models
+        run: |
+          if [ -n "${LITELLM_KEY}" ]; then AUTH="-H 'Authorization: Bearer ${LITELLM_KEY}'"; fi
+          curl -s --fail ${LITELLM_BASE}/models ${AUTH:-} | jq .
+      - name: Chat via LiteLLM
+        run: |
+          if [ -n "${LITELLM_KEY}" ]; then AUTH="-H 'Authorization: Bearer ${LITELLM_KEY}'"; fi
+          DATA='{"model":"'"${LITELLM_MODEL}"'","messages":[{"role":"user","content":"ทดสอบจาก GitHub Actions Jetson"}],"stream":false}'
+          curl -s --fail ${LITELLM_BASE}/chat/completions -H 'Content-Type: application/json' ${AUTH:-} -d "${DATA}" | jq -r .choices[0].message.content

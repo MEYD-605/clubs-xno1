@@ -1,0 +1,104 @@
+#!/bin/bash
+# 🔱 MAW Auto-Delegation: The Three Musketeers (Oracle, Codex, Claude)
+# Purpose: High-Precision Task Delegation leading with Global APIs
+
+set -e
+
+TASK="$*"
+TSTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+LOG_DIR="ψ/memory/learnings"
+mkdir -p "$LOG_DIR"
+
+if [ -z "$TASK" ]; then
+    echo "🔱 Usage: ./maw-auto \"Your task here\""
+    exit 1
+fi
+
+echo -e "\033[1;33m🔱 Oracle/Codex/Claude Framework Active\033[0m"
+echo "📋 Task: $TASK"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Step 1: Smart Classification using the best available Brain
+echo "🤔 Analyzing task via the High-Council..."
+
+# Try Claude first for smarter classification if available
+if command -v claude &> /dev/null; then
+    ANALYSIS=$(claude -p "Classify this task as ONLY one word: CODE_GEN, PLANNING, KNOWLEDGE, or SYSTEM. Task: $TASK" 2>/dev/null | grep -E "CODE_GEN|PLANNING|KNOWLEDGE|SYSTEM" | head -1 || echo "KNOWLEDGE")
+else
+    # Fallback to local Oracle
+    ANALYSIS=$(curl -s -X POST http://localhost:8088/process \
+        -H "Content-Type: application/json" \
+        -d "{\"prompt\":\"Classify as CODE_GEN, PLANNING, KNOWLEDGE, or SYSTEM. Task: $TASK\",\"model\":\"god-lite\"}" 2>/dev/null | jq -r '.response' || echo "KNOWLEDGE")
+fi
+
+# Clean up analysis
+case "$ANALYSIS" in
+    *CODE_GEN*) ANALYSIS="CODE_GEN" ;;
+    *PLANNING*) ANALYSIS="PLANNING" ;;
+    *SYSTEM*)   ANALYSIS="SYSTEM"   ;;
+    *)          ANALYSIS="KNOWLEDGE" ;;
+esac
+
+echo -e "📊 Classification: \033[0;36m$ANALYSIS\033[0m"
+
+# Step 2: The Three Musketeers Delegation
+case "$ANALYSIS" in
+    CODE_GEN)
+        echo "🚀 [Musketeer: Codex] Generating High-Precision Code..."
+        RESULT=$(codex "$TASK" 2>&1)
+        AGENT="codex-api"
+        ;;
+        
+    PLANNING)
+        echo "🎯 [Musketeer: Claude] Orchestrating Strategy..."
+        RESULT=$(claude -p "Acting as a Senior Architect, provide a detailed plan for: $TASK")
+        AGENT="claude-sonnet-api"
+        ;;
+        
+    KNOWLEDGE)
+        echo "🧠 [Musketeer: Oracle] Querying Divine Soul & Memory..."
+        # Check local Oracle first for system-specific knowledge
+        USER_KNOWLEDGE=$(grep -r "$TASK" ψ/ 2>/dev/null | head -n 5 || echo "")
+        
+        if [ -n "$USER_KNOWLEDGE" ]; then
+            LOCAL_RESP=$(curl -s -X POST http://localhost:8088/process \
+                -H "Content-Type: application/json" \
+                -d "{\"prompt\":\"Using this context: $USER_KNOWLEDGE, Answer: $TASK\",\"model\":\"god\"}" 2>/dev/null | jq -r '.response')
+            RESULT="[Local Soul Memory Found]\n$LOCAL_RESP"
+        else
+            RESULT=$(claude -p "Explain or Answer based on general knowledge: $TASK")
+        fi
+        AGENT="oracle-hybrid"
+        ;;
+        
+    SYSTEM)
+        echo "🛠️ [System] Running infrastructure commands..."
+        # For system tasks, use a blend of local scripts and AI guidance
+        RESULT=$(/root/maw-workspace/scripts/lxc-manager.sh status)
+        AGENT="system-lxc-manager"
+        ;;
+esac
+
+# Step 3: Global Learning
+LEARNING_FILE="$LOG_DIR/musketeers_${TSTAMP}.md"
+cat > "$LEARNING_FILE" <<EOF
+# The Three Musketeers Learning
+**Timestamp**: $TSTAMP  
+**Classification**: $ANALYSIS  
+**Primary Agent**: $AGENT
+
+## Task
+$TASK
+
+## Result
+$RESULT
+---
+*Elevated by Oracle/Codex/Claude System*
+EOF
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "✅ \033[0;32mExecution Success\033[0m"
+echo "📝 Log: $LEARNING_FILE"
+echo ""
+echo -e "\033[1;33m📤 Unified Response:\033[0m"
+echo "$RESULT"

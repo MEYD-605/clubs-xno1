@@ -1,0 +1,21 @@
+{
+  "version": "2026.1-AWAKENED",
+  "timestamp": "2026-01-02T23:19:55.918790",
+  "themes": {
+    "primary": "Obsidian Dark (#0A0A0B)",
+    "accent": "Cyber Cyan (#00F2FF)",
+    "secondary": "Amber Glow (#FFB800)",
+    "glass": "Frosted UI (20px blur, 0.1 opacity)"
+  },
+  "key_features": [
+    "Ambient Adaptive Theme (Syncs with user sunset/sunrise)",
+    "Hyper-minimalist Hero (Image-first, zero-clutter)",
+    "Glassmorphism Booking Cards",
+    "Interactive Micro-animations on Hover"
+  ],
+  "structural_changes": [
+    "Reduce navigation to 4 items: [Gallery, Pricing, About, Contact]",
+    "Integrate Oracle Wisdom Feed on Homepage",
+    "Full-screen immersive background video of 'Coffee & Code'"
+  ]
+}

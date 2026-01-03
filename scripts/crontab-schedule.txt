@@ -1,0 +1,20 @@
+# Cron Jobs for MAW Oracle Infrastructure
+# Installed: 2025-12-27
+
+# Daily health check at 9 AM
+0 9 * * * /root/maw-workspace/scripts/health-check.sh >> /root/maw-workspace/ψ/memory/logs/health.log 2>&1
+
+# Update Dashboard every 15 minutes
+*/15 * * * * /root/maw-workspace/scripts/generate-dashboard.sh >> /root/maw-workspace/ψ/memory/logs/dashboard.log 2>&1
+
+# Auto-heal containers every 5 minutes
+*/5 * * * * /root/maw-workspace/scripts/lxc-manager.sh auto-heal >> /root/maw-workspace/ψ/memory/logs/auto-heal.log 2>&1
+
+# Daily backup at 2 AM
+0 2 * * * /root/maw-workspace/scripts/proxmox-snapshot.sh >> /root/maw-workspace/ψ/memory/logs/backup.log 2>&1
+
+# Hourly WIP update reminder (during work hours)
+0 10-18 * * 1-5 echo "🔔 Update your ψ/WIP.md" | wall
+
+# Weekly retrospective reminder (Friday 5 PM)
+0 17 * * 5 echo "📝 Time for /rrr - Weekly retrospective!" | wall
