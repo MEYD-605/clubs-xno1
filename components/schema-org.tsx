@@ -1,0 +1,91 @@
+export function SchemaOrg() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://clubsbybo.com/#organization",
+        name: "Club S by Bo",
+        url: "https://clubsbybo.com",
+        logo: {
+          "@type": "ImageObject",
+          "@id": "https://clubsbybo.com/#logo",
+          inLanguage: "en-US",
+          url: "https://clubsbybo.com/logo.png",
+          contentUrl: "https://clubsbybo.com/logo.png",
+          width: 512,
+          height: 512,
+          caption: "Club S by Bo",
+        },
+        image: { "@id": "https://clubsbybo.com/#logo" },
+        sameAs: ["https://instagram.com/clubsbybo", "https://facebook.com/clubsbybo", "https://twitter.com/clubsbybo"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: "+66651234416",
+            contactType: "customer service",
+            email: "barboxar.khunbo@gmail.com",
+            availableLanguage: ["Thai", "English"],
+          },
+        ],
+        description: "A Space Where Creativity Meets Precision - Photography, AI, Bartending, and more.",
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://clubsbybo.com/#website",
+        url: "https://clubsbybo.com",
+        name: "Club S by Bo",
+        description: "A Space Where Creativity Meets Precision",
+        publisher: { "@id": "https://clubsbybo.com/#organization" },
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "Person",
+        "@id": "https://clubsbybo.com/#person",
+        name: "Bo",
+        image: {
+          "@type": "ImageObject",
+          "@id": "https://clubsbybo.com/#personImage",
+          inLanguage: "en-US",
+          url: "https://clubsbybo.com/profile.jpg",
+          contentUrl: "https://clubsbybo.com/profile.jpg",
+          caption: "Bo",
+        },
+        description: "Photographer, Bartender, and AI Strategist",
+        sameAs: ["https://instagram.com/clubsbybo", "https://facebook.com/clubsbybo", "https://twitter.com/clubsbybo"],
+        worksFor: { "@id": "https://clubsbybo.com/#organization" },
+        knowsAbout: ["Photography", "Bartending", "Artificial Intelligence", "Digital Tools"],
+        jobTitle: "Founder",
+      },
+      {
+        "@type": "Service",
+        "@id": "https://clubsbybo.com/ai/#service",
+        name: "AI Assistant Services",
+        url: "https://clubsbybo.com/ai/",
+        provider: { "@id": "https://clubsbybo.com/#organization" },
+        description: "AI solutions that help businesses and individuals work more efficiently.",
+        serviceType: "AI Services",
+      },
+      {
+        "@type": "Service",
+        "@id": "https://clubsbybo.com/photography/#service",
+        name: "Photography Services",
+        url: "https://clubsbybo.com/photography/",
+        provider: { "@id": "https://clubsbybo.com/#organization" },
+        description: "Professional photography services for events, products, portraits, and more.",
+        serviceType: "Photography Services",
+      },
+      {
+        "@type": "Service",
+        "@id": "https://clubsbybo.com/bar/#service",
+        name: "Bartending Services",
+        url: "https://clubsbybo.com/bar/",
+        provider: { "@id": "https://clubsbybo.com/#organization" },
+        description: "Professional bartending services for private parties, corporate events, and special occasions.",
+        serviceType: "Bartending Services",
+      },
+    ],
+  }
+
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+}

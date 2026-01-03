@@ -1,0 +1,378 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --warm-50: 255, 252, 245;
+  --warm-100: 254, 243, 227;
+  --warm-200: 253, 230, 206;
+  --warm-300: 251, 211, 177;
+  --warm-400: 249, 183, 145;
+  --warm-500: 246, 153, 111;
+  --warm-600: 237, 120, 81;
+  --warm-700: 220, 88, 58;
+  --warm-800: 188, 65, 43;
+  --warm-900: 156, 52, 37;
+  --warm-950: 85, 25, 18;
+
+  --neutral-50: 250, 250, 250;
+  --neutral-100: 244, 244, 245;
+  --neutral-200: 228, 228, 231;
+  --neutral-300: 212, 212, 216;
+  --neutral-400: 161, 161, 170;
+  --neutral-500: 113, 113, 122;
+  --neutral-600: 82, 82, 91;
+  --neutral-700: 63, 63, 70;
+  --neutral-800: 39, 39, 42;
+  --neutral-900: 24, 24, 27;
+  --neutral-950: 9, 9, 11;
+
+  /* Theme colors - dynamically updated by ThemeContext */
+  --theme-primary: 75, 145, 241; /* Default: clubs-primary */
+  --theme-secondary: 241, 159, 77; /* Default: clubs-hover */
+
+  --color-blush: 255, 247, 243;
+  --color-light: 248, 248, 248;
+  --color-dark: 26, 26, 26;
+  --color-accent-blue: 75, 145, 241;
+  --color-accent-orange: 241, 159, 77;
+
+  --color-pastel-yellow: 255, 247, 141;
+  --color-pastel-pink: 255, 201, 227;
+  --color-pastel-coral: 244, 138, 122;
+}
+
+@layer base {
+  body {
+    @apply text-gray-900 bg-white font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sarabun leading-tight;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-clubs-background text-clubs-text font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sarabun leading-tight;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold uppercase tracking-wide;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-medium;
+  }
+
+  p {
+    @apply leading-relaxed text-base md:text-lg;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium transition-all duration-300 rounded-lg shadow-soft;
+  }
+
+  .btn-primary {
+    @apply inline-block text-white rounded-full px-6 py-3 font-medium transition-all hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-primary:hover {
+    @apply opacity-95;
+  }
+
+  .btn-secondary {
+    @apply border border-clubs-text text-clubs-text hover:bg-clubs-text hover:text-white;
+  }
+
+  .btn-outline {
+    @apply inline-block border-2 rounded-full px-6 py-3 font-medium transition-all hover:text-white hover:-translate-y-0.5;
+  }
+
+  .btn-white {
+    @apply inline-block bg-white rounded-full px-6 py-3 font-medium transition-all hover:shadow-lg hover:shadow-black/10 hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply border border-clubs-primary text-clubs-primary hover:bg-clubs-primary hover:text-white transition-all duration-300;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold mb-6 text-clubs-text uppercase tracking-wide;
+  }
+
+  .section-description {
+    @apply text-lg text-clubs-muted mb-12 max-w-3xl leading-relaxed;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-soft hover:shadow-md transition-all duration-300;
+  }
+
+  .social-icon {
+    @apply w-6 h-6 text-clubs-muted hover:text-clubs-primary transition-colors duration-300;
+  }
+
+  .social-icon:hover {
+    @apply animate-pulse;
+  }
+
+  .nav-link {
+    @apply relative text-dark hover:text-accent-blue transition-colors;
+  }
+
+  /* Separate the pseudo-element styles completely from @apply */
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: rgb(75, 145, 241); /* accent-blue color */
+    transform: scaleX(0);
+    transition-property: transform;
+    transform-origin: bottom right;
+  }
+
+  .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 rounded-lg transition-all duration-300;
+  }
+
+  .nav-link-active {
+    @apply bg-clubs-primary text-white shadow-soft;
+  }
+
+  .nav-link-inactive {
+    @apply text-clubs-text hover:bg-clubs-light hover:text-clubs-primary;
+  }
+
+  .magazine-card {
+    @apply relative overflow-hidden rounded-lg shadow-soft hover:shadow-md transition-all duration-300;
+  }
+
+  .magazine-card-content {
+    @apply absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white;
+  }
+
+  .product-card {
+    @apply bg-white rounded-lg shadow-soft overflow-hidden hover:shadow-md transition-all duration-300;
+  }
+
+  .product-card-featured {
+    position: relative;
+  }
+
+  .product-card-featured::after {
+    content: "Featured";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f19f4d; /* clubs-hover color */
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+
+/* Subtle texture overlay */
+.texture-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+}
+
+/* Optimized for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .img-transition,
+  .image-hover,
+  .animate-fade-in,
+  .animate-slide-up {
+    @apply transition-none transform-none;
+    animation: none;
+  }
+}
+
+/* Optimized for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-pulse-slow {
+    animation: none;
+  }
+}
+
+/* Lazy loading styles */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.lazy-loaded {
+  opacity: 1;
+}
+
+/* Magazine-style typography */
+.magazine-title {
+  @apply font-serif text-2xl md:text-3xl font-bold leading-tight;
+}
+
+.magazine-subtitle {
+  @apply text-sm md:text-base text-clubs-muted uppercase tracking-wider font-medium;
+}
+
+/* Zodiac badge */
+.zodiac-badge {
+  @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full;
+  background-color: rgba(75, 145, 241, 0.1);
+  color: #4b91f1;
+}
+
+/* Gradient overlays */
+.gradient-overlay-bottom {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.gradient-overlay-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* Micro-interactions */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(75, 145, 241, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-transition,
+  .image-hover,
+  .animate-fade-in,
+  .animate-slide-up {
+    @apply transition-none transform-none;
+    animation: none;
+  }
+}
+
+@layer utilities {
+  .bg-blush {
+    @apply bg-[#FFF7F3];
+  }
+
+  .bg-light {
+    @apply bg-[#F8F8F8];
+  }
+}
