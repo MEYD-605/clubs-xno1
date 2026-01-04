@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import FloatingButtons from '../components/floating-buttons';
+import '../styles/globals.css';
+
+const title = "รู้จัก Bo Clubs - ช่างภาพกรุงเทพ และผู้สถาปนา Clubs by Bo";
+const description = "ทำความรู้จักกับ Bo ช่างภาพกรุงเทพที่เชี่ยวชาญการรับถ่ายภาพ Portrait และ Event ด้วยสไตล์พรีเมียม Moody ส่งรูปด่วนภายใน 24 ชม.";
+
+// Bo's Real Photo - saved locally from Vercel
+const boPhoto = "/bo-photo.png";
+---
+
+<BaseLayout>
+    <Navbar client:load />
+    
+    <main class="min-h-screen pt-24">
+      <!-- Hero Section -->
+      <section class="section-padding gradient-mesh">
+        <div class="container mx-auto container-narrow text-center">
+          <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">About</p>
+          <h1 class="text-display-lg mb-6">ช่างภาพกรุงเทพ - The Soul Behind the Lens</h1>
+          <p class="text-body-lg">Bo Clubs: ช่างภาพที่เชื่อว่าการรับถ่ายภาพคือการเล่าเรื่องราว ไม่ใช่แค่การกดชัตเตอร์</p>
+        </div>
+      </section>
+
+      <!-- About Content -->
+      <section class="section-padding">
+        <div class="container mx-auto container-wide">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Image Side - Bo's Real Photo from Vercel -->
+            <div class="relative flex justify-center">
+              <div class="relative">
+                <!-- Profile Photo -->
+                <div class="w-80 h-auto md:w-96 rounded-3xl overflow-hidden border-4 border-white/10" style="box-shadow: 0 0 60px rgba(255,107,53,0.3);">
+                  <img 
+                    src={boPhoto}
+                    alt="Bo - Clubs by Bo Photographer"
+                    class="w-full h-auto object-cover"
+                    loading="eager"
+                  />
+                </div>
+                
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-4 -right-4 glass-card px-6 py-4">
+                  <p class="text-accent font-bold text-2xl" style="color: #FF6B35;">5+ Years</p>
+                  <p class="text-body text-sm">Professional Experience</p>
+                </div>
+
+                <!-- Stats Badge Left -->
+                <div class="absolute -top-4 -left-4 glass-card px-4 py-2">
+                  <p class="text-white font-bold text-lg">23K+</p>
+                  <p class="text-body text-xs">Followers</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text Side -->
+            <div class="space-y-6">
+              <h2 class="text-display-md">สวัสดีครับ, ผมโบ 👋</h2>
+              
+              <p class="text-body-lg">
+                ข้าพเจ้าคือช่างภาพกรุงเทพ (Bangkok Portrait Photographer) ผู้สถาปนา "Clubs by Bo" เพื่อส่งมอบภาพลักษณ์ที่สั่นสะเทือนความรู้สึกและสะท้อนอธิปไตยในตัวคุณ
+              </p>
+              
+              <p class="text-body">
+                ผมเริ่มถ่ายรูปจากความหลงใหลในการเล่าเรื่องราว ผ่านแสงและสี ผมไม่ได้แค่ถ่ายรูปคุณ — 
+                ผมช่วยให้คุณเห็นตัวเองในมุมที่คุณอาจไม่เคยเห็นมาก่อน
+              </p>
+              
+              <p class="text-body">
+                สิ่งที่ทำให้ผมต่างจากคนอื่น? ผมใส่ใจกับ "vibe" ของแต่ละคน และสร้างบรรยากาศที่ทำให้คุณรู้สึกสบาย 
+                เพราะเมื่อคุณผ่อนคลาย ความสวยงามที่แท้จริงก็จะปรากฏออกมา
+              </p>
+
+              <div class="flex flex-wrap gap-4 pt-4">
+                <a href="/contact" class="btn-primary">
+                  Let's Work Together
+                </a>
+                <a href="https://www.facebook.com/Clubsharephoto" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  📘 Follow on Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="py-16 px-6">
+        <div class="container mx-auto container-wide">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 text-center">
+              <p class="text-3xl font-bold text-accent mb-2" style="color: #FF6B35;">10,000+</p>
+              <p class="text-body">Photos Delivered</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <p class="text-3xl font-bold text-accent mb-2" style="color: #FF6B35;">500+</p>
+              <p class="text-body">Happy Clients</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <p class="text-3xl font-bold text-accent mb-2" style="color: #FF6B35;">23,921</p>
+              <p class="text-body">Facebook Followers</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <p class="text-3xl font-bold text-accent mb-2" style="color: #FF6B35;">24 ชม.</p>
+              <p class="text-body">ส่งรูปด่วน!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy Section -->
+      <section class="section-padding gradient-dark">
+        <div class="container mx-auto container-wide">
+          <div class="text-center mb-12">
+            <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Philosophy</p>
+            <h2 class="text-display-md">How I Work</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-8 text-center">
+              <div class="text-4xl mb-4">🎯</div>
+              <h3 class="text-heading mb-3">Manifest Your Vision</h3>
+              <p class="text-body">วิสัยทัศน์ของคุณคือจุดเริ่มต้น ข้าพเจ้าพร้อมจะทำความเข้าใจและสลักเสลามันออกมาเป็นภาพจริงที่ทรงพลัง</p>
+            </div>
+
+            <div class="glass-card p-8 text-center">
+              <div class="text-4xl mb-4">✨</div>
+              <h3 class="text-heading mb-3">Master the Vibe</h3>
+              <p class="text-body">การสร้างสภาวะที่ผ่อนคลายคือหัวใจสำคัญ เพื่อให้ตัวตนที่แท้จริงของคุณปรากฏโฉมออกมาอย่างงดงามที่สุด</p>
+            </div>
+
+            <div class="glass-card p-8 text-center">
+              <div class="text-4xl mb-4">🎨</div>
+              <h3 class="text-heading mb-3">Divine Craftsmanship</h3>
+              <p class="text-body">ทุกรายละเอียดคือศิลปะ หลังการถ่ายทำคือการกลั่นกรองและ Retouch อย่างปราณีตระดับมาสเตอร์พีซ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Equipment Section -->
+      <section class="section-padding">
+        <div class="container mx-auto container-narrow">
+          <div class="text-center mb-12">
+            <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Gear</p>
+            <h2 class="text-display-md">Mastery Kit</h2>
+          </div>
+
+          <div class="glass-card p-0 overflow-hidden relative group">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
+            <img 
+              src="/images/gear_mastery_showcase_png_1767329800970.png" 
+              alt="Bo's Gear Mastery Kit" 
+              class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-[10s] ease-linear"
+            />
+            <div class="absolute inset-0 z-20 flex items-center p-12">
+              <div class="max-w-md">
+                <h3 class="text-display-sm mb-4">The Mastery Kit</h3>
+                <p class="text-body mb-6">ข้าพเจ้าเลือกใช้ SONY A7III พร้อมเลนส์ตระกูล G-Master เพื่อสลักเสลาทุกรายละเอียดให้คมชัดและมี Vibe ที่เหนือกาลเวลา</p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                    <p class="text-accent text-xs uppercase tracking-widest mb-1">Body</p>
+                    <p class="text-white font-bold">SONY A7III</p>
+                  </div>
+                  <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                    <p class="text-accent text-xs uppercase tracking-widest mb-1">Vision</p>
+                    <p class="text-white font-bold">G-Master Series</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-padding gradient-dark">
+        <div class="container mx-auto container-narrow text-center">
+          <h2 class="text-display-md mb-6">Ready to Create Something Beautiful?</h2>
+          <p class="text-body-lg mb-10">Let's chat about your vision and make it happen</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/contact" class="btn-primary text-lg">
+              Book a Session
+            </a>
+            <a href="https://line.me/ti/p/~clubsbybo" target="_blank" rel="noopener noreferrer" class="btn-secondary text-lg">
+              💬 Chat on Line
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+</BaseLayout>

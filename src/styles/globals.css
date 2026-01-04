@@ -1,0 +1,314 @@
+/* ===========================================
+   🔱 Soul-Brews 2026 Design System
+   Trend: Neo-Brutalism meets Soft Elegance
+   =========================================== */
+
+@import "tailwindcss";
+
+/* ===== COLOR PALETTE 2026 ===== */
+@theme {
+  /* Primary Colors */
+  --color-primary: #FF6B35;
+  /* Electric Orange */
+  --color-primary-light: #FF8F5C;
+  --color-primary-dark: #E55A2B;
+
+  /* Neutral Dark Scale */
+  --color-dark-950: #0A0A0A;
+  --color-dark-900: #0F0F0F;
+  --color-dark-800: #171717;
+  --color-dark-700: #262626;
+  --color-dark-600: #404040;
+  --color-dark-500: #525252;
+
+  /* Accent Colors */
+  --color-accent-blue: #3B82F6;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-teal: #14B8A6;
+  --color-accent-pink: #EC4899;
+
+  /* Semantic Colors */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Typography */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-thai: "Sarabun", "Noto Sans Thai", sans-serif;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  @apply bg-[--color-dark-950] text-white antialiased;
+  font-family: var(--font-body);
+}
+
+/* Thai text support */
+:lang(th) {
+  font-family: var(--font-thai);
+}
+
+/* ===== GRADIENT UTILITIES 2026 ===== */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-pink) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(180deg, var(--color-dark-900) 0%, var(--color-dark-950) 100%);
+}
+
+.gradient-glow {
+  background: radial-gradient(circle at center, var(--color-primary) 0%, transparent 70%);
+}
+
+.gradient-mesh {
+  background:
+    radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 0.1) 0px, transparent 50%);
+}
+
+/* ===== GLASSMORPHISM 2.0 ===== */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-xl border border-white/5;
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+}
+
+/* ===== ANIMATION UTILITIES ===== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Scroll animations */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== BUTTON STYLES 2026 ===== */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  @apply transform scale-105;
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.4);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
+  @apply border-2 border-white/20 text-white hover:bg-white/5;
+}
+
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s infinite alternate ease-in-out;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all;
+  @apply text-white/70 hover:text-white hover:bg-white/5;
+}
+
+/* ===== CARD STYLES 2026 ===== */
+.card-2026 {
+  @apply relative p-6 rounded-2xl transition-all duration-300;
+  @apply bg-[--color-dark-800] border border-white/5;
+}
+
+.card-2026:hover {
+  @apply border-[--color-primary]/30;
+  box-shadow: 0 0 40px rgba(255, 107, 53, 0.1);
+}
+
+.card-glow {
+  @apply relative overflow-hidden;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+/* ===== TYPOGRAPHY SCALE ===== */
+.text-display-xl {
+  @apply text-6xl md:text-8xl font-light tracking-tighter;
+}
+
+.text-display-lg {
+  @apply text-4xl md:text-6xl font-light tracking-tight;
+}
+
+.text-display-md {
+  @apply text-3xl md:text-4xl font-light tracking-tight;
+}
+
+.text-display-sm {
+  @apply text-2xl md:text-3xl font-light tracking-tight;
+}
+
+.text-heading {
+  @apply text-xl md:text-2xl font-medium;
+}
+
+.text-body-lg {
+  @apply text-lg md:text-xl text-white/70 leading-relaxed;
+}
+
+.text-body {
+  @apply text-base text-white/60 leading-relaxed;
+}
+
+.text-accent {
+  color: var(--color-primary);
+}
+
+/* ===== SECTION UTILITIES ===== */
+.section-padding {
+  @apply py-20 md:py-32 px-6;
+}
+
+.container-narrow {
+  @apply max-w-4xl mx-auto;
+}
+
+.container-wide {
+  @apply max-w-7xl mx-auto;
+}
+
+/* ===== HOVER EFFECTS 2026 ===== */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  @apply -translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-500);
+}
+
+/* ===== SELECTION STYLING ===== */
+::selection {
+  background: rgba(255, 107, 53, 0.3);
+  color: white;
+}
