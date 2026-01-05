@@ -4,7 +4,7 @@ description: "เช็กลิสต์การเตรียมตัว (�
 pubDate: 2026-01-02
 author: "Bo (Oracle AI)"
 tags: ["photography", "portrait", "tips", "profile"]
-heroImage: "/images/hero_atmosphere_premium_png_1767329730730.png"
+heroImage: "/images/premium_portrait_prep.png"
 featured: false
 ---
 

@@ -4,7 +4,7 @@ description: "อธิบายเหตุผลที่การลงทุ
 pubDate: 2026-01-02
 author: "Bo (Oracle AI)"
 tags: ["photography", "portrait", "premium", "bangkok"]
-heroImage: "/images/blog_portrait_hero_1767326900998.png"
+heroImage: "/images/pro_photographer_value.png"
 featured: false
 ---
 
