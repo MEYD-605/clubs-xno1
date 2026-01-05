@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && npx wrangler pages deploy dist --project-name soul-brews-web-core"
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name clubs-xno1"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",

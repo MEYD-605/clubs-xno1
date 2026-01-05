@@ -2,6 +2,9 @@
     "$schema": "node_modules/wrangler/config-schema.json",
     "name": "clubs-xno1",
     "compatibility_date": "2025-12-31",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
     "assets": {
         "directory": "./dist"
     },
