@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/",
+    "/_astro/*",
+    "/.assetsignore",
+    "/ai-lab-ai.png",
+    "/bo-photo.png",
+    "/favicon.svg",
+    "/gear-ai.png",
+    "/hero-ai.png",
+    "/placeholder-logo.png",
+    "/placeholder-logo.svg",
+    "/placeholder-user.jpg",
+    "/placeholder.jpg",
+    "/placeholder.svg",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/images/*",
+    "/videos/*",
+    "/about",
+    "/ai-lab",
+    "/bartender",
+    "/command-center",
+    "/contact",
+    "/free-tools",
+    "/gallery",
+    "/gear",
+    "/services"
+  ]
+}

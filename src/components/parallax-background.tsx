@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { jarallax } from 'jarallax';
+// @ts-ignore
+import { jarallax, jarallaxVideo } from 'jarallax';
 import 'jarallax/dist/jarallax.css';
 
 interface ParallaxBackgroundProps {

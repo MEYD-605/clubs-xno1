@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import FloatingButtons from '../components/floating-buttons';
+import '../styles/globals.css';
+
+const title = "ช่างภาพกรุงเทพ - อัตราค่าบริการและแพ็กเกจรับถ่ายภาพ | Clubs by Bo";
+const description = "เช็กราคาและแพ็กเกจรับถ่ายภาพ Portrait, Event, และ Pre-wedding โดยช่างภาพมืออาชีพในกรุงเทพ ส่งรูปด่วนภายใน 24 ชม.";
+
+export const prerender = true;
+---
+
+<BaseLayout>
+    <Navbar client:load />
+    
+    <main class="min-h-screen pt-24">
+      <!-- Hero Section -->
+      <section class="relative section-padding overflow-hidden">
+        <!-- Cinematic Background Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img 
+            src="/images/hero_atmosphere_premium_png_1767329730730.png" 
+            alt="Cinematic Background" 
+            class="w-full h-full object-cover scale-110 animate-slow-zoom opacity-30 mix-blend-overlay"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-zinc-950"></div>
+        </div>
+
+        <div class="container relative z-10 mx-auto container-narrow text-center">
+          <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Services</p>
+          <h1 class="text-display-lg mb-6">สถาวนะแห่งภาพลักษณ์ที่คุณเลือกได้</h1>
+          <p class="text-body-lg">สถาปนาอัตลักษณ์ของคุณผ่านการรับถ่ายภาพระดับพรีเมียม โดย Clubs by Bo</p>
+        </div>
+      </section>
+
+      <!-- Pricing Cards -->
+      <section class="section-padding">
+        <div class="container mx-auto container-wide">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Portrait Mastery -->
+            <div class="card-2026 flex flex-col p-0 overflow-hidden">
+              <div class="relative h-64 overflow-hidden">
+                <img src="/images/service_portrait_mastery_png_1767329748801.png" alt="Portrait Mastery" class="w-full h-full object-cover animate-slow-zoom" />
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+              </div>
+              <div class="p-8 pt-6">
+                <div class="text-center mb-6">
+                  <h3 class="text-heading mb-2">Portrait Mastery</h3>
+                  <p class="text-body text-sm">สถาปนาตัวตนและภาพลักษณ์ส่วนตัวระดับ High-end</p>
+                </div>
+              
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold text-accent" style="color: #FF6B35;">1,500฿</span>
+                <span class="text-body text-sm block">starting price</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 flex-grow">
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  1-2 ชั่วโมงถ่าย
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  15-20 รูปตกแต่งสี
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  5 รูป Full Retouch
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  1 Location
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  ⚡ ส่งไฟล์ด่วน 1 วัน (24 ชม.)
+                </li>
+              </ul>
+
+              <a href="/contact" class="btn-secondary w-full text-center">
+                Book Now
+              </a>
+            </div>
+
+            <!-- Eternal Love Story -->
+            <div class="card-2026 flex flex-col p-0 overflow-hidden border-2 border-accent/20 relative">
+              <div class="absolute top-4 right-4 z-20 bg-accent text-white text-[10px] uppercase font-bold px-3 py-1 rounded-full">Sovereign's Choice</div>
+              <div class="relative h-64 overflow-hidden">
+                <img src="/images/service_couple_eternal_png_1767329765958.png" alt="Eternal Love Story" class="w-full h-full object-cover animate-slow-zoom" />
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+              </div>
+              <div class="p-8 pt-6">
+                <div class="text-center mb-6">
+                  <h3 class="text-heading mb-2">Eternal Love Story</h3>
+                  <p class="text-body text-sm">บันทึกตำนานความรักในสไตล์ Cinematic และความสง่างาม</p>
+                </div>
+              
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold text-accent" style="color: #FF6B35;">5,500฿</span>
+                <span class="text-body text-sm block">starting price</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 flex-grow">
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  2-3 ชั่วโมงถ่าย
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  30-40 รูปตกแต่งสี
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  10 รูป Full Retouch
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  2 Locations
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  Outfit change
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  ส่งไฟล์ใน 10 วัน
+                </li>
+              </ul>
+
+              <a href="/contact" class="btn-primary w-full text-center">
+                Book Now
+              </a>
+            </div>
+
+            <!-- Exclusive Event Coverage -->
+            <div class="card-2026 flex flex-col p-0 overflow-hidden">
+              <div class="relative h-64 overflow-hidden">
+                <img src="/images/service_event_exclusive_png_1767329782239.png" alt="Exclusive Event Coverage" class="w-full h-full object-cover animate-slow-zoom" />
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+              </div>
+              <div class="p-8 pt-6">
+                <div class="text-center mb-6">
+                  <h3 class="text-heading mb-2">Exclusive Event Coverage</h3>
+                  <p class="text-body text-sm">เก็บทุกห้วงบรรยากาศและความทรงจำสำคัญอย่างไร้รอยต่อ</p>
+                </div>
+              
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold text-accent" style="color: #FF6B35;">8,000฿</span>
+                <span class="text-body text-sm block">starting price</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 flex-grow">
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  4-6 ชั่วโมง coverage
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  100+ รูปตกแต่ง
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  Highlight album
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  Same-day preview
+                </li>
+                <li class="flex items-center text-body">
+                  <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 text-xs flex items-center justify-center mr-3">✓</span>
+                  ส่งไฟล์ใน 14 วัน
+                </li>
+              </ul>
+
+              <a href="/contact" class="btn-secondary w-full text-center">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add-ons Section -->
+      <section class="section-padding gradient-dark">
+        <div class="container mx-auto container-wide">
+          <div class="text-center mb-12">
+            <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Add-ons</p>
+            <h2 class="text-display-md">เพิ่มเติมได้</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 text-center">
+              <p class="text-accent font-bold text-xl mb-2" style="color: #FF6B35;">+500฿</p>
+              <p class="text-body">Extra Location</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <p class="text-accent font-bold text-xl mb-2" style="color: #FF6B35;">+300฿/รูป</p>
+              <p class="text-body">Extra Retouch</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <p class="text-accent font-bold text-xl mb-2" style="color: #FF6B35;">+1,500฿</p>
+              <p class="text-body">Rush Delivery (3 วัน)</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <p class="text-accent font-bold text-xl mb-2" style="color: #FF6B35;">+2,000฿</p>
+              <p class="text-body">Print Album 8x12</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section-padding">
+        <div class="container mx-auto container-narrow">
+          <div class="text-center mb-12">
+            <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">FAQ</p>
+            <h2 class="text-display-md">คำถามที่พบบ่อย</h2>
+          </div>
+
+          <div class="space-y-4">
+            <div class="glass-card p-6">
+              <h4 class="font-medium text-white mb-2">จองล่วงหน้ากี่วัน?</h4>
+              <p class="text-body">แนะนำ 1-2 สัปดาห์ล่วงหน้าครับ แต่ถ้าเร่งด่วนสามารถติดต่อมาสอบถามได้เลย</p>
+            </div>
+            <div class="glass-card p-6">
+              <h4 class="font-medium text-white mb-2">ต้องเตรียมอะไรมาถ่าย?</h4>
+              <p class="text-body">เตรียมเสื้อผ้าที่คุณชอบมา 2-3 ชุด ส่วนเมคอัพและทรงผมจะมีทีมช่วยจัดการให้ (เพิ่มเติม +1,500฿)</p>
+            </div>
+            <div class="glass-card p-6">
+              <h4 class="font-medium text-white mb-2">ถ่ายที่ไหนได้บ้าง?</h4>
+              <p class="text-body">ทุกที่ในกรุงเทพและปริมณฑลครับ ถ้าต่างจังหวัดมีค่าเดินทางเพิ่มเติม</p>
+            </div>
+            <div class="glass-card p-6">
+              <h4 class="font-medium text-white mb-2">ได้รูปทั้งหมดกี่รูป?</h4>
+              <p class="text-body">ขึ้นอยู่กับ package ครับ และคุณสามารถซื้อรูปเพิ่มได้ในราคาพิเศษ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-padding gradient-dark">
+        <div class="container mx-auto container-narrow text-center">
+          <h2 class="text-display-md mb-6">พร้อมถ่ายรูปหรือยัง?</h2>
+          <p class="text-body-lg mb-10">ติดต่อมาคุยกันได้เลยครับ ไม่มี obligation</p>
+          <a href="/contact" class="btn-primary text-lg">
+            ติดต่อเลย
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+</BaseLayout>
