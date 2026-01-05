@@ -5,7 +5,7 @@ import react from '@astrojs/react';
 export default defineConfig({
     output: 'server',
     adapter: cloudflare({
-        imageService: 'cloudflare',
+        imageService: 'passthrough',
         platformProxy: {
             enabled: true
         }
