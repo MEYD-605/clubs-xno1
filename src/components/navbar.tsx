@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="/" className="text-2xl font-bold text-white">
-            Clubs <span className="text-orange-400">by Bo</span>
+            Clubsx<span className="text-orange-400">AI</span>
           </a>
 
           <nav className="hidden md:flex space-x-8">
@@ -41,8 +41,11 @@ export default function Navbar() {
             <a href="/services" className="relative text-white hover:text-orange-400 transition-colors">
               Services
             </a>
+            <a href="/blog" className="relative text-white hover:text-orange-400 transition-colors">
+              Blog
+            </a>
 
-            {/* More dropdown - Original Vercel menu */}
+            {/* More dropdown */}
             <div className="relative group">
               <button
                 className="flex items-center text-white hover:text-orange-400 transition-colors"
@@ -137,6 +140,9 @@ export default function Navbar() {
             </a>
             <a href="/services" className="px-4 py-3 text-white hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>
               Services
+            </a>
+            <a href="/blog" className="px-4 py-3 text-white hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>
+              Blog
             </a>
             <div className="border-t border-white/10 my-2"></div>
             <p className="px-4 py-2 text-zinc-500 text-sm">More</p>

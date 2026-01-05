@@ -7,17 +7,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Clubs <span className="text-orange-400">by Bo</span>
+              Clubsx<span className="text-orange-400">AI</span>
             </h3>
-            <p className="text-zinc-400 mb-2">Premium portrait photography for bold, creative individuals.</p>
-            <p className="text-zinc-500 text-sm mb-6">
-              Founded by Bo, a professional photographer with 5+ years of experience in Bangkok. Specialist in SONY A7III Mastery and high-end portrait vibe.
-            </p>
+            <p className="text-zinc-400 mb-6">Premium portrait photography for bold, creative individuals.</p>
             <div className="flex space-x-4">
               <a href="https://instagram.com/clubsbybo" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
                 Instagram
               </a>
-              <a href="https://facebook.com/clubsbybo" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+              <a href="https://facebook.com/Clubsharephoto" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
                 Facebook
               </a>
               <a href="https://tiktok.com/@clubsbybo" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
@@ -45,6 +42,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/blog" className="text-zinc-400 hover:text-white transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className="text-zinc-400 hover:text-white transition-colors">
                   Contact
                 </a>
@@ -63,8 +65,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-zinc-400">
                 <span className="mr-2">Phone:</span>
-                <a href="tel:+66651234416" className="hover:text-white transition-colors">
-                  +66 65 123 4416
+                <a href="tel:0800416403" className="hover:text-white transition-colors">
+                  080-041-6403
                 </a>
               </li>
             </ul>
@@ -72,8 +74,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-zinc-800 mt-8 pt-8 text-center text-zinc-500">
-          <p>&copy; {currentYear} Clubs by Bo. All rights reserved.</p>
-          <p className="text-sm mt-2">🔱 Powered by Oracle Sovereign Intelligence</p>
+          <p>&copy; {currentYear} ClubsxAI. All rights reserved.</p>
+          <p className="text-sm mt-2">Design & Technology by Clubs Tech</p>
         </div>
       </div>
     </footer>

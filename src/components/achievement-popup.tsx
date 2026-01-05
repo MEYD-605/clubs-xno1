@@ -4,10 +4,10 @@ import { useState, useEffect } from "react"
 import { X, Star, Camera, Users, Award } from "lucide-react"
 
 const stats = [
-    { icon: Camera, label: "Photos Delivered", value: "10,000+", color: "#FF6B35" },
+    { icon: Camera, label: "Photos Delivered", value: "1,000,000+", color: "#FF6B35" },
     { icon: Users, label: "Happy Clients", value: "500+", color: "#EC4899" },
     { icon: Star, label: "5-Star Reviews", value: "200+", color: "#F59E0B" },
-    { icon: Award, label: "Years Experience", value: "5+", color: "#3B82F6" },
+    { icon: Award, label: "Years Experience", value: "10+", color: "#3B82F6" },
 ]
 
 export default function AchievementPopup() {
@@ -45,7 +45,8 @@ export default function AchievementPopup() {
                     {/* Close Button */}
                     <button
                         onClick={() => setIsVisible(false)}
-                        className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                        className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                        aria-label="Close popup"
                     >
                         <X className="w-5 h-5" />
                     </button>
@@ -65,7 +66,8 @@ export default function AchievementPopup() {
                         <h3 className="text-2xl font-bold text-white mb-2">
                             Club <span style={{ color: "#FF6B35" }}>S</span> Achievements
                         </h3>
-                        <p className="text-white/60 text-sm">ช่างภาพที่ลูกค้าไว้วางใจ</p>
+                        <p className="text-white/60 text-sm mb-1">ช่างภาพที่ลูกค้าไว้วางใจ</p>
+                        <p className="text-accent font-bold text-sm" style={{ color: "#FF6B35" }}>จองคิวถ่ายภาพเริ่มต้น 1,500.- | ส่งงานด่วน 24H 🚀</p>
                     </div>
 
                     {/* Stats Grid */}

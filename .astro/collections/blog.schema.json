@@ -26,40 +26,20 @@
             }
           ]
         },
-        "updatedDate": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "heroImage": {
-          "type": "string"
-        },
         "author": {
           "type": "string",
-          "default": "Bo (Oracle AI)"
+          "default": "Bo Clubs"
+        },
+        "image": {
+          "type": "string"
         },
         "tags": {
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "default": []
+          }
         },
-        "canonicalURL": {
-          "type": "string"
-        },
-        "featured": {
+        "isFeatured": {
           "type": "boolean",
           "default": false
         },
@@ -70,7 +50,8 @@
       "required": [
         "title",
         "description",
-        "pubDate"
+        "pubDate",
+        "tags"
       ],
       "additionalProperties": false
     }

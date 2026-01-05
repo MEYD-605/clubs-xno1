@@ -1,15 +1,49 @@
 ---
+import { getOGImageUrl } from '../lib/og-image';
 import '../styles/globals.css';
+import EnhancedSchema from '../components/EnhancedSchema.astro';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+}
+
+const { 
+  title = "ClubsxAI | Premium Portrait Photography by Bo",
+  description = "ClubsxAI | Premium Portrait Photography by Bo. We don't shoot photos, we shoot feelings.",
+  keywords = "ช่างภาพ, Portrait, Premium, Bangkok, Photographer, ClubsxAI, ClubsxAI",
+  image = "/images/bo_snake_portrait_hero.jpg"
+} = Astro.props;
+
+// Generate dynamic OG image URL
+const ogImageUrl = getOGImageUrl(title, description, image);
 ---
 <!DOCTYPE html>
 <html lang="th" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clubs by Bo | Premium Portrait Photography. We don't shoot photos, we shoot feelings. ส่งรูปด่วนภายใน 24 ชม.">
-    <meta name="keywords" content="ช่างภาพ, รับถ่ายภาพ, ช่างภาพกรุงเทพ, Portrait Photographer Bangkok, ช่างภาพ Event, รับถ่ายภาพบุคคล, ช่างภาพพรีเวดดิ้ง, ส่งรูปด่วน 24 ชม, Clubs by Bo, Clubsharephoto, Sony A7III Photographer">
-    <title>Clubs by Bo | ช่างภาพกรุงเทพ 2026 - สถาปนาภาพลักษณ์ที่ทรงพลัง & ส่งรูปไวที่สุด ✓</title>
-    <link rel="canonical" href={`https://clubsbybo.com${Astro.url.pathname}`} />
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content={keywords}>
+    <link rel="canonical" href={Astro.url} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageUrl} />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +52,21 @@ import '../styles/globals.css';
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Schema.org -->
+    <EnhancedSchema title={title} description={description} image={image} />
+
+    <!-- Astro View Transitions (ClientRouter) -->
+    <ClientRouter />
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67TZPJY9LF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-67TZPJY9LF');
+    </script>
 </head>
 <body class="bg-black text-white font-sans antialiased selection:bg-white/10">
     <slot />

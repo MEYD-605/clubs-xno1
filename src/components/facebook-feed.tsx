@@ -46,7 +46,7 @@ export default function FacebookFeed({
                     className="fb-xfbml-parse-ignore"
                 >
                     <a href={pageUrl}>
-                        Clubs by Bo - ช่างภาพ ส่งรูปด่วนภายใน 24 ชม.
+                        Club S ช่างภาพ ส่งรูปด่วนภายใน 24 ชม.
                     </a>
                 </blockquote>
             </div>

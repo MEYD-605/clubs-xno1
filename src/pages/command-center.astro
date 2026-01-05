@@ -3,13 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
-import TerminalConsole from '../components/terminal-console';
 import '../styles/globals.css';
 
-const title = "Command Center | Club S by Bo";
+const title = "Command Center | ClubsxAI";
 const description = "System dashboard for managing bookings and backend automation";
-
-export const prerender = true;
 ---
 
 <BaseLayout>
@@ -63,18 +60,70 @@ export const prerender = true;
         </div>
       </section>
 
-      <!-- Command Interface Section -->
+      <!-- Command Interface Preview -->
       <section class="section-padding gradient-dark">
         <div class="container mx-auto container-wide">
-          <div class="text-center mb-12">
+          <div class="text-center mb-8">
             <h2 class="text-display-md mb-4">Command Interface</h2>
             <p class="text-accent mb-4" style="color: #FF6B35;">
-              Connected to <strong>Maha Hybrid Cluster</strong> via Sentinel Protocol.
+              Connected to <strong>n8n automation backend</strong> via secured webhook endpoint.
             </p>
             <p class="text-body-lg">Manage your entire business with simple text commands</p>
           </div>
 
-          <TerminalConsole client:load />
+          <!-- Terminal Mockup -->
+          <div class="max-w-3xl mx-auto rounded-3xl overflow-hidden" style="background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="p-4 flex items-center" style="background: #2a2a2a;">
+              <div class="flex space-x-2 mr-4">
+                <div class="w-3 h-3 rounded-full" style="background: #ff5f56;"></div>
+                <div class="w-3 h-3 rounded-full" style="background: #ffbd2e;"></div>
+                <div class="w-3 h-3 rounded-full" style="background: #27ca40;"></div>
+              </div>
+              <div class="text-white/40 text-sm">command-terminal</div>
+            </div>
+            <div class="p-6 font-mono text-sm">
+              <div class="flex">
+                <span class="text-green-400 mr-2">bo@system:~$</span>
+                <span class="text-white">@bookings list upcoming</span>
+              </div>
+              <div class="text-white/60 mt-2 mb-4">
+                <div>Fetching upcoming bookings...</div>
+                <div class="mt-2">
+                  <div class="text-yellow-400">• 2026-01-05 10:00 - Portrait Session with Sarah</div>
+                  <div class="text-yellow-400">• 2026-01-07 14:00 - Editorial Shoot with Mark</div>
+                  <div class="text-yellow-400">• 2026-01-10 18:00 - Cocktail Workshop (4 participants)</div>
+                </div>
+              </div>
+
+              <div class="flex mt-4">
+                <span class="text-green-400 mr-2">bo@system:~$</span>
+                <span class="text-white">@stats monthly revenue</span>
+              </div>
+              <div class="text-white/60 mt-2 mb-4">
+                <div>Calculating monthly revenue...</div>
+                <div class="mt-2">
+                  <div class="text-green-400">Total Revenue (Jan): ฿45,500</div>
+                  <div class="text-blue-400">• Photography: ฿28,000</div>
+                  <div class="text-blue-400">• Workshops: ฿12,500</div>
+                  <div class="text-blue-400">• Digital Products: ฿5,000</div>
+                </div>
+              </div>
+
+              <div class="flex mt-4">
+                <span class="text-green-400 mr-2">bo@system:~$</span>
+                <span class="text-white">@automation status — webhook: active</span>
+              </div>
+              <div class="text-white/60 mt-2">
+                <div>Checking automation workflows...</div>
+                <div class="mt-2">
+                  <div class="text-green-400">✓ Client Onboarding: Running</div>
+                  <div class="text-green-400">✓ Social Media Scheduler: Running</div>
+                  <div class="text-green-400">✓ Invoice Generator: Running</div>
+                  <div class="text-red-400">✗ Email Newsletter: Error (API key expired)</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

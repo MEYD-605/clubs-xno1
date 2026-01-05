@@ -5,65 +5,15 @@ import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
 
-const title = "Bo's Favorite Gear | Clubs by Bo";
+const title = "Craft & Chill with Bo | ClubsxAI";
 const description = "Former boutique hotel bartender offering private cocktail workshops and product picks";
-
-const workshops = [
-  {
-    title: "Classic Mixology",
-    description: "สถาปนาเทคนิคการทำค็อกเทลคลาสสิก 5 เมนูหลักที่บาร์เทนเดอร์ทุกคนต้องรู้ พร้อมประวัติศาสตร์เบื้องหลัง",
-    duration: "4 hours",
-    price: "฿4,500 per person",
-    minParticipants: 2,
-    maxParticipants: 6,
-    emoji: "🍸"
-  },
-  {
-    title: "Signature Creation",
-    description: "เรียนรู้วิธีการออกแบบ Signature Drink ของตัวเองโดยใช้เทคนิค Infusion และ Homemade Syrups",
-    duration: "4 hours",
-    price: "฿6,500 per person",
-    minParticipants: 2,
-    maxParticipants: 4,
-    emoji: "✨"
-  },
-  {
-    title: "Event Consulting",
-    description: "การให้คำปรึกษาและจัดเตรียมบาร์สำหรับงาน Event ระดับ High-end พร้อมการออกแบบเมนูพิเศษ",
-    duration: "Custom",
-    price: "Start at ฿15,000",
-    minParticipants: 1,
-    maxParticipants: 1,
-    emoji: "🎭"
-  },
-];
-
-const equipment = [
-  {
-    name: "Yukiwa Shaker (Hand-polished)",
-    description: "ความแม่นยำและน้ำหนักที่เป็นเอกลักษณ์จากญี่ปุ่น มอบสัมผัสที่บาร์เทนเดอร์มือโปรต้องการ",
-    price: "฿2,400",
-  },
-  {
-    name: "Kimura Glassware",
-    description: "ความบางระดับพรีเมียมที่ทำให้สัมผัสของเหลวและรสชาติได้ดียิ่งขึ้น",
-    price: "฿1,200",
-  },
-  {
-    name: "Japanese Jigger",
-    description: "Precision measuring tool เพื่อสัดส่วนรสชาติที่สมบูรณ์แบบที่สุด",
-    price: "฿850",
-  },
-];
-
-export const prerender = true;
+const keywords = "Private Bartender, Cocktail Workshop, Mixology Class, เรียนชงเหล้า, สอนมิกซ์เครื่องดื่ม, Bartender Service Bangkok, ค็อกเทลพาร์ตี้";
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description} keywords={keywords} image="/images/bo_cocktail_flame_portrait.jpg">
     <Navbar client:load />
     
     <main class="min-h-screen pt-24">
-      <!-- Hero Section -->
       <section class="section-padding gradient-mesh">
         <div class="container mx-auto container-wide">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -87,17 +37,20 @@ export const prerender = true;
 
             <div class="relative">
               <div class="aspect-[3/4] rounded-3xl overflow-hidden" style="box-shadow: 0 0 60px rgba(255,107,53,0.2);">
-                <img 
-                  src="/bo-photo.png"
-                  alt="Bo as a bartender"
-                  class="w-full h-full object-cover"
-                />
+	                <img loading="lazy" 
+	                  src="/images/bo_cocktail_flame_portrait.jpg"
+	                  alt="Bo as a bartender"
+	                  width="682"
+	                  height="1024"
+	                  class="w-full h-full object-cover"
+	                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Content remains same -->
       <!-- Workshops Section -->
       <section id="workshops" class="section-padding gradient-dark">
         <div class="container mx-auto container-wide">
@@ -107,35 +60,51 @@ export const prerender = true;
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {workshops.map((workshop) => (
-              <div class="card-2026 p-6 group">
-                <div class="text-4xl mb-4">{workshop.emoji}</div>
-                <h3 class="text-heading mb-3 group-hover:text-accent transition-colors">{workshop.title}</h3>
-                <p class="text-body mb-4">{workshop.description}</p>
-                
+            <div class="card-2026 p-6 group">
+                <div class="text-4xl mb-4">🍸</div>
+                <h3 class="text-heading mb-3 group-hover:text-accent transition-colors">Cocktail Basics</h3>
+                <p class="text-body mb-4">Learn the fundamentals of mixology and create classic cocktails</p>
                 <div class="space-y-2 mb-4">
-                  <div class="flex items-center text-body">
-                    <span class="mr-2">⏱</span> {workshop.duration}
-                  </div>
-                  <div class="flex items-center text-body">
-                    <span class="mr-2">👥</span> {workshop.minParticipants}-{workshop.maxParticipants} participants
-                  </div>
+                  <div class="flex items-center text-body"><span class="mr-2">⏱</span> 2 hours</div>
+                  <div class="flex items-center text-body"><span class="mr-2">👥</span> 2-6 participants</div>
                 </div>
-
                 <div class="flex justify-between items-center mt-auto">
-                  <span class="font-bold text-accent" style="color: #FF6B35;">{workshop.price}</span>
-                  <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">
-                    Book now →
-                  </a>
+                  <span class="font-bold text-accent" style="color: #FF6B35;">฿3,500</span>
+                  <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">Book now →</a>
                 </div>
-              </div>
-            ))}
+            </div>
+             <div class="card-2026 p-6 group">
+                <div class="text-4xl mb-4">🧪</div>
+                <h3 class="text-heading mb-3 group-hover:text-accent transition-colors">Creative Mixology</h3>
+                <p class="text-body mb-4">Explore innovative techniques and create signature drinks</p>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center text-body"><span class="mr-2">⏱</span> 3 hours</div>
+                  <div class="flex items-center text-body"><span class="mr-2">👥</span> 2-4 participants</div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <span class="font-bold text-accent" style="color: #FF6B35;">฿4,500</span>
+                  <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">Book now →</a>
+                </div>
+            </div>
+             <div class="card-2026 p-6 group">
+                <div class="text-4xl mb-4">🎉</div>
+                <h3 class="text-heading mb-3 group-hover:text-accent transition-colors">Private Bar Experience</h3>
+                <p class="text-body mb-4">Custom cocktail menu for your private event with professional service</p>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center text-body"><span class="mr-2">⏱</span> 4+ hours</div>
+                  <div class="flex items-center text-body"><span class="mr-2">👥</span> 10-30 participants</div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <span class="font-bold text-accent" style="color: #FF6B35;">Starting ฿15,000</span>
+                  <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">Book now →</a>
+                </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Equipment Section -->
-      <section class="section-padding">
+       <section class="section-padding">
         <div class="container mx-auto container-wide">
           <div class="text-center mb-12">
             <h2 class="text-display-md mb-4">Recommended Equipment</h2>
@@ -143,17 +112,28 @@ export const prerender = true;
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {equipment.map((item) => (
               <div class="glass-card p-6 text-center">
                 <div class="text-4xl mb-4">🍹</div>
-                <h3 class="text-heading mb-3">{item.name}</h3>
-                <p class="text-body mb-4">{item.description}</p>
-                <span class="font-bold text-accent" style="color: #FF6B35;">{item.price}</span>
+                <h3 class="text-heading mb-3">Professional Shaker Set</h3>
+                <p class="text-body mb-4">High-quality stainless steel Boston shaker with strainer</p>
+                <span class="font-bold text-accent" style="color: #FF6B35;">฿1,800</span>
               </div>
-            ))}
+              <div class="glass-card p-6 text-center">
+                <div class="text-4xl mb-4">📏</div>
+                <h3 class="text-heading mb-3">Japanese Jigger</h3>
+                <p class="text-body mb-4">Precision measuring tool for perfect proportions</p>
+                <span class="font-bold text-accent" style="color: #FF6B35;">฿850</span>
+              </div>
+              <div class="glass-card p-6 text-center">
+                <div class="text-4xl mb-4">🥄</div>
+                <h3 class="text-heading mb-3">Bar Spoon Set</h3>
+                <p class="text-body mb-4">Professional bar spoons for stirring cocktails</p>
+                <span class="font-bold text-accent" style="color: #FF6B35;">฿950</span>
+              </div>
           </div>
         </div>
       </section>
+
 
       <!-- CTA Section -->
       <section class="section-padding" style="background: #FF6B35;">

@@ -1,5 +1,5 @@
 /* ===========================================
-  //   🔱 Soul-Brews 2026 Design System
+   🔱 ClubsxAI 2026 Design System
    Trend: Neo-Brutalism meets Soft Elegance
    =========================================== */
 
@@ -145,6 +145,14 @@ body {
   animation: slide-up 0.6s ease-out forwards;
 }
 
+.animate-scan-y {
+  animation: scan-y 3s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
 .animate-fade-in {
   animation: fade-in 0.5s ease-out forwards;
 }
@@ -176,20 +184,6 @@ body {
 .btn-secondary {
   @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
   @apply border-2 border-white/20 text-white hover:bg-white/5;
-}
-
-@keyframes slow-zoom {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.animate-slow-zoom {
-  animation: slow-zoom 20s infinite alternate ease-in-out;
 }
 
 .btn-ghost {
@@ -239,10 +233,6 @@ body {
   @apply text-3xl md:text-4xl font-light tracking-tight;
 }
 
-.text-display-sm {
-  @apply text-2xl md:text-3xl font-light tracking-tight;
-}
-
 .text-heading {
   @apply text-xl md:text-2xl font-medium;
 }
@@ -261,7 +251,7 @@ body {
 
 /* ===== SECTION UTILITIES ===== */
 .section-padding {
-  @apply py-20 md:py-32 px-6;
+  @apply py-12 md:py-20 px-6;
 }
 
 .container-narrow {
@@ -311,4 +301,56 @@ body {
 ::selection {
   background: rgba(255, 107, 53, 0.3);
   color: white;
+}
+
+@keyframes scan-y {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(400px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }

@@ -5,19 +5,15 @@ import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
 
-const title = "รู้จัก Bo Clubs - ช่างภาพกรุงเทพ และผู้สถาปนา Clubs by Bo";
+const title = "รู้จัก Bo - Founder of ClubsxAI | ช่างภาพกรุงเทพ & Event";
 const description = "ทำความรู้จักกับ Bo ช่างภาพกรุงเทพที่เชี่ยวชาญการรับถ่ายภาพ Portrait และ Event ด้วยสไตล์พรีเมียม Moody ส่งรูปด่วนภายใน 24 ชม.";
-
-// Bo's Real Photo - saved locally from Vercel
-const boPhoto = "/bo-photo.png";
-
-export const prerender = true;
+const keywords = "ประวัติช่างภาพ, Bo Clubs, ช่างภาพกรุงเทพ, ช่างภาพ Portrait, สไตล์ Moody, รับถ่ายภาพบุคคล, ช่างภาพ Event, ClubsxAI";
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description} keywords={keywords} image="/images/bo_red_neon_portrait.png">
     <Navbar client:load />
     
-    <main class="min-h-screen pt-24">
+    <main class="min-h-screen pt-16 md:pt-20">
       <!-- Hero Section -->
       <section class="section-padding gradient-mesh">
         <div class="container mx-auto container-narrow text-center">
@@ -31,22 +27,24 @@ export const prerender = true;
       <section class="section-padding">
         <div class="container mx-auto container-wide">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Image Side - Bo's Real Photo from Vercel -->
+            <!-- Image Side - Bo's Real Photo -->
             <div class="relative flex justify-center">
               <div class="relative">
                 <!-- Profile Photo -->
                 <div class="w-80 h-auto md:w-96 rounded-3xl overflow-hidden border-4 border-white/10" style="box-shadow: 0 0 60px rgba(255,107,53,0.3);">
-                  <img 
-                    src={boPhoto}
-                    alt="Bo - Clubs by Bo Photographer"
-                    class="w-full h-auto object-cover"
-                    loading="eager"
-                  />
-                </div>
+	                  <img
+	                    src="/images/bo_red_neon_portrait.png"
+	                    alt="Bo - Club S Photographer"
+	                    class="w-full h-auto object-cover"
+	                    width="682"
+	                    height="1024"
+	                    loading="eager"
+	                  />
+	                </div>
                 
                 <!-- Floating Badge -->
                 <div class="absolute -bottom-4 -right-4 glass-card px-6 py-4">
-                  <p class="text-accent font-bold text-2xl" style="color: #FF6B35;">5+ Years</p>
+                  <p class="text-accent font-bold text-2xl" style="color: #FF6B35;">10+ Years</p>
                   <p class="text-body text-sm">Professional Experience</p>
                 </div>
 
@@ -63,7 +61,7 @@ export const prerender = true;
               <h2 class="text-display-md">สวัสดีครับ, ผมโบ 👋</h2>
               
               <p class="text-body-lg">
-                ข้าพเจ้าคือช่างภาพกรุงเทพ (Bangkok Portrait Photographer) ผู้สถาปนา "Clubs by Bo" เพื่อส่งมอบภาพลักษณ์ที่สั่นสะเทือนความรู้สึกและสะท้อนอธิปไตยในตัวคุณ
+                ข้าพเจ้าคือช่างภาพกรุงเทพ (Bangkok Portrait Photographer) ผู้สถาปนา "ClubsxAI" เพื่อส่งมอบภาพลักษณ์ที่สั่นสะเทือนความรู้สึกและสะท้อนอธิปไตยในตัวคุณ
               </p>
               
               <p class="text-body">
@@ -94,7 +92,7 @@ export const prerender = true;
         <div class="container mx-auto container-wide">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div class="glass-card p-6 text-center">
-              <p class="text-3xl font-bold text-accent mb-2" style="color: #FF6B35;">10,000+</p>
+              <p class="text-3xl font-bold text-accent mb-2" style="color: #FF6B35;">1,000,000+</p>
               <p class="text-body">Photos Delivered</p>
             </div>
             <div class="glass-card p-6 text-center">
@@ -153,19 +151,21 @@ export const prerender = true;
 
           <div class="glass-card p-0 overflow-hidden relative group">
             <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
-            <img 
-              src="/images/gear_mastery_showcase_png_1767329800970.png" 
-              alt="Bo's Gear Mastery Kit" 
-              class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-[10s] ease-linear"
-            />
+	            <img loading="lazy" 
+	              src="/images/bo_gear_mastery_kit.png" 
+	              alt="Bo's Gear Mastery Kit - SONY A7III & A7C with G-Master Lenses" 
+	              width="1024"
+	              height="1024"
+	              class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-[10s] ease-linear"
+	            />
             <div class="absolute inset-0 z-20 flex items-center p-12">
               <div class="max-w-md">
                 <h3 class="text-display-sm mb-4">The Mastery Kit</h3>
-                <p class="text-body mb-6">ข้าพเจ้าเลือกใช้ SONY A7III พร้อมเลนส์ตระกูล G-Master เพื่อสลักเสลาทุกรายละเอียดให้คมชัดและมี Vibe ที่เหนือกาลเวลา</p>
+                <p class="text-body mb-6">ข้าพเจ้าเลือกใช้ SONY A7III และ A7C พร้อมเลนส์ตระกูล G-Master เพื่อสลักเสลาทุกรายละเอียดให้คมชัดและมี Vibe ที่เหนือกาลเวลา</p>
                 <div class="grid grid-cols-2 gap-4">
                   <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10">
                     <p class="text-accent text-xs uppercase tracking-widest mb-1">Body</p>
-                    <p class="text-white font-bold">SONY A7III</p>
+                    <p class="text-white font-bold">SONY A7III & A7C</p>
                   </div>
                   <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10">
                     <p class="text-accent text-xs uppercase tracking-widest mb-1">Vision</p>

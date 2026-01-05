@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import '../../styles/globals.css';
+
+// 1. Generate static paths for all blog posts
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+// 2. Get the entry from props
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const tags = entry.data.tags || [];
+const keywords = tags.join(', ') + ", ClubsxAI, Bo Clubs, Photography Blog";
+---
+
+<BaseLayout 
+  title={`${entry.data.title} | ClubsxAI Blog`}
+  description={entry.data.description}
+  keywords={keywords}
+  image={entry.data.image}
+>
+  <Navbar client:load />
+
+  <main class="min-h-screen pt-24 bg-black">
+    <article>
+      <!-- Post Header -->
+      <header class="relative py-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/80 to-black z-10"></div>
+          {entry.data.image && (
+             <img loading="lazy" src={entry.data.image} alt="" aria-hidden="true" class="w-full h-full object-cover opacity-50" />
+          )}
+        </div>
+
+        <div class="container mx-auto container-narrow relative z-20 text-center">
+          <div class="flex items-center justify-center gap-2 mb-6">
+            <span class="px-3 py-1 rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-medium backdrop-blur-md">
+              {tags[0]}
+            </span>
+            <span class="text-white/80 text-sm backdrop-blur-md px-2 rounded">
+              {entry.data.pubDate.toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </span>
+          </div>
+          
+          <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            {entry.data.title}
+          </h1>
+          
+          <p class="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            {entry.data.description}
+          </p>
+
+          <div class="flex items-center justify-center gap-3 mt-8">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20">
+              <img loading="lazy" src="/images/bo_neon_purple_portrait.png" alt="Bo" width="682" height="1024" class="w-full h-full object-cover" />
+            </div>
+            <div class="text-left">
+              <p class="text-white text-sm font-medium">{entry.data.author}</p>
+              <p class="text-white/40 text-xs">ClubsxAI Founder</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Post Content -->
+      <div class="container mx-auto container-narrow px-6 py-12">
+        <div class="prose prose-invert prose-lg mx-auto prose-headings:font-bold prose-headings:text-white prose-p:text-white/80 prose-a:text-[#FF6B35] prose-strong:text-white prose-li:text-white/80">
+          <Content />
+        </div>
+        
+        <!-- Tags -->
+        <div class="mt-12 pt-8 border-t border-white/10">
+          <p class="text-sm text-white/40 mb-4">Tags:</p>
+          <div class="flex flex-wrap gap-2">
+            {tags.map(tag => (
+              <a href="/blog" class="px-4 py-2 rounded-lg bg-white/5 text-white/70 hover:bg-[#FF6B35]/20 hover:text-[#FF6B35] transition-colors text-sm">
+                #{tag}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- CTA at bottom of article -->
+    <section class="section-padding border-t border-white/10 bg-white/5">
+      <div class="container mx-auto container-narrow text-center">
+        <h2 class="text-2xl font-bold mb-4">Ready to create your own story?</h2>
+        <p class="text-white/70 mb-8">Book a session with Bo today and let's make magic happen.</p>
+        <a href="/contact" class="btn-primary">Book Now</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>

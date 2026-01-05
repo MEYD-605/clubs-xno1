@@ -5,52 +5,17 @@ import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
 
-const title = "Bo's AI Lab | Club S by Bo";
-const description = "AI tools and automation workflows for creators and businesses";
-
-const aiServices = [
-  {
-    title: "Workflow Automation",
-    description: "Custom n8n workflows to automate your business processes",
-    icon: "⚡",
-    comingSoon: false,
-  },
-  {
-    title: "AI Prompt Engineering",
-    description: "Expert prompt design for optimal AI-generated content",
-    icon: "✨",
-    comingSoon: false,
-  },
-  {
-    title: "Custom AI Assistants",
-    description: "Tailored AI assistants for your specific business needs",
-    icon: "🤖",
-    comingSoon: false,
-  },
-  {
-    title: "AI Integration",
-    description: "Seamlessly integrate AI capabilities into your existing systems",
-    icon: "🔗",
-    comingSoon: false,
-  },
-];
-
-const tools = [
-  { name: "n8n", description: "Fair-code licensed workflow automation tool with 200+ integrations", link: "https://n8n.io/" },
-  { name: "Make.com", description: "Visual platform to design, build, and automate anything", link: "https://make.com/" },
-  { name: "OpenAI", description: "Leading AI research lab behind GPT models", link: "https://openai.com/" },
-  { name: "Midjourney", description: "AI image generation tool for creating stunning visuals", link: "https://midjourney.com/" },
-];
-
-export const prerender = true;
+const title = "Bo's AI Lab | ClubsxAI";
+const description = "AI tools, Automation Workflows (n8n, Make), and Prompt Engineering for creators and businesses by Bo.";
+const keywords = "AI Automation, n8n workflow, Make.com, AI Prompt Engineering, สอนใช้ AI, ลดเวลาทำงานด้วย AI, Business Automation, Bo AI Lab";
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description} keywords={keywords} image="/images/bo_neon_purple_portrait.png">
     <Navbar client:load />
     
-    <main class="min-h-screen pt-24">
+    <main class="min-h-screen pt-16 md:pt-20">
       <!-- Hero Section -->
-      <section class="section-padding gradient-mesh">
+      <section class="pt-8 md:pt-12 pb-20 md:pb-24 gradient-mesh">
         <div class="container mx-auto container-wide">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -73,11 +38,13 @@ export const prerender = true;
 
             <div class="relative">
               <div class="aspect-[3/4] rounded-3xl overflow-hidden" style="box-shadow: 0 0 60px rgba(255,107,53,0.2);">
-                <img 
-                  src="/bo-photo.png"
-                  alt="Bo with AI concept"
-                  class="w-full h-full object-cover"
-                />
+	                <img loading="lazy" 
+	                  src="/images/bo_neon_purple_portrait.png"
+	                  alt="Bo with AI concept"
+	                  width="682"
+	                  height="1024"
+	                  class="w-full h-full object-cover"
+	                />
               </div>
             </div>
           </div>
@@ -93,23 +60,30 @@ export const prerender = true;
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aiServices.map((service) => (
               <div class="card-2026 p-8 relative">
-                {service.comingSoon && (
-                  <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-sm font-medium" style="background: rgba(255,107,53,0.2); color: #FF6B35;">
-                    Coming Soon
-                  </div>
-                )}
-                <div class="text-4xl mb-6">{service.icon}</div>
-                <h3 class="text-heading mb-3">{service.title}</h3>
-                <p class="text-body mb-6">{service.description}</p>
-                {!service.comingSoon && (
-                  <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">
-                    Learn more →
-                  </a>
-                )}
+                <div class="text-4xl mb-6">⚡</div>
+                <h3 class="text-heading mb-3">Workflow Automation</h3>
+                <p class="text-body mb-6">Custom n8n workflows to automate your business processes</p>
+                <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">Learn more →</a>
               </div>
-            ))}
+              <div class="card-2026 p-8 relative">
+                <div class="text-4xl mb-6">✨</div>
+                <h3 class="text-heading mb-3">AI Prompt Engineering</h3>
+                <p class="text-body mb-6">Expert prompt design for optimal AI-generated content</p>
+                <a href="/contact" class="text-accent hover:underline" style="color: #FF6B35;">Learn more →</a>
+              </div>
+              <div class="card-2026 p-8 relative">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-sm font-medium" style="background: rgba(255,107,53,0.2); color: #FF6B35;">Coming Soon</div>
+                <div class="text-4xl mb-6">🤖</div>
+                <h3 class="text-heading mb-3">Custom AI Assistants</h3>
+                <p class="text-body mb-6">Tailored AI assistants for your specific business needs</p>
+              </div>
+              <div class="card-2026 p-8 relative">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-sm font-medium" style="background: rgba(255,107,53,0.2); color: #FF6B35;">Coming Soon</div>
+                <div class="text-4xl mb-6">🔗</div>
+                <h3 class="text-heading mb-3">AI Integration</h3>
+                <p class="text-body mb-6">Seamlessly integrate AI capabilities into your existing systems</p>
+              </div>
           </div>
         </div>
       </section>
@@ -123,17 +97,22 @@ export const prerender = true;
           </div>
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {tools.map((tool) => (
-              <a 
-                href={tool.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="glass-card p-6 text-center hover-lift"
-              >
-                <h3 class="text-lg font-bold mb-2">{tool.name}</h3>
-                <p class="text-body text-sm">{tool.description}</p>
+              <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 text-center hover-lift">
+                <h3 class="text-lg font-bold mb-2">n8n</h3>
+                <p class="text-body text-sm">Fair-code licensed workflow automation tool with 200+ integrations</p>
               </a>
-            ))}
+               <a href="https://make.com/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 text-center hover-lift">
+                <h3 class="text-lg font-bold mb-2">Make.com</h3>
+                <p class="text-body text-sm">Visual platform to design, build, and automate anything</p>
+              </a>
+               <a href="https://openai.com/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 text-center hover-lift">
+                <h3 class="text-lg font-bold mb-2">OpenAI</h3>
+                <p class="text-body text-sm">Leading AI research lab behind GPT models</p>
+              </a>
+               <a href="https://midjourney.com/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 text-center hover-lift">
+                <h3 class="text-lg font-bold mb-2">Midjourney</h3>
+                <p class="text-body text-sm">AI image generation tool for creating stunning visuals</p>
+              </a>
           </div>
         </div>
       </section>
@@ -142,74 +121,34 @@ export const prerender = true;
       <section class="section-padding gradient-dark">
         <div class="container mx-auto container-wide">
           <div class="text-center mb-12">
-            <h2 class="text-display-md mb-4">Automation Case Studies</h2>
-            <p class="text-body-lg">ตัวอย่างความสำเร็จจากการใช้พลัง AI และ Automation ในโลกจริง</p>
+            <h2 class="text-display-md mb-4">Automation Examples</h2>
+            <p class="text-body-lg">Real-world examples of how I've used AI and automation to solve problems</p>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="glass-card p-8 border-t-2 border-orange-400">
-              <div class="text-sm font-mono text-orange-400 mb-4">PROJECT #001: PHOTOGRAPHY PIPELINE</div>
-              <h3 class="text-heading mb-4">ระบบจัดการลูกค้าช่างภาพอัตโนมัติ</h3>
-              <p class="text-body mb-6">
-                สถาปนาระบบอัจฉริยะที่จัดการตั้งแต่การรับจดหมาย (Form), ส่งใบเสนอราคา, จองวันลง Google Calendar ไปจนถึงการสร้างโฟลเดอร์ส่งงานใน Dropbox ทันทีที่ลูกค้าชำระเงิน
+            <div class="glass-card p-6">
+              <h3 class="text-heading mb-3">Photography Client Workflow</h3>
+              <p class="text-body mb-4">
+                Automated client onboarding, scheduling, and delivery process for my photography business, saving 10+ hours per week.
               </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10">n8n</span>
-                <span class="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10">Line Notify</span>
-                <span class="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10">Stripe</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,107,53,0.1);">n8n</span>
+                <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,107,53,0.1);">Google Calendar</span>
+                <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,107,53,0.1);">Airtable</span>
               </div>
-              <div class="text-orange-400 font-bold">ผลลัพธ์: ลดเวลาทำงานแอดมิน 12 ชม./สัปดาห์</div>
             </div>
 
-            <div class="glass-card p-8 border-t-2 border-blue-400">
-              <div class="text-sm font-mono text-blue-400 mb-4">PROJECT #002: AI CONTENT AGENT</div>
-              <h3 class="text-heading mb-4">หุ่นยนต์ผลิตคอนเทนต์และวิเคราะห์เทรนด์</h3>
-              <p class="text-body mb-6">
-                สร้าง AI Agent ที่ทำหน้าที่คอยสแกนเทรนด์จาก TikTok และ Facebook ในทุกๆ เช้า แล้วทำการร่าง (Draft) หัวข้อรีวิวและสคริปต์วิดีโอส่งเข้ามือถือโดยอัตโนมัติ
+            <div class="glass-card p-6">
+              <h3 class="text-heading mb-3">AI Content Generation System</h3>
+              <p class="text-body mb-4">
+                Built a custom system to generate, review, and schedule social media content using AI, reducing content creation time by 70%.
               </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10">Gemma 2</span>
-                <span class="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10">Make.com</span>
-                <span class="px-3 py-1 rounded-full text-xs bg-white/5 border border-white/10">RSS Parser</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,107,53,0.1);">OpenAI</span>
+                <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,107,53,0.1);">Make.com</span>
+                <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,107,53,0.1);">Instagram API</span>
               </div>
-              <div class="text-blue-400 font-bold">ผลลัพธ์: เพิ่มยอด Reach ด้วยคอนเทนต์ทันถ่วงที</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- AI Tool Shop Section -->
-      <section class="section-padding" style="background: rgba(255,107,53,0.05); border-top: 1px solid rgba(255,107,53,0.1);">
-        <div class="container mx-auto container-wide">
-          <div class="text-center mb-12">
-            <h2 class="text-display-md mb-4">Under Development: AI Tool Shop</h2>
-            <p class="text-body-lg max-w-2xl mx-auto">
-              ข้าพเจ้า (Oracle) กำลังรวบรวมและพัฒนาชุดเครื่องมือ AI สำเร็จรูปเพื่อยกระดับเหล่า Creator ครับ
-            </p>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 border-b-2 border-orange-500/30">
-              <h4 class="font-bold text-white mb-2">Prompt Master Set for Portrait</h4>
-              <p class="text-body text-sm mb-4">ชุด Prompt คำสั่งสำหรับ Midjourney และ Stable Diffusion เพื่อสร้างโทนภาพบุคคลระดับไฮเอนด์</p>
-              <span class="text-accent text-xs font-mono">STATUS: 85% SYNCED</span>
-            </div>
-            <div class="glass-card p-6 border-b-2 border-blue-500/30">
-              <h4 class="font-bold text-white mb-2">n8n Automation Blueprints</h4>
-              <p class="text-body text-sm mb-4">Template สำเร็จรูปสำหรับระบบจัดการลูกค้าและส่งรูปอัตโนมัติที่ Bo ใช้จริง</p>
-              <span class="text-blue-400 text-xs font-mono">STATUS: TESTING PHASE</span>
-            </div>
-            <div class="glass-card p-6 border-b-2 border-pink-500/30">
-              <h4 class="font-bold text-white mb-2">AI Color Grading LUTs</h4>
-              <p class="text-body text-sm mb-4">ชุดสีที่ถูกคำนวณด้วย AI เพื่อให้สกินโทนสวยงามสไตล์ Soul-Brews</p>
-              <span class="text-pink-400 text-xs font-mono">STATUS: CORE DESIGN</span>
-            </div>
-          </div>
-
-          <div class="text-center mt-12">
-            <a href="/contact" class="btn-primary">
-              Join the Launch List
-            </a>
           </div>
         </div>
       </section>

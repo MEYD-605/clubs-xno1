@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "react" // Placeholder
 import { ShoppingCart } from "lucide-react"
 
 export default function ProductSection() {
@@ -40,7 +41,7 @@ export default function ProductSection() {
       },
       {
         id: "prod-006",
-        name: "Clubs Notebook",
+        name: "Club S Notebook",
         price: 19,
         image: "/placeholder.svg?height=600&width=600",
         featured: false,
@@ -49,7 +50,7 @@ export default function ProductSection() {
     apparel: [
       {
         id: "prod-002",
-        name: "Clubs Signature T-Shirt",
+        name: "Club S Signature T-Shirt",
         price: 35,
         image: "/placeholder.svg?height=600&width=600",
         featured: true,
@@ -71,10 +72,11 @@ export default function ProductSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-2 rounded-lg transition-all duration-300 ${activeTab === tab.id
-                ? "bg-clubs-primary text-white shadow-soft"
-                : "text-clubs-text hover:bg-clubs-light hover:text-clubs-primary"
-                }`}
+              className={`px-6 py-2 rounded-lg transition-all duration-300 ${
+                activeTab === tab.id
+                  ? "bg-clubs-primary text-white shadow-soft"
+                  : "text-clubs-text hover:bg-clubs-light hover:text-clubs-primary"
+              }`}
             >
               {tab.label}
             </button>
@@ -89,10 +91,12 @@ export default function ProductSection() {
             className={`product-card p-6 hover-lift ${product.featured ? "product-card-featured" : ""}`}
           >
             <div className="relative h-64 mb-6 rounded-lg overflow-hidden bg-clubs-light">
-              <img
+              <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
-                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                fill
+                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="flex justify-between items-start">

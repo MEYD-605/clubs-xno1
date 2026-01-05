@@ -53,7 +53,7 @@ export default function ChatButton() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 md:w-96 bg-white rounded-3xl shadow-xl z-40 overflow-hidden border-2 border-coral/20">
+        <div className="fixed bottom-24 left-4 right-4 sm:left-auto sm:right-6 sm:w-80 md:w-96 bg-white rounded-3xl shadow-xl z-40 overflow-hidden border-2 border-coral/20">
           <div className="bg-coral text-white p-4 rounded-t-3xl">
             <h3 className="font-bold">Chat with Bo</h3>
             <p className="text-sm opacity-90">I usually respond within an hour</p>
@@ -83,11 +83,13 @@ export default function ChatButton() {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your message..."
                 className="flex-grow px-4 py-2 rounded-l-full border border-gray-300 focus:outline-none focus:border-coral"
+                aria-label="Type your message"
               />
               <button
                 type="submit"
                 className="bg-coral text-white px-4 py-2 rounded-r-full hover:bg-coral/90"
                 disabled={!message.trim()}
+                aria-label="Send message"
               >
                 <Send className="h-5 w-5" />
               </button>

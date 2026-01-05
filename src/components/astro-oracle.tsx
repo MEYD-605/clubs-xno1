@@ -183,8 +183,8 @@ export default function AstroOracle() {
       setIsRevealed(true)
 
       try {
-        const GATEWAY_URL = import.meta.env.PUBLIC_GATEWAY_URL || ""
-        const API_KEY = import.meta.env.PUBLIC_GATEWAY_KEY || ""
+        const GATEWAY_URL = process.env.NEXT_PUBLIC_GATEWAY_URL || ""
+        const API_KEY = process.env.NEXT_PUBLIC_GATEWAY_KEY || ""
 
         if (GATEWAY_URL) {
           const res = await fetch(`${GATEWAY_URL}/api/brain`, {
@@ -194,7 +194,7 @@ export default function AstroOracle() {
               'Authorization': `Bearer ${API_KEY}`
             },
             body: JSON.stringify({
-              prompt: `Provide a mystical and creative astrological reading for a ${foundSign.name} (Element: ${foundSign.element}, Traits: ${foundSign.traits.join(', ')}). The user was born on ${birthdate}. Make it inspiring and related to Soul-Brews philosophy of autonomy and creativity.`,
+              prompt: `Provide a mystical and creative astrological reading for a ${foundSign.name} (Element: ${foundSign.element}, Traits: ${foundSign.traits.join(', ')}). The user was born on ${birthdate}. Make it inspiring and related to ClubsxAI philosophy of autonomy and creativity.`,
               model: 'god-lite'
             })
           });
