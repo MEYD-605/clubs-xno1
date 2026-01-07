@@ -13,18 +13,13 @@ export default defineConfig({
 
   // Astro 5.0: Default is static, opt-in to SSR per page
   output: 'static',
+  // Image optimization (passthrough for stability)
   adapter: cloudflare({
+    imageService: 'passthrough',
     platformProxy: {
       enabled: true,
     },
   }),
-
-  // Image optimization (compile time for Cloudflare)
-  image: {
-    service: {
-      entrypoint: 'astro/assets/services/sharp'
-    }
-  },
 
   build: {
     assets: '_assets'

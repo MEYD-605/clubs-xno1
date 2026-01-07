@@ -7,6 +7,8 @@ import GalleryPreview from '../components/gallery-preview';
 import Testimonials from '../components/testimonials';
 import AchievementPopup from '../components/achievement-popup';
 import FreeToolsWidget from '../components/free-tools-widget';
+import FAQ from '../components/faq';
+import ScrollReveal from '../components/scroll-reveal';
 import '../styles/globals.css';
 import { Image } from 'astro:assets';
 import heroImage from '../assets/images/bo_snake_portrait_hero.jpg';
@@ -15,9 +17,9 @@ import service1Image from '../assets/images/portfolio_outdoor_black_dress.jpg';
 import service2Image from '../assets/images/portfolio_wedding_bride_champagne.jpg';
 import service3Image from '../assets/images/portfolio_bartender_cocktail_mix.jpg';
 
-const title = "ClubsxAI | ช่างภาพกรุงเทพ - รับถ่ายภาพบุคคลและอีเว้นท์ระดับพรีเมียม";
-const description = "ช่างภาพที่มี Vibe พรีเมียมที่สุดในกรุงเทพ รับถ่ายภาพบุคคล Portrait, Event และงานสร้างสรรค์ ส่งรูปด่วนภายใน 24 ชม.";
-const keywords = "ช่างภาพกรุงเทพ, รับถ่ายภาพ, Portrait Photographer Bangkok, ช่างภาพ Event, หาช่างภาพ, ClubsxAI, ClubsxAI";
+const title = "ClubsxAI | ช่างภาพ Portrait กรุงเทพ ส่งรูปด่วนภายใน 24 ชม. (Premium Moody Style)";
+const description = "ช่างภาพ Portrait กรุงเทพ โดย Bo Clubs ✨ ส่งรูปไว 24 ชม. ทุกแพ็กเกจ เรทเริ่มต้น 1,500.- สถาปนาภาพลักษณ์ผู้บริหารและบุคคลให้ดูแพงที่สุดในย่านนี้";
+const keywords = "ช่างภาพ Portrait กรุงเทพ, รับถ่ายภาพบุคคล, ถ่ายภาพโปรไฟล์ผู้บริหาร, ช่างภาพส่งรูปไว, ClubsxAI, หาช่างภาพกรุงเทพ แนะนำ";
 ---
 
 <BaseLayout title={title} description={description} keywords={keywords}>
@@ -83,63 +85,73 @@ const keywords = "ช่างภาพกรุงเทพ, รับถ่า
       <!-- Introduction Section -->
       <section class="section-padding">
         <div class="container mx-auto container-narrow">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="relative group">
-              <div class="absolute -inset-4 bg-gradient-to-r from-orange-500 to-purple-600 rounded-xl opacity-20 group-hover:opacity-40 blur-xl transition-opacity duration-500"></div>
-              <div class="relative aspect-[3/4] rounded-xl overflow-hidden glass-card p-2">
-	                <Image
-	                  src={introImage}
-	                  alt="Bo - Founder and Lead Photographer at ClubsxAI | Red Neon Creative Portrait"
-	                  width={682}
-	                  height={1024}
-	                  class="w-full h-full object-cover rounded-lg"
-	                />
-	              </div>
+          <ScrollReveal client:visible>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-orange-500 to-purple-600 rounded-xl opacity-20 group-hover:opacity-40 blur-xl transition-opacity duration-500"></div>
+                <div class="relative aspect-[3/4] rounded-xl overflow-hidden glass-card p-2">
+                    <Image
+                      src={introImage}
+                      alt="Bo - Founder and Lead Photographer at ClubsxAI | Red Neon Creative Portrait"
+                      width={682}
+                      height={1024}
+                      class="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+              </div>
+              
+              <div>
+                <p class="text-accent text-sm uppercase tracking-widest mb-2">The Photographer</p>
+                <h2 class="text-display-md mb-6">ช่างภาพกรุงเทพ - ClubsxAI</h2>
+                <h3 class="text-xl font-medium text-white mb-4">เพราะการรับถ่ายภาพ ไม่ใช่แค่การกดชัตเตอร์ แต่คือการสถาปนา "ตัวตน" ให้ทรงพลัง</h3>
+                <p class="text-body mb-6">
+                  I help you see the version of you that you secretly admire. I don't just take your photo. 
+                  I guide you through the vibe, the light, and the magic. Every session is an experience—a moment where you discover something new about yourself.
+                </p>
+                <p class="text-body mb-8">
+                  ผมเชื่อว่าทุกคนมีความสวยงามในแบบของตัวเอง หน้าที่ของผมคือช่วยดึงมันออกมา ผ่านอุปกรณ์ระดับมืออาชีพ SONY A7III & A7C Mastery และการส่งรูปด่วนใน 24 ชม. ที่คุณหาจากที่ไหนไม่ได้
+                </p>
+                <a href="/about" class="text-accent hover:text-white transition-colors flex items-center gap-2 group">
+                  More about me 
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
             </div>
-            
-            <div>
-              <p class="text-accent text-sm uppercase tracking-widest mb-2">The Photographer</p>
-              <h2 class="text-display-md mb-6">ช่างภาพกรุงเทพ - ClubsxAI</h2>
-              <h3 class="text-xl font-medium text-white mb-4">เพราะการรับถ่ายภาพ ไม่ใช่แค่การกดชัตเตอร์ แต่คือการสถาปนา "ตัวตน" ให้ทรงพลัง</h3>
-              <p class="text-body mb-6">
-                I help you see the version of you that you secretly admire. I don't just take your photo. 
-                I guide you through the vibe, the light, and the magic. Every session is an experience—a moment where you discover something new about yourself.
-              </p>
-              <p class="text-body mb-8">
-                ผมเชื่อว่าทุกคนมีความสวยงามในแบบของตัวเอง หน้าที่ของผมคือช่วยดึงมันออกมา ผ่านอุปกรณ์ระดับมืออาชีพ SONY A7III & A7C Mastery และการส่งรูปด่วนใน 24 ชม. ที่คุณหาจากที่ไหนไม่ได้
-              </p>
-              <a href="/about" class="text-accent hover:text-white transition-colors flex items-center gap-2 group">
-                More about me 
-                <span class="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <!-- Latest Articles Section (NEW) -->
       <section class="section-padding bg-black/40">
         <div class="container mx-auto container-wide">
-          <div class="flex justify-between items-center mb-8">
-            <h2 class="text-display-sm">Latest from Blog</h2>
-            <a href="/blog" class="text-accent hover:text-white transition-colors">See all →</a>
-          </div>
+          <ScrollReveal direction="right" client:visible>
+            <div class="flex justify-between items-center mb-8">
+              <h2 class="text-display-sm">Latest from Blog</h2>
+              <a href="/blog" class="text-accent hover:text-white transition-colors">See all →</a>
+            </div>
+          </ScrollReveal>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/blog/2026-01-03_post-023546" class="glass-card p-6 block hover:bg-white/5 transition-colors">
-               <span class="text-sm text-accent mb-2 block">Photography</span>
-               <h3 class="text-xl font-bold mb-2">ทำไมต้องใช้ช่างภาพมืออาชีพ?</h3>
-               <p class="text-body text-sm line-clamp-2">5 เหตุผลที่การลงทุนกับช่างภาพมืออาชีพคุ้มค่าเสมอ</p>
-            </a>
-            <a href="/blog" class="glass-card p-6 block hover:bg-white/5 transition-colors">
-               <span class="text-sm text-[#3b82f6] mb-2 block">Tips</span>
-               <h3 class="text-xl font-bold mb-2">เตรียมตัวก่อนถ่าย Portrait</h3>
-               <p class="text-body text-sm line-clamp-2">เทคนิคการเตรียมผิวและเสื้อผ้าให้พร้อมที่สุด</p>
-            </a>
-             <a href="/blog" class="glass-card p-6 block hover:bg-white/5 transition-colors">
-               <span class="text-sm text-[#ec4899] mb-2 block">Style</span>
-               <h3 class="text-xl font-bold mb-2">หา Vibe ที่ใช่สำหรับคุณ</h3>
-               <p class="text-body text-sm line-clamp-2">ค้นหาตัวตนผ่าน Mood & Tone ของภาพถ่าย</p>
-            </a>
+            <ScrollReveal delay={0.2} client:visible>
+              <a href="/blog/2026-01-03_post-023546" class="glass-card p-6 block hover:bg-white/5 transition-colors">
+                <span class="text-sm text-accent mb-2 block">Photography</span>
+                <h3 class="text-xl font-bold mb-2">ทำไมต้องใช้ช่างภาพมืออาชีพ?</h3>
+                <p class="text-body text-sm line-clamp-2">5 เหตุผลที่การลงทุนกับช่างภาพมืออาชีพคุ้มค่าเสมอ</p>
+              </a>
+            </ScrollReveal>
+            <ScrollReveal delay={0.4} client:visible>
+              <a href="/blog" class="glass-card p-6 block hover:bg-white/5 transition-colors">
+                <span class="text-sm text-[#3b82f6] mb-2 block">Tips</span>
+                <h3 class="text-xl font-bold mb-2">เตรียมตัวก่อนถ่าย Portrait</h3>
+                <p class="text-body text-sm line-clamp-2">เทคนิคการเตรียมผิวและเสื้อผ้าให้พร้อมที่สุด</p>
+              </a>
+            </ScrollReveal>
+            <ScrollReveal delay={0.6} client:visible>
+              <a href="/blog" class="glass-card p-6 block hover:bg-white/5 transition-colors">
+                <span class="text-sm text-[#ec4899] mb-2 block">Style</span>
+                <h3 class="text-xl font-bold mb-2">หา Vibe ที่ใช่สำหรับคุณ</h3>
+                <p class="text-body text-sm line-clamp-2">ค้นหาตัวตนผ่าน Mood & Tone ของภาพถ่าย</p>
+              </a>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -257,7 +269,24 @@ const keywords = "ช่างภาพกรุงเทพ, รับถ่า
       <!-- Testimonials Section -->
       <section class="section-padding bg-black/30">
         <div class="container mx-auto container-narrow">
-          <Testimonials client:visible />
+          <ScrollReveal client:visible>
+            <Testimonials client:visible />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <!-- FAQ Section (NEW) -->
+      <section class="section-padding">
+        <div class="container mx-auto container-narrow">
+          <ScrollReveal client:visible>
+            <div class="text-center mb-16">
+              <p class="text-accent text-sm uppercase tracking-[0.3em] mb-4">Questions</p>
+              <h2 class="text-display-md">คำถามที่ <span class="text-gradient">บอสถามบ่อย</span></h2>
+              <p class="text-body mt-4">เพราะความชัดเจน คือจุดเริ่มต้นของความพรีเมียม</p>
+            </div>
+            
+            <FAQ client:load />
+          </ScrollReveal>
         </div>
       </section>
 

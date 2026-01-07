@@ -5,12 +5,5 @@
     "pages_build_output_dir": "./dist",
     "compatibility_flags": [
         "nodejs_compat"
-    ],
-    "d1_databases": [
-        {
-            "binding": "DB",
-            "database_name": "clubs-xno1-db",
-            "database_id": "99637775583b3e81881765c9f13d80327f2f11c52bdbc3828d54c1533ad0374e"
-        }
     ]
 }
