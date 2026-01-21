@@ -7,11 +7,15 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMoreOpen, setIsMoreOpen] = useState(false)
+  const [isAiLab, setIsAiLab] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
+
+    // Check path for logo
+    setIsAiLab(window.location.pathname.includes('/ai-lab'))
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -25,7 +29,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="/" className="text-2xl font-bold text-white">
-            Clubsx<span className="text-orange-400">AI</span>
+            {isAiLab ? (
+              <span>Clubsx<span className="text-orange-400">AI</span></span>
+            ) : (
+              <span>Club<span className="text-orange-400">S</span></span>
+            )}
           </a>
 
           <nav className="hidden md:flex space-x-8">
