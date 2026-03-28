@@ -165,7 +165,7 @@ export default function VibeChecker() {
 
                     <div className="pt-4 flex justify-center">
                         <p className="text-[10px] text-white/30 text-center max-w-md italic">
-                            * รูปภาพทั้งหมดถูกประมวลผลบนเครื่องของคุณ ข้าพเจ้าไม่เก็บไฟล์ไว้บน Server เพื่อความลับสุดยอดของบอส
+                            * รูปภาพทั้งหมดถูกประมวลผลบนเครื่องของคุณ ผมไม่เก็บไฟล์ไว้บน Server ครับ
                         </p>
                     </div>
                 </div>

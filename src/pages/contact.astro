@@ -5,8 +5,8 @@ import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
 
-const title = "Contact | ClubsxAI Studio";
-const description = "Get in touch for booking or inquiries. ติดต่อจองถ่ายภาพ ClubsxAI Studio ราคาเริ่มต้น 1,500 บาท. ส่งงานด่วนใน 24 ชม.";
+const title = "จองคิวช่างภาพ กรุงเทพ | รับถ่ายภาพส่งด่วน 24 ชม. เริ่ม 1,500.- ClubsxAI";
+const description = "ติดต่อจองคิวช่างภาพ Portrait กรุงเทพ Club S รับถ่ายภาพบุคคล ถ่ายรูป 1,500 บาท ช่างภาพด่วนส่งรูปภายใน 24 ชม. จองผ่าน Line, Messenger หรือโทร 080-041-6403";
 const keywords = "ติดต่อช่างภาพ, จองคิวถ่ายรูป, ราคาช่างภาพ, Contact Photographer, Booking Portrait, ClubsxAI Price List";
 ---
 
@@ -18,8 +18,8 @@ const keywords = "ติดต่อช่างภาพ, จองคิวถ
       <section class="section-padding gradient-mesh">
         <div class="container mx-auto container-narrow text-center">
           <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Contact</p>
-          <h1 class="text-display-lg mb-6">Booking & <span class="text-accent italic">Inquiries</span></h1>
-          <p class="text-body-lg">พร้อมถ่ายรูปหรือมีคำถาม? ติดต่อมาได้เลยครับ (ส่งงานด่วนใน 24 ชม.)</p>
+          <h1 class="text-display-lg mb-6">จองคิว<span class="text-accent italic">ช่างภาพ</span>กรุงเทพ</h1>
+          <p class="text-body-lg">พร้อมถ่ายรูปหรือมีคำถาม? ติดต่อช่างภาพด่วนกรุงเทพ ถ่ายรูป 1,500 บาท ส่งรูปใน 24 ชม.</p>
         </div>
       </section>
 
@@ -48,18 +48,18 @@ const keywords = "ติดต่อช่างภาพ, จองคิวถ
                   </div>
                   <div>
                     <h4 class="font-medium text-white group-hover:text-[#0084FF] transition-colors">Facebook Messenger</h4>
-                    <p class="text-body">@clubsbybo (IB มาได้เลยครับ!)</p>
+                    <p class="text-body">Clubsharephoto (IB มาได้เลยครับ!)</p>
                   </div>
                 </a>
 
-                <a href="mailto:barboxar.khunbo@gmail.com"
+                <a href="mailto:share.photothailand@gmail.com"
                    class="glass-card p-6 flex items-center gap-4 hover:border-accent/50 transition-all group" style="--tw-border-opacity: 0.5;">
                   <div class="w-12 h-12 rounded-full bg-zinc-700 flex items-center justify-center">
                     <span class="text-2xl">📧</span>
                   </div>
                   <div>
                     <h4 class="font-medium text-white group-hover:text-accent transition-colors" style="--tw-text-opacity: 1;">Email</h4>
-                    <p class="text-body">barboxar.khunbo@gmail.com</p>
+                    <p class="text-body">share.photothailand@gmail.com</p>
                   </div>
                 </a>
 
@@ -113,12 +113,20 @@ const keywords = "ติดต่อช่างภาพ, จองคิวถ
                   <span class="text-4xl text-accent">✨</span>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-3">ได้รับข้อมูลแล้วครับ!</h3>
-                <p class="text-white/60 mb-8">ขอบคุณที่สนใจ ClubsxAI ครับ ข้าพเจ้าจะติดต่อกลับไปทาง Messenger หรือโทรหาโดยด่วนที่สุดครับ</p>
+                <p class="text-white/60 mb-8">ขอบคุณที่สนใจ ClubsxAI ครับ ผมจะติดต่อกลับทาง Messenger หรือโทรหาโดยเร็วที่สุดครับ</p>
                 <button onclick="location.reload()" class="btn-secondary">ส่งข้อความเพิ่ม</button>
               </div>
 
-              <h3 class="text-heading mb-6">Send a Message</h3>
+              <h3 class="text-heading mb-6">ส่งข้อความหาผม</h3>
               <form id="contact-form" class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-white mb-2">ชื่อ *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-accent/50 transition-colors"
                     placeholder="คุณชื่ออะไร?"
                   />
                 </div>

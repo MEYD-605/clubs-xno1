@@ -59,8 +59,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center text-zinc-400">
                 <span className="mr-2">Email:</span>
-                <a href="mailto:barboxar.khunbo@gmail.com" className="hover:text-white transition-colors">
-                  barboxar.khunbo@gmail.com
+                <a href="mailto:share.photothailand@gmail.com" className="hover:text-white transition-colors">
+                  share.photothailand@gmail.com
                 </a>
               </li>
               <li className="flex items-center text-zinc-400">
@@ -74,8 +74,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-zinc-800 mt-8 pt-8 text-center text-zinc-500">
-          <p>&copy; {currentYear} ClubsxAI. All rights reserved.</p>
-          <p className="text-sm mt-2">Design & Technology by Clubs Tech</p>
+          <p className="text-sm mb-1">บริษัท โฟโต้ไทยแลนด์ จำกัด / Photo Thailand Co., Ltd.</p>
+          <p className="text-xs mb-1">583/5 ซ.พิบูลอุปถัมภ์ ถ.ลาดพร้าว 48 แขวงสามเสนนอก เขตห้วยขวาง กรุงเทพ 10310</p>
+          <p className="text-xs mb-3">Tax ID: 0-1055-64100-89-1</p>
+          <p>&copy; {currentYear} CLUBS. All rights reserved.</p>
         </div>
       </div>
     </footer>
