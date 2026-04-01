@@ -8,8 +8,11 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMoreOpen, setIsMoreOpen] = useState(false)
   const [isAiLab, setIsAiLab] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
@@ -20,6 +23,22 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Don't render interactive elements until mounted (prevents hydration mismatch)
+  if (!mounted) {
+    return (
+      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <a href="/" className="text-2xl font-bold text-white">
+              <span>Club<span className="text-orange-400">S</span></span>
+            </a>
+            <div className="w-12 h-12"></div> {/* Placeholder for menu button */}
+          </div>
+        </div>
+      </header>
+    )
+  }
 
   return (
     <header
@@ -125,7 +144,11 @@ export default function Navbar() {
 
           <button
             className="md:hidden text-white p-3 -m-3 min-h-[44px] min-w-[44px]"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              console.log('Menu button clicked, current state:', isMenuOpen)
+              setIsMenuOpen(!isMenuOpen)
+              console.log('Menu state set to:', !isMenuOpen)
+            }}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -134,8 +157,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-zinc-900/95 backdrop-blur-xl shadow-lg rounded-b-3xl border-t border-white/10">
+      <div className={`md:hidden absolute top-full left-0 right-0 bg-zinc-900/95 backdrop-blur-xl shadow-lg rounded-b-3xl border-t border-white/10 transition-opacity duration-200 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
           <nav className="flex flex-col py-4">
             <a href="/" className="px-4 py-3 text-white hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>
               Home
@@ -178,7 +200,6 @@ export default function Navbar() {
             </a>
           </nav>
         </div>
-      )}
     </header>
   )
 }

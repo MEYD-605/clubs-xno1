@@ -1,0 +1,218 @@
+---
+const { currentPath = '/' } = Astro.props;
+const isAiLab = Astro.url.pathname.includes('/ai-lab');
+---
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-white">
+        {isAiLab ? (
+          <span>Clubsx<span class="text-orange-400">AI</span></span>
+        ) : (
+          <span>Club<span class="text-orange-400">S</span></span>
+        )}
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="/" class:aria-current={currentPath === '/'} class="relative text-white hover:text-orange-400 transition-colors">
+          Home
+        </a>
+        <a href="/about" class:aria-current={currentPath === '/about'} class="relative text-white hover:text-orange-400 transition-colors">
+          About
+        </a>
+        <a href="/gallery" class:aria-current={currentPath === '/gallery'} class="relative text-white hover:text-orange-400 transition-colors">
+          Gallery
+        </a>
+        <a href="/services" class:aria-current={currentPath === '/services'} class="relative text-white hover:text-orange-400 transition-colors">
+          Services
+        </a>
+        <a href="/blog" class:aria-current={currentPath === '/blog'} class="relative text-white hover:text-orange-400 transition-colors">
+          Blog
+        </a>
+
+        <!-- More dropdown -->
+        <div class="relative group">
+          <button
+            id="more-dropdown-btn"
+            class="flex items-center text-white hover:text-orange-400 transition-colors"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+
+          <div
+            id="more-dropdown"
+            class="absolute right-0 mt-2 w-48 bg-zinc-900/95 backdrop-blur-xl rounded-xl shadow-lg py-2 transition-all duration-200 border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+          >
+            <a href="/bartender" class="block px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-orange-400">
+              Bartender
+            </a>
+            <a href="/ai-lab" class="block px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-orange-400">
+              AI Lab
+            </a>
+            <a href="/admin" class="block px-4 py-2 text-orange-400 hover:bg-zinc-800">
+              Command Center
+            </a>
+            <a href="/free-tools" class="block px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-orange-400">
+              Free Tools
+            </a>
+            <a href="/gear" class="block px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-orange-400">
+              Bo's Gear
+            </a>
+            <div class="border-t border-white/10 my-2"></div>
+            <a href="https://www.facebook.com/Clubsharephoto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-orange-400">
+              📘 Facebook
+            </a>
+            <a href="https://instagram.com/clubsbybo" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-orange-400">
+              📷 Instagram
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-white p-3 -m-3 min-h-[44px] min-w-[44px]"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden absolute top-full left-0 right-0 bg-zinc-900/95 backdrop-blur-xl shadow-lg rounded-b-3xl border-t border-white/10 transition-opacity duration-200 opacity-0 invisible"
+  >
+    <nav class="flex flex-col py-4">
+      <a href="/" class="px-4 py-3 text-white hover:bg-zinc-800">Home</a>
+      <a href="/about" class="px-4 py-3 text-white hover:bg-zinc-800">About</a>
+      <a href="/gallery" class="px-4 py-3 text-white hover:bg-zinc-800">Gallery</a>
+      <a href="/services" class="px-4 py-3 text-white hover:bg-zinc-800">Services</a>
+      <a href="/blog" class="px-4 py-3 text-white hover:bg-zinc-800">Blog</a>
+      <div class="border-t border-white/10 my-2"></div>
+      <p class="px-4 py-2 text-zinc-500 text-sm">More</p>
+      <a href="/bartender" class="px-4 py-3 text-white hover:bg-zinc-800">Bartender</a>
+      <a href="/ai-lab" class="px-4 py-3 text-white hover:bg-zinc-800">AI Lab</a>
+      <a href="/admin" class="px-4 py-3 text-orange-400 hover:bg-zinc-800">Command Center</a>
+      <a href="/free-tools" class="px-4 py-3 text-white hover:bg-zinc-800">Free Tools</a>
+      <a href="/gear" class="px-4 py-3 text-white hover:bg-zinc-800">Bo's Gear</a>
+      <div class="border-t border-white/10 my-2"></div>
+      <a href="https://www.facebook.com/Clubsharephoto" target="_blank" rel="noopener noreferrer" class="px-4 py-3 text-white hover:bg-zinc-800 flex items-center gap-2">
+        📘 Facebook
+      </a>
+      <a href="https://instagram.com/clubsbybo" target="_blank" rel="noopener noreferrer" class="px-4 py-3 text-white hover:bg-zinc-800 flex items-center gap-2">
+        📷 Instagram
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  let isScrolled = false;
+
+  window.addEventListener('scroll', () => {
+    const shouldScroll = window.scrollY > 10;
+    if (shouldScroll !== isScrolled) {
+      isScrolled = shouldScroll;
+      if (isScrolled) {
+        navbar.classList.remove('bg-transparent', 'py-6');
+        navbar.classList.add('bg-black/95', 'backdrop-blur-sm', 'shadow-md', 'py-3');
+      } else {
+        navbar.classList.add('bg-transparent', 'py-6');
+        navbar.classList.remove('bg-black/95', 'backdrop-blur-sm', 'shadow-md', 'py-3');
+      }
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('opacity-100');
+
+    if (isOpen) {
+      // Close menu
+      mobileMenu.classList.remove('opacity-100', 'visible');
+      mobileMenu.classList.add('opacity-0', 'invisible');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    } else {
+      // Open menu
+      mobileMenu.classList.remove('opacity-0', 'invisible');
+      mobileMenu.classList.add('opacity-100', 'visible');
+      menuIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-label', 'Close menu');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Close mobile menu when clicking on links
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-100', 'visible');
+      mobileMenu.classList.add('opacity-0', 'invisible');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+
+  // More dropdown toggle
+  const moreDropdownBtn = document.getElementById('more-dropdown-btn');
+  const moreDropdown = document.getElementById('more-dropdown');
+
+  moreDropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isExpanded = moreDropdownBtn.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+      moreDropdown.classList.remove('opacity-100', 'visible');
+      moreDropdown.classList.add('opacity-0', 'invisible');
+      moreDropdownBtn.setAttribute('aria-expanded', 'false');
+    } else {
+      moreDropdown.classList.remove('opacity-0', 'invisible');
+      moreDropdown.classList.add('opacity-100', 'visible');
+      moreDropdownBtn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!moreDropdownBtn.contains(e.target) && !moreDropdown.contains(e.target)) {
+      moreDropdown.classList.remove('opacity-100', 'visible');
+      moreDropdown.classList.add('opacity-0', 'invisible');
+      moreDropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<style>
+  #mobile-menu {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  #mobile-menu.visible {
+    visibility: visible;
+  }
+
+  #mobile-menu.invisible {
+    visibility: hidden;
+  }
+</style>
