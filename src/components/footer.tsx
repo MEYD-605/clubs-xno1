@@ -77,6 +77,11 @@ export default function Footer() {
           <p className="text-sm mb-1">บริษัท โฟโต้ไทยแลนด์ จำกัด / Photo Thailand Co., Ltd.</p>
           <p className="text-xs mb-1">583/5 ซ.พิบูลอุปถัมภ์ ถ.ลาดพร้าว 48 แขวงสามเสนนอก เขตห้วยขวาง กรุงเทพ 10310</p>
           <p className="text-xs mb-3">Tax ID: 0-1055-64100-89-1</p>
+          <div className="flex justify-center gap-4 mb-3 text-xs">
+            <a href="/privacy" className="text-zinc-500 hover:text-white transition-colors">Privacy Policy</a>
+            <span className="text-zinc-700">|</span>
+            <a href="/terms" className="text-zinc-500 hover:text-white transition-colors">Terms of Service</a>
+          </div>
           <p>&copy; {currentYear} CLUBS. All rights reserved.</p>
         </div>
       </div>

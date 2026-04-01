@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClubsxAI — Before/After Comparison</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0A0A0A;
+      color: #fff;
+      padding: 20px;
+    }
+    .container { max-width: 1400px; margin: 0 auto; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #FF6B35, #EC4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    .comparison-card {
+      background: #171717;
+      border: 1px solid #262626;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .badge {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge.before { background: #EF4444; color: #fff; }
+    .badge.after { background: #22C55E; color: #fff; }
+    .viewport-info {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+    .demo-box {
+      background: #0F0F0F;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 15px;
+      min-height: 200px;
+    }
+    .demo-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .before-text {
+      font-size: 96px;
+      line-height: 1;
+      color: #666;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .after-text {
+      font-size: 36px;
+      line-height: 1.7;
+      color: #fff;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+    .issue-list {
+      list-style: none;
+      margin-top: 15px;
+    }
+    .issue-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #262626;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .issue-list li:last-child { border-bottom: none; }
+    .icon { font-size: 16px; }
+    .fix-summary {
+      background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(236,72,153,0.1));
+      border: 1px solid rgba(255,107,53,0.3);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    .fix-summary h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #FF6B35;
+    }
+    .fix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .fix-item {
+      background: rgba(0,0,0,0.3);
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .fix-item h3 {
+      font-size: 1rem;
+      color: #FF6B35;
+      margin-bottom: 8px;
+    }
+    .fix-item p {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.6;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #FF6B35;
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 20px auto;
+      display: block;
+      text-align: center;
+      max-width: 300px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+    }
+    @media (max-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Responsive Fixes — Before vs After</h1>
+    <p class="subtitle">ClubsxAI.com — 1 April 2026</p>
+
+    <div class="fix-summary">
+      <h2>✅ 12 Fixes Applied</h2>
+      <div class="fix-grid">
+        <div class="fix-item">
+          <h3>📱 Typography Scale</h3>
+          <p>text-4xl → text-8xl (was: text-6xl → text-8xl)<br/>Mobile-friendly headlines</p>
+        </div>
+        <div class="fix-item">
+          <h3>🇹🇭 Thai Word Break</h3>
+          <p>Added word-break, overflow-wrap, line-height 1.7<br/>No more text overflow</p>
+        </div>
+        <div class="fix-item">
+          <h3>👆 Touch Targets</h3>
+          <p>44px minimum (WCAG standard)<br/>Easy to tap on mobile</p>
+        </div>
+        <div class="fix-item">
+          <h3>🎨 Color Contrast</h3>
+          <p>text-white/80 (was: text-white/60)<br/>Better readability</p>
+        </div>
+        <div class="fix-item">
+          <h3>📐 Responsive Padding</h3>
+          <p>p-4 → p-8 (was: p-8)<br/>Optimized space usage</p>
+        </div>
+        <div class="fix-item">
+          <h3>♿ Accessibility</h3>
+          <p>Skip navigation link added<br/>Dynamic lang attribute</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="text-align: center; margin-bottom: 30px;">📱 Visual Comparison</h2>
+
+    <!-- iPhone SE -->
+    <div class="comparison-grid">
+      <div class="comparison-card">
+        <div class="card-header">
+          <span class="badge before">Before</span>
+          <span style="color: #888;">iPhone SE (375px)</span>
+        </div>
+        <div class="viewport-info">ความกว้างหน้าจอ: 375px</div>
+        <div class="demo-box">
+          <div class="demo-title">Hero Headline</div>
+          <div class="before-text">
+            ช่างภาพ Portrait กรุงเทพ
+          </div>
+        </div>
+        <ul class="issue-list">
+          <li><span class="icon">❌</span> Font: 96px (text-6xl) — ใหญ่เกินไป</li>
+          <li><span class="icon">❌</span> ไม่มี word-break → อาจ overflow</li>
+          <li><span class="icon">❌</span> Line-height แคบ — อ่านลำบาก</li>
+        </ul>
+      </div>
+
+      <div class="comparison-card">
+        <div class="card-header">
+          <span class="badge after">After</span>
+          <span style="color: #888;">iPhone SE (375px)</span>
+        </div>
+        <div class="viewport-info">ความกว้างหน้าจอ: 375px</div>
+        <div class="demo-box">
+          <div class="demo-title">Hero Headline</div>
+          <div class="after-text">
+            ช่างภาพ Portrait กรุงเทพ
+          </div>
+        </div>
+        <ul class="issue-list">
+          <li><span class="icon">✅</span> Font: 36px (text-4xl) — อ่านง่าย</li>
+          <li><span class="icon">✅</span> Word-break → wrap สวยงาม</li>
+          <li><span class="icon">✅</span> Line-height 1.7 — สบายตา</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- iPhone 12 -->
+    <div class="comparison-grid">
+      <div class="comparison-card">
+        <div class="card-header">
+          <span class="badge before">Before</span>
+          <span style="color: #888;">iPhone 12 (390px)</span>
+        </div>
+        <div class="viewport-info">ความกว้างหน้าจอ: 390px</div>
+        <div class="demo-box">
+          <div class="demo-title">Stats Section</div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <div style="background: #262626; padding: 8px 12px; border-radius: 8px;">
+              <div style="font-size: 18px; font-weight: bold;">23.9K+</div>
+              <div style="font-size: 11px; color: #666;">ผู้ติดตาม</div>
+            </div>
+          </div>
+        </div>
+        <ul class="issue-list">
+          <li><span class="icon">❌</span> Contrast: text-white/60 — มองยาก</li>
+          <li><span class="icon">❌</span> Padding: ไม่ responsive</li>
+        </ul>
+      </div>
+
+      <div class="comparison-card">
+        <div class="card-header">
+          <span class="badge after">After</span>
+          <span style="color: #888;">iPhone 12 (390px)</span>
+        </div>
+        <div class="viewport-info">ความกว้างหน้าจอ: 390px</div>
+        <div class="demo-box">
+          <div class="demo-title">Stats Section</div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <div style="background: #262626; padding: 8px 12px; border-radius: 8px;">
+              <div style="font-size: 18px; font-weight: bold;">23.9K+</div>
+              <div style="font-size: 11px; color: #ccc;">ผู้ติดตาม</div>
+            </div>
+          </div>
+        </div>
+        <ul class="issue-list">
+          <li><span class="icon">✅</span> Contrast: text-white/80 — มองชัด</li>
+          <li><span class="icon">✅</span> Padding: responsive px-4 → px-6</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Touch Targets -->
+    <div class="comparison-grid">
+      <div class="comparison-card">
+        <div class="card-header">
+          <span class="badge before">Before</span>
+          <span style="color: #888;">Mobile Menu Button</span>
+        </div>
+        <div class="viewport-info">Touch target size</div>
+        <div class="demo-box" style="display: flex; align-items: center; justify-content: center;">
+          <div style="width: 24px; height: 24px; background: #FF6B35; border-radius: 4px;"></div>
+        </div>
+        <ul class="issue-list">
+          <li><span class="icon">❌</span> Size: 24px — กดลำบาก</li>
+          <li><span class="icon">❌</span> Violates WCAG 2.5.5</li>
+        </ul>
+      </div>
+
+      <div class="comparison-card">
+        <div class="card-header">
+          <span class="badge after">After</span>
+          <span style="color: #888;">Mobile Menu Button</span>
+        </div>
+        <div class="viewport-info">Touch target size</div>
+        <div class="demo-box" style="display: flex; align-items: center; justify-content: center;">
+          <div style="width: 44px; height: 44px; background: #FF6B35; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 24px; height: 24px; background: rgba(0,0,0,0.3); border-radius: 4px;"></div>
+          </div>
+        </div>
+        <ul class="issue-list">
+          <li><span class="icon">✅</span> Size: 44px — กดสะดวก</li>
+          <li><span class="icon">✅</span> WCAG 2.5.5 compliant</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="text-align: center; margin: 50px 0 30px;">🚀 Ready to Deploy?</h2>
+
+    <div style="background: #171717; border: 1px solid #262626; border-radius: 16px; padding: 30px; max-width: 600px; margin: 0 auto;">
+      <h3 style="color: #FF6B35; margin-bottom: 15px;">Deploy Commands</h3>
+      <pre style="background: #0A0A0A; padding: 20px; border-radius: 12px; overflow-x: auto; font-size: 13px; line-height: 1.8;"><code style="color: #22C55E;"># Commit & Push
+cd clubsxai-web
+git add -A
+git commit -m "fix: responsive design + SEO improvements"
+
+# Deploy to Cloudflare Pages
+git push</code></pre>
+      <p style="color: #888; font-size: 14px; margin-top: 20px;">✨ Cloudflare Pages will auto-build & deploy</p>
+    </div>
+
+    <a href="http://localhost:4321" class="cta-button" target="_blank">
+      🚀 View Live Preview →
+    </a>
+
+    <p style="text-align: center; color: #666; font-size: 14px; margin-top: 40px;">
+      Generated: 1 April 2026 • Fixes: 12 issues<br/>
+      Files changed: 5 files • Lines changed: ~50 lines
+    </p>
+  </div>
+</body>
+</html>

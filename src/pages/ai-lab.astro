@@ -4,6 +4,8 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
+import { Image } from 'astro:assets';
+import aiLabImage from '../assets/images/bo_neon_purple_portrait.png';
 
 const title = "Bo's AI Lab | ClubsxAI";
 const description = "AI tools, Automation Workflows (n8n, Make), and Prompt Engineering for creators and businesses by Bo.";
@@ -38,12 +40,13 @@ const keywords = "AI Automation, n8n workflow, Make.com, AI Prompt Engineering, 
 
             <div class="relative">
               <div class="aspect-[3/4] rounded-3xl overflow-hidden" style="box-shadow: 0 0 60px rgba(255,107,53,0.2);">
-	                <img loading="lazy" 
-	                  src="/images/bo_neon_purple_portrait.png"
-	                  alt="Bo with AI concept"
-	                  width="682"
-	                  height="1024"
+	                <Image
+	                  src={aiLabImage}
+	                  alt="โบ ผู้เชี่ยวชาญ AI Automation และ Workflow ที่ ClubsxAI สไตล์ Neon Purple Portrait"
+	                  width={682}
+	                  height={1024}
 	                  class="w-full h-full object-cover"
+	                  loading="lazy"
 	                />
               </div>
             </div>

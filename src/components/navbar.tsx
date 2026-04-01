@@ -80,7 +80,7 @@ export default function Navbar() {
                   AI Lab
                 </a>
                 <a
-                  href="/command-center"
+                  href="/admin"
                   className="block px-4 py-2 text-orange-400 hover:bg-zinc-800"
                   onClick={() => setIsMoreOpen(false)}
                 >
@@ -124,7 +124,7 @@ export default function Navbar() {
           </nav>
 
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white p-3 -m-3 min-h-[44px] min-w-[44px]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -160,7 +160,7 @@ export default function Navbar() {
             <a href="/ai-lab" className="px-4 py-3 text-white hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>
               AI Lab
             </a>
-            <a href="/command-center" className="px-4 py-3 text-orange-400 hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>
+            <a href="/admin" className="px-4 py-3 text-orange-400 hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>
               Command Center
             </a>
             <a href="/free-tools" className="px-4 py-3 text-white hover:bg-zinc-800" onClick={() => setIsMenuOpen(false)}>

@@ -47,6 +47,19 @@ body {
 /* Thai text support */
 :lang(th) {
   font-family: var(--font-thai);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-height: 1.7;
+}
+
+/* Responsive font size for mobile displays */
+@media (max-width: 640px) {
+  .text-display-xl {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .text-display-lg {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+  }
 }
 
 /* ===== GRADIENT UTILITIES 2026 ===== */
@@ -222,15 +235,15 @@ body {
 
 /* ===== TYPOGRAPHY SCALE ===== */
 .text-display-xl {
-  @apply text-6xl md:text-8xl font-light tracking-tighter;
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tighter;
 }
 
 .text-display-lg {
-  @apply text-4xl md:text-6xl font-light tracking-tight;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
 }
 
 .text-display-md {
-  @apply text-3xl md:text-4xl font-light tracking-tight;
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-tight;
 }
 
 .text-heading {

@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import FloatingButtons from '../components/floating-buttons';
+import '../styles/globals.css';
+
+const title = "ข้อกำหนดการให้บริการ | ClubsxAI";
+const description = "ข้อกำหนดและเงื่อนไขการใช้บริการถ่ายภาพ ClubsxAI รวมถึงนโยบายการจอง มัดจำ ส่งงาน และการยกเลิก";
+---
+
+<BaseLayout title={title} description={description}>
+    <Navbar client:load />
+
+    <main class="min-h-screen pt-16 md:pt-20">
+      <section class="section-padding gradient-mesh">
+        <div class="container mx-auto container-narrow text-center">
+          <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Legal</p>
+          <h1 class="text-display-lg mb-6">ข้อกำหนดการให้บริการ</h1>
+          <p class="text-body-lg">Terms of Service</p>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container mx-auto container-narrow">
+          <div class="prose prose-invert prose-lg max-w-none space-y-8">
+
+            <p class="text-body text-white/60 text-sm">อัปเดตล่าสุด: 29 มีนาคม 2026</p>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">1. การจองคิวและมัดจำ</h2>
+              <ul class="text-body space-y-2">
+                <li>• การจองคิวจะสมบูรณ์เมื่อมีการ <strong class="text-white">ชำระเงินมัดจำ</strong> เท่านั้น</li>
+                <li>• <strong class="text-white">งานถ่ายภาพ:</strong> ราคา ≤ 2,000 บาท มัดจำ 500 บาท / ราคา > 2,000 บาท มัดจำ 1,000 บาท</li>
+                <li>• <strong class="text-white">งานวิดีโอ:</strong> ราคา ≤ 7,500 บาท มัดจำ 2,000 บาท / ราคา > 7,500 บาท มัดจำ 3,000 บาท</li>
+                <li>• ส่วนที่เหลือชำระหน้างานหลังจบเซสชัน</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">2. การชำระเงิน</h2>
+              <ul class="text-body space-y-2">
+                <li>• ชำระผ่านบัญชี <strong class="text-white">ธนาคารไทยพาณิชย์ (SCB)</strong> เลขที่ 929-222-3492 ชื่อบัญชี นาย สุจริต มานิตยกุล</li>
+                <li>• สำหรับ <strong class="text-white">นิติบุคคล:</strong> มีการหัก ณ ที่จ่าย (WHT) 3%</li>
+                <li>• <strong class="text-white">ใบเสนอราคา</strong> มีผลบังคับใช้ 30 วัน นับจากวันที่ออก</li>
+                <li>• <strong class="text-white">ใบแจ้งหนี้</strong> กำหนดชำระภายใน 7 วัน</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">3. การส่งมอบงาน</h2>
+              <ul class="text-body space-y-2">
+                <li>• ภาพถ่ายจะได้รับการ <strong class="text-white">ปรับแสงสีและรีทัชทุกใบ</strong></li>
+                <li>• ส่งมอบงานภายใน <strong class="text-white">24 ชั่วโมง</strong> หลังจบเซสชัน (ทุกแพ็กเกจ)</li>
+                <li>• บริการ <strong class="text-white">ส่งงานเร่งด่วน</strong> ภายใน 3 ชม. มีค่าบริการเพิ่มเติม 500-1,000 บาท</li>
+                <li>• ไฟล์ภาพจะถูก <strong class="text-white">สำรองไว้ 3 เดือน</strong> นับจากวันถ่าย</li>
+                <li>• ส่งมอบผ่าน Google Drive หรือช่องทางที่ตกลงกัน</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">4. การยกเลิกและเลื่อนนัด</h2>
+              <ul class="text-body space-y-2">
+                <li>• <strong class="text-white">แจ้งล่วงหน้า 48 ชม.:</strong> สามารถเลื่อนนัดหมายได้ 1 ครั้ง โดยไม่มีค่าใช้จ่ายเพิ่ม</li>
+                <li>• <strong class="text-white">แจ้งล่วงหน้า 24-48 ชม.:</strong> หักค่ามัดจำ 50%</li>
+                <li>• <strong class="text-white">แจ้งน้อยกว่า 24 ชม. หรือไม่มาตามนัด:</strong> สงวนสิทธิ์ไม่คืนเงินมัดจำ</li>
+                <li>• กรณี <strong class="text-white">สภาพอากาศไม่เอื้ออำนวย</strong> (ถ่ายกลางแจ้ง): เลื่อนนัดได้ฟรี ไม่มีค่าใช้จ่ายเพิ่ม</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">5. ลิขสิทธิ์และการใช้ภาพ</h2>
+              <ul class="text-body space-y-2">
+                <li>• ลูกค้าได้รับ <strong class="text-white">สิทธิ์ใช้ภาพเพื่อวัตถุประสงค์ส่วนบุคคลและธุรกิจ</strong></li>
+                <li>• ช่างภาพสงวนสิทธิ์ในการใช้ภาพเพื่อ <strong class="text-white">ประชาสัมพันธ์และ Portfolio</strong></li>
+                <li>• หากไม่ต้องการให้ใช้ภาพเพื่อ Portfolio สามารถแจ้งล่วงหน้าก่อนวันถ่ายได้</li>
+                <li>• ห้ามนำภาพไป <strong class="text-white">ขายต่อ</strong> หรือใช้ในลักษณะที่ผิดกฎหมาย</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">6. การเพิ่มบุคคลในเซสชัน</h2>
+              <ul class="text-body space-y-2">
+                <li>• สามารถเพิ่มบุคคลในเซสชันได้ในราคา <strong class="text-white">700 บาท/คน</strong></li>
+                <li>• กรณีงาน Couple จัดอยู่ในแพ็กเกจคู่แยกต่างหาก</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">7. การใช้เว็บไซต์</h2>
+              <ul class="text-body space-y-2">
+                <li>• เว็บไซต์ clubsxai.com ให้บริการตามสภาพ ("as is")</li>
+                <li>• เราสงวนสิทธิ์ในการแก้ไข เปลี่ยนแปลง หรือหยุดให้บริการส่วนใดส่วนหนึ่งของเว็บไซต์ได้ตลอดเวลา</li>
+                <li>• เนื้อหาทั้งหมดบนเว็บไซต์เป็น <strong class="text-white">ทรัพย์สินทางปัญญาของ ClubsxAI</strong></li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4 border border-accent/20">
+              <h2 class="text-display-xs text-white">ติดต่อเรา</h2>
+              <p class="text-body">หากมีคำถามเกี่ยวกับข้อกำหนดการให้บริการ:</p>
+              <ul class="text-body space-y-2">
+                <li>• บริษัท โฟโต้ไทยแลนด์ จำกัด / Photo Thailand Co., Ltd.</li>
+                <li>• Email: <a href="mailto:share.photothailand@gmail.com" class="text-accent hover:underline">share.photothailand@gmail.com</a></li>
+                <li>• โทร: <a href="tel:0800416403" class="text-accent hover:underline">080-041-6403</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+</BaseLayout>

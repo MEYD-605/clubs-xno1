@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import FloatingButtons from '../components/floating-buttons';
+import '../styles/globals.css';
+
+const title = "นโยบายความเป็นส่วนตัว | ClubsxAI";
+const description = "นโยบายความเป็นส่วนตัวของ ClubsxAI เกี่ยวกับการเก็บ ใช้ และปกป้องข้อมูลส่วนบุคคลของคุณ";
+---
+
+<BaseLayout title={title} description={description}>
+    <Navbar client:load />
+
+    <main class="min-h-screen pt-16 md:pt-20">
+      <section class="section-padding gradient-mesh">
+        <div class="container mx-auto container-narrow text-center">
+          <p class="text-sm uppercase tracking-[0.2em] text-accent mb-4" style="color: #FF6B35;">Legal</p>
+          <h1 class="text-display-lg mb-6">นโยบายความเป็นส่วนตัว</h1>
+          <p class="text-body-lg">Privacy Policy</p>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container mx-auto container-narrow">
+          <div class="prose prose-invert prose-lg max-w-none space-y-8">
+
+            <p class="text-body text-white/60 text-sm">อัปเดตล่าสุด: 29 มีนาคม 2026</p>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">ข้อมูลที่เราเก็บรวบรวม</h2>
+              <p class="text-body">เมื่อคุณใช้บริการ ClubsxAI เราอาจเก็บรวบรวมข้อมูลดังนี้:</p>
+              <ul class="text-body space-y-2">
+                <li>• <strong class="text-white">ข้อมูลที่คุณให้โดยตรง</strong> — ชื่อ, อีเมล, LINE ID, เบอร์โทรศัพท์ ที่กรอกผ่านแบบฟอร์มติดต่อหรือจองคิว</li>
+                <li>• <strong class="text-white">ข้อมูลการใช้เว็บไซต์</strong> — หน้าที่เข้าชม, ระยะเวลาที่อยู่ในเว็บ ผ่าน Google Analytics (GA4)</li>
+                <li>• <strong class="text-white">ข้อมูลเทคนิค</strong> — ประเภทเบราว์เซอร์, อุปกรณ์, IP address</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">วัตถุประสงค์ในการใช้ข้อมูล</h2>
+              <p class="text-body">เราใช้ข้อมูลของคุณเพื่อ:</p>
+              <ul class="text-body space-y-2">
+                <li>• ติดต่อกลับเพื่อยืนยันการจองคิวถ่ายภาพ</li>
+                <li>• ส่งรูปภาพและงานที่เสร็จแล้วให้คุณ</li>
+                <li>• ปรับปรุงเว็บไซต์และบริการของเราให้ดีขึ้น</li>
+                <li>• ตอบคำถามและให้บริการหลังการถ่ายภาพ</li>
+              </ul>
+              <p class="text-body"><strong class="text-white">เราจะไม่ขายหรือแบ่งปันข้อมูลส่วนบุคคลของคุณกับบุคคลที่สาม</strong> เพื่อการตลาดโดยเด็ดขาด</p>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">การปกป้องข้อมูล</h2>
+              <p class="text-body">เราใช้มาตรการรักษาความปลอดภัยดังนี้:</p>
+              <ul class="text-body space-y-2">
+                <li>• เว็บไซต์ใช้การเข้ารหัส HTTPS ตลอดเวลา</li>
+                <li>• ข้อมูลจัดเก็บบน Cloudflare ซึ่งมีมาตรฐานความปลอดภัยระดับสูง</li>
+                <li>• จำกัดการเข้าถึงข้อมูลเฉพาะบุคลากรที่จำเป็น</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">Google Analytics</h2>
+              <p class="text-body">เราใช้ Google Analytics 4 (GA4) เพื่อวิเคราะห์การใช้งานเว็บไซต์ Google Analytics จะเก็บข้อมูลในรูปแบบที่ไม่สามารถระบุตัวบุคคลได้โดยตรง คุณสามารถปิดการติดตามได้โดยใช้ <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Google Analytics Opt-out Browser Add-on</a></p>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">สิทธิ์ของคุณ</h2>
+              <p class="text-body">ตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) คุณมีสิทธิ์:</p>
+              <ul class="text-body space-y-2">
+                <li>• <strong class="text-white">เข้าถึง</strong> ข้อมูลส่วนบุคคลของคุณที่เราจัดเก็บ</li>
+                <li>• <strong class="text-white">แก้ไข</strong> ข้อมูลที่ไม่ถูกต้อง</li>
+                <li>• <strong class="text-white">ลบ</strong> ข้อมูลส่วนบุคคลของคุณ</li>
+                <li>• <strong class="text-white">คัดค้าน</strong> การประมวลผลข้อมูลในบางกรณี</li>
+              </ul>
+              <p class="text-body">หากต้องการใช้สิทธิ์ใดๆ ติดต่อเราได้ที่ <a href="mailto:share.photothailand@gmail.com" class="text-accent hover:underline">share.photothailand@gmail.com</a></p>
+            </div>
+
+            <div class="glass-card p-8 space-y-4">
+              <h2 class="text-display-xs text-white">การเปลี่ยนแปลงนโยบาย</h2>
+              <p class="text-body">เราอาจปรับปรุงนโยบายนี้เป็นครั้งคราว การเปลี่ยนแปลงจะประกาศบนหน้านี้พร้อมวันที่อัปเดต</p>
+            </div>
+
+            <div class="glass-card p-8 space-y-4 border border-accent/20">
+              <h2 class="text-display-xs text-white">ติดต่อเรา</h2>
+              <p class="text-body">หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว:</p>
+              <ul class="text-body space-y-2">
+                <li>• บริษัท โฟโต้ไทยแลนด์ จำกัด / Photo Thailand Co., Ltd.</li>
+                <li>• 583/5 ซ.พิบูลอุปถัมภ์ ถ.ลาดพร้าว 48 แขวงสามเสนนอก เขตห้วยขวาง กรุงเทพ 10310</li>
+                <li>• Email: <a href="mailto:share.photothailand@gmail.com" class="text-accent hover:underline">share.photothailand@gmail.com</a></li>
+                <li>• โทร: <a href="tel:0800416403" class="text-accent hover:underline">080-041-6403</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+    <FloatingButtons client:load />
+</BaseLayout>

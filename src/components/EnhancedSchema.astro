@@ -9,6 +9,36 @@ const {
 const siteUrl = "https://clubsxai.com";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
 
+// Build breadcrumb from URL path
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl }
+];
+let currentPath = '';
+const segmentNames: Record<string, string> = {
+  'about': 'About',
+  'services': 'Services',
+  'contact': 'Contact',
+  'gallery': 'Gallery',
+  'blog': 'Blog',
+  'gear': "Bo's Gear",
+  'bartender': 'Bartender',
+  'ai-lab': 'AI Lab',
+  'free-tools': 'Free Tools',
+  'privacy': 'Privacy Policy',
+  'terms': 'Terms of Service',
+  'premium-portrait-bangkok': 'Premium Portrait Bangkok',
+};
+pathSegments.forEach((segment, i) => {
+  currentPath += `/${segment}`;
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    "position": i + 2,
+    "name": segmentNames[segment] || title,
+    "item": `${siteUrl}${currentPath}`
+  });
+});
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -97,7 +127,46 @@ const schema = {
           }
         ]
       },
-      "description": "Club S ช่างภาพ Portrait กรุงเทพ รับถ่ายภาพบุคคล Event อาหาร สไตล์ Moody Premium ช่างภาพด่วนส่งรูปภายใน 24 ชม. ถ่ายรูปเริ่มต้น 1,500 บาท"
+      "description": "Club S ช่างภาพ Portrait กรุงเทพ รับถ่ายภาพบุคคล Event อาหาร สไตล์ Moody Premium ช่างภาพด่วนส่งรูปภายใน 24 ชม. ถ่ายรูปเริ่มต้น 1,500 บาท",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "คุณมิว" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "ถ่ายกับพี่โบครั้งแรกก็รักเลย! เก็บ vibe ได้ดีมาก ไม่เกร็ง รูปออกมาสวยเกินคาด"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "คุณเจมส์" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "ถ่าย portrait สำหรับ LinkedIn พี่โบให้คำแนะนำดีมาก ได้รูปที่ professional เกินราคา"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "คุณเบลล์ & คุณออม" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "ถ่าย pre-wedding กับพี่โบ ได้ความเป็นธรรมชาติมากๆ พี่โบเก็บ moment ได้ดีมาก"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "คุณหมอปุ้ย" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "ถ่ายรูปทีมคลินิกและรูปโปรไฟล์หมอ ออกมาดูเป็นมืออาชีพมาก คนไข้ trust เลย"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "คุณนิค" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "ถ่าย food photography กับ bartender shots พี่โบเข้าใจ mood ของร้านมาก"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -120,6 +189,57 @@ const schema = {
       },
       "jobTitle": "Founder",
       "worksFor": { "@id": `${siteUrl}/#organization` }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ส่งรูปไวแค่ไหน? ต้องรอกี่วัน?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "เราส่งรูปด่วนภายใน 24 ชม. (วันถัดไป) หลังจบงานครับ ไม่ต้องรอนานเป็นเดือนเหมือนที่อื่น"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "มีการแต่งรูป หรือรีทัชหน้าเนียนให้ไหม?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "เราปรับแสงสี (Color Grading) ให้พรีเมียมทุกใบ และรีทัชใบหน้า (หน้าเนียน/เรียว) ให้เป็นธรรมชาติทุกใบในเซ็ตครับ"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ต้องเช็คคิวและวางมัดจำอย่างไร?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "สามารถเช็คคิวผ่าน Line หรือ Contact Form ได้เลยครับ การล็อคคิวจะนับเมื่อมีการมัดจำ ส่วนที่เหลือสามารถชำระได้หน้างานหลังจบเซสชัน"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ถ่ายนอกสถานที่ มีค่าเดินทางเพิ่มเติมไหม?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ในเขตกรุงเทพฯ (สยาม, สุขุมวิท, อารีย์) ไม่มีค่าเดินทางครับ หากเป็นปริมณฑลหรือต่างจังหวัด จะมีค่าเดินทางเพิ่มเติมตามระยะทางจริง"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "เตรียมตัวอย่างไรก่อนมาถ่ายภาพ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "แนะนำให้พักผ่อนให้เพียงพอ เตรียมชุดที่มั่นใจที่สุดมาสัก 2-3 ชุด ถ้าไม่แน่ใจเรื่อง Vibe ทักมาปรึกษาก่อนได้ฟรีครับ"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${canonicalUrl}/#breadcrumb`,
+      "itemListElement": breadcrumbItems
     }
   ]
 };

@@ -5,11 +5,13 @@ import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
 
+export const prerender = true;
+
 const title = "Command Center | ClubsxAI";
 const description = "System dashboard for managing bookings and backend automation";
 ---
 
-<BaseLayout>
+<BaseLayout noindex={true}>
     <Navbar client:load />
     
     <main class="min-h-screen pt-24">

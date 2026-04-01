@@ -9,26 +9,31 @@ interface Props {
   description?: string;
   keywords?: string;
   image?: string;
+  noindex?: boolean;
+  lang?: string;
 }
 
-const { 
+const {
   title = "ClubsxAI | Premium Portrait Photography by Bo",
   description = "ClubsxAI | Premium Portrait Photography by Bo. We don't shoot photos, we shoot feelings.",
   keywords = "ช่างภาพ, Portrait, Premium, Bangkok, Photographer, ClubsxAI, ClubsxAI",
-  image = "/images/bo_snake_portrait_hero.jpg"
+  image = "/images/bo_snake_portrait_hero.jpg",
+  noindex = false,
+  lang = "th"
 } = Astro.props;
 
 // Generate dynamic OG image URL
 const ogImageUrl = getOGImageUrl(title, description, image);
 ---
 <!DOCTYPE html>
-<html lang="th" class="dark">
+<html lang={lang} class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content={keywords}>
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={Astro.url} />
     
     <!-- Open Graph / Facebook -->
@@ -69,6 +74,9 @@ const ogImageUrl = getOGImageUrl(title, description, image);
     </script>
 </head>
 <body class="bg-black text-white font-sans antialiased selection:bg-white/10">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-orange-500 focus:text-white focus:rounded">
+      Skip to main content
+    </a>
     <slot />
 </body>
 </html>
