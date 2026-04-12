@@ -14,9 +14,9 @@ interface Props {
 }
 
 const {
-  title = "ClubsxAI | Premium Portrait Photography by Bo",
-  description = "ClubsxAI | Premium Portrait Photography by Bo. We don't shoot photos, we shoot feelings.",
-  keywords = "ช่างภาพ, Portrait, Premium, Bangkok, Photographer, ClubsxAI, ClubsxAI",
+  title = "Club S ช่างภาพด่วน กรุงเทพ | ช่างภาพ กทม ส่งรูปใน 24 ชม. - ClubsxAI",
+  description = "Club S ช่างภาพด่วน กรุงเทพ รับถ่ายภาพ Portrait บุคคล งานแต่ง อาหาร ช่างภาพ กทม มืออาชีพ เริ่มต้น 1,500 บาท ส่งรูปภายใน 24 ชม. รีทัชทุกใบ จองคิวถ่ายวันนี้",
+  keywords = "ช่างภาพด่วน, ช่างภาพกรุงเทพ, ช่างภาพ กทม, ช่างภาพ Portrait, รับถ่ายภาพบุคคล, ช่างภาพมืออาชีพ, ช่างภาพส่งรูปไว, ถ่ายรูปด่วน, ช่างภาพใกล้ฉัน, จ้างช่างภาพ, ช่างภาพราคาถูก, ช่างภาพรับปริญญา, ช่างภาพงานแต่ง, ช่างภาพถ่ายอาหาร, ClubsxAI",
   image = "/images/bo_snake_portrait_hero.jpg",
   noindex = false,
   lang = "th"
@@ -35,8 +35,16 @@ const ogImageUrl = getOGImageUrl(title, description, image);
     <meta name="keywords" content={keywords}>
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={Astro.url} />
+
+    <!-- Geo Tags - Local SEO Bangkok -->
+    <meta name="geo.region" content="TH-10" />
+    <meta name="geo.placename" content="Bangkok, Thailand" />
+    <meta name="geo.position" content="13.7563;100.5018" />
+    <meta name="ICBM" content="13.7563, 100.5018" />
     
     <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:site_name" content="ClubsxAI - Club S ช่างภาพกรุงเทพ" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
@@ -64,13 +72,36 @@ const ogImageUrl = getOGImageUrl(title, description, image);
     <!-- Astro View Transitions (ClientRouter) -->
     <ClientRouter />
 
-    <!-- Google Analytics (GA4) -->
+    <!-- Google Analytics (GA4) + Google Ads Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-67TZPJY9LF"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-67TZPJY9LF');
+      gtag('config', 'AW-16603996176');
+    </script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track phone call clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'conversion', {'send_to': 'AW-16603996176/xc-6CLfz0ZMcEJDAs-09'});
+          });
+        });
+        // Track LINE clicks
+        document.querySelectorAll('a[href*="line.me"], a[href*="line://"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'conversion', {'send_to': 'AW-16603996176/ZCixCLrz0ZMcEJDAs-09'});
+          });
+        });
+        // Track contact form submissions
+        document.querySelectorAll('form').forEach(function(form) {
+          form.addEventListener('submit', function() {
+            gtag('event', 'conversion', {'send_to': 'AW-16603996176/nGvXCLTz0ZMcEJDAs-09'});
+          });
+        });
+      });
     </script>
 </head>
 <body class="bg-black text-white font-sans antialiased selection:bg-white/10">

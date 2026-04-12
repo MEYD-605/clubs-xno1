@@ -73,16 +73,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-800 mt-8 pt-8 text-center text-zinc-500">
-          <p className="text-sm mb-1">บริษัท โฟโต้ไทยแลนด์ จำกัด / Photo Thailand Co., Ltd.</p>
-          <p className="text-xs mb-1">583/5 ซ.พิบูลอุปถัมภ์ ถ.ลาดพร้าว 48 แขวงสามเสนนอก เขตห้วยขวาง กรุงเทพ 10310</p>
-          <p className="text-xs mb-3">Tax ID: 0-1055-64100-89-1</p>
-          <div className="flex justify-center gap-4 mb-3 text-xs">
-            <a href="/privacy" className="text-zinc-500 hover:text-white transition-colors">Privacy Policy</a>
+        <div className="border-t border-zinc-800 mt-8 pt-8 text-center">
+          <div className="flex justify-center space-x-4 mb-4">
+            <a href="/privacy" className="text-xs text-zinc-500 hover:text-white transition-colors">นโยบายความเป็นส่วนตัว</a>
             <span className="text-zinc-700">|</span>
-            <a href="/terms" className="text-zinc-500 hover:text-white transition-colors">Terms of Service</a>
+            <a href="/terms" className="text-xs text-zinc-500 hover:text-white transition-colors">ข้อกำหนดการให้บริการ</a>
           </div>
-          <p>&copy; {currentYear} CLUBS. All rights reserved.</p>
+          <p className="text-sm text-zinc-500 mb-1">&copy; {currentYear} ClubsxAI. All rights reserved.</p>
+          <p className="text-xs text-zinc-600">Design & Technology by Clubs Tech</p>
         </div>
       </div>
     </footer>

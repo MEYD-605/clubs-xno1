@@ -33,5 +33,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), sitemap()]
+  integrations: [react(), sitemap({
+    filter: (page) => !page.includes('/admin') && !page.includes('/command-center')
+  })]
 });

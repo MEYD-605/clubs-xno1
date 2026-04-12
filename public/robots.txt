@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /command-center/
+Disallow: /api/
 Sitemap: https://clubsxai.com/sitemap-index.xml

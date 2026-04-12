@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar.astro';
 import Footer from '../components/footer';
 import FloatingButtons from '../components/floating-buttons';
 import '../styles/globals.css';
@@ -8,9 +8,9 @@ import { Image } from 'astro:assets';
 import boPortrait from '../assets/images/bo_red_neon_portrait.png';
 import gearImage from '../assets/images/bo_gear_mastery_kit.png';
 
-const title = "รู้จัก Bo - Founder of ClubsxAI | ช่างภาพกรุงเทพ & Event";
-const description = "ทำความรู้จักกับ Bo ช่างภาพกรุงเทพที่เชี่ยวชาญการรับถ่ายภาพ Portrait และ Event ด้วยสไตล์พรีเมียม Moody ส่งรูปด่วนภายใน 24 ชม.";
-const keywords = "ประวัติช่างภาพ, Bo Clubs, ช่างภาพกรุงเทพ, ช่างภาพ Portrait, สไตล์ Moody, รับถ่ายภาพบุคคล, ช่างภาพ Event, ClubsxAI";
+const title = "รู้จัก Bo - Founder of ClubsxAI | ช่างภาพกรุงเทพ มืออาชีพ";
+const description = "รู้จัก Bo ช่างภาพด่วน กรุงเทพ ผู้ก่อตั้ง ClubsxAI ช่างภาพ freelance กรุงเทพ เชี่ยวชาญ Portrait บุคคล Event งานแต่ง รับปริญญา อาหาร สไตล์ Moody Premium ส่งรูปภายใน 24 ชม. ผู้ติดตาม 23.9K+ รับถ่ายทั่วกรุงเทพฯ";
+const keywords = "ประวัติช่างภาพ, Bo Clubs, ช่างภาพกรุงเทพ, ช่างภาพ กทม, ช่างภาพด่วน, ช่างภาพ Portrait, ช่างภาพ freelance กรุงเทพ, จ้างช่างภาพ, ช่างภาพมืออาชีพ, ช่างภาพใกล้ฉัน, รับถ่ายภาพบุคคล, ช่างภาพ Event, ช่างภาพงานแต่ง, ช่างภาพถ่ายอาหาร, ClubsxAI";
 ---
 
 <BaseLayout title={title} description={description} keywords={keywords} image="/images/bo_red_neon_portrait.png">

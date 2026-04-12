@@ -1,0 +1,561 @@
+{
+  "config": {
+    "configFile": "/home/clubs/sovereign-stack/customer-workspace/clubsxai-web/playwright.config.ts",
+    "rootDir": "/home/clubs/sovereign-stack/customer-workspace/clubsxai-web/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/clubs/sovereign-stack/customer-workspace/clubsxai-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/clubs/sovereign-stack/customer-workspace/clubsxai-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/clubs/sovereign-stack/customer-workspace/clubsxai-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/home/clubs/sovereign-stack/customer-workspace/clubsxai-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "responsive.spec.ts",
+      "file": "responsive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "ClubsxAI Responsive Design",
+          "file": "responsive.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "homepage loads on mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3103,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Mobile viewport: { width: \u001b[33m1280\u001b[39m, height: \u001b[33m720\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Hero H1 font size: 96px\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:04.499Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-b6f9c8f5561c525df7d8",
+              "file": "responsive.spec.ts",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "homepage loads on desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3259,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Desktop viewport: { width: \u001b[33m1920\u001b[39m, height: \u001b[33m1080\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Hero H1 font size: 96px\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:04.491Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-f27a6ec2e8dbcc7de35f",
+              "file": "responsive.spec.ts",
+              "line": 26,
+              "column": 3
+            },
+            {
+              "title": "font sizes are responsive",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 2547,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Mobile font size: 36px\n"
+                        },
+                        {
+                          "text": "Desktop font size: 96px\n"
+                        },
+                        {
+                          "text": "Mobile: 36px, Desktop: 96px\n"
+                        },
+                        {
+                          "text": "Difference: 60px\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:04.627Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-b914bb537d0e803bf144",
+              "file": "responsive.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "navbar is accessible on mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3630,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Menu button: 48x48\n"
+                        },
+                        {
+                          "text": "Mobile menu elements found: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "Mobile menu className: md:hidden absolute top-full left-0 right-0 bg-zinc-900/95 backdrop-blur-xl shadow-lg rounded-b-3xl border-t border-white/10 transition-opacity duration-200 opacity-100 visible\n"
+                        },
+                        {
+                          "text": "Mobile menu visible: \u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "Found 12 mobile menu links\n"
+                        },
+                        {
+                          "text": "Link 0: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 1: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 2: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 3: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 4: 375x51.1875 - ✓\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:04.481Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-a83e2c765cf9c9b376a3",
+              "file": "responsive.spec.ts",
+              "line": 81,
+              "column": 3
+            },
+            {
+              "title": "no horizontal scroll on mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1282,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Has horizontal scroll: \u001b[33mfalse\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:07.279Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-68e565514e4cbf0baf8c",
+              "file": "responsive.spec.ts",
+              "line": 157,
+              "column": 3
+            },
+            {
+              "title": "homepage loads on mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5129,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Mobile viewport: { width: \u001b[33m393\u001b[39m, height: \u001b[33m727\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Hero H1 font size: 36px\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:08.195Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-0ae745a2194ce0007bbf",
+              "file": "responsive.spec.ts",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "homepage loads on desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 13014,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Desktop viewport: { width: \u001b[33m1920\u001b[39m, height: \u001b[33m1080\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Hero H1 font size: 96px\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:08.354Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-cab610bb4b33d49be19c",
+              "file": "responsive.spec.ts",
+              "line": 26,
+              "column": 3
+            },
+            {
+              "title": "font sizes are responsive",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2505,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Mobile font size: 36px\n"
+                        },
+                        {
+                          "text": "Desktop font size: 96px\n"
+                        },
+                        {
+                          "text": "Mobile: 36px, Desktop: 96px\n"
+                        },
+                        {
+                          "text": "Difference: 60px\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:08.700Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-35190feaded2c7b57231",
+              "file": "responsive.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "navbar is accessible on mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3424,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Menu button: 48x48\n"
+                        },
+                        {
+                          "text": "Mobile menu elements found: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "Mobile menu className: md:hidden absolute top-full left-0 right-0 bg-zinc-900/95 backdrop-blur-xl shadow-lg rounded-b-3xl border-t border-white/10 transition-opacity duration-200 opacity-100 visible\n"
+                        },
+                        {
+                          "text": "Mobile menu visible: \u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "Found 12 mobile menu links\n"
+                        },
+                        {
+                          "text": "Link 0: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 1: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 2: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 3: 375x51.1875 - ✓\n"
+                        },
+                        {
+                          "text": "Link 4: 375x51.1875 - ✓\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:09.134Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-8e8bca601a7dcfff2820",
+              "file": "responsive.spec.ts",
+              "line": 81,
+              "column": 3
+            },
+            {
+              "title": "no horizontal scroll on mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1502,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Has horizontal scroll: \u001b[33mfalse\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-01T03:02:11.293Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e0223b006feb3d306446-2764ab2fbe726c9174e9",
+              "file": "responsive.spec.ts",
+              "line": 157,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-01T03:02:03.979Z",
+    "duration": 17595.325999999997,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

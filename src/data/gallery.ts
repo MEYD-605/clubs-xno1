@@ -13,7 +13,7 @@ export interface GalleryImage {
 export const galleryImages: GalleryImage[] = [
     {
         id: 1,
-        src: "/images/portfolio_spa_clinic_lady.jpg",
+        src: "/images/portfolio_spa_clinic_lady.webp",
         fallback: "/images/portfolio_spa_clinic_lady.jpg",
         width: 683,
         height: 1024,
@@ -23,7 +23,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 2,
-        src: "/images/portfolio_outdoor_black_dress.jpg",
+        src: "/images/portfolio_outdoor_black_dress.webp",
         fallback: "/images/portfolio_outdoor_black_dress.jpg",
         width: 682,
         height: 1024,
@@ -33,7 +33,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 3,
-        src: "/images/portfolio_wedding_bride_champagne.jpg",
+        src: "/images/portfolio_wedding_bride_champagne.webp",
         fallback: "/images/portfolio_wedding_bride_champagne.jpg",
         width: 682,
         height: 1024,
@@ -43,7 +43,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 4,
-        src: "/images/portfolio_lifestyle_cowboy_cafe.jpg",
+        src: "/images/portfolio_lifestyle_cowboy_cafe.webp",
         fallback: "/images/portfolio_lifestyle_cowboy_cafe.jpg",
         width: 682,
         height: 1024,
@@ -53,7 +53,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 5,
-        src: "/images/portfolio_product_woven_bags.jpg",
+        src: "/images/portfolio_product_woven_bags.webp",
         fallback: "/images/portfolio_product_woven_bags.jpg",
         width: 1024,
         height: 682,
@@ -63,7 +63,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 6,
-        src: "/images/portfolio_bartender_cocktail_mix.jpg",
+        src: "/images/portfolio_bartender_cocktail_mix.webp",
         fallback: "/images/portfolio_bartender_cocktail_mix.jpg",
         width: 1024,
         height: 682,
@@ -73,7 +73,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 7,
-        src: "/images/portfolio_beverage_pink_cocktail.jpg",
+        src: "/images/portfolio_beverage_pink_cocktail.webp",
         fallback: "/images/portfolio_beverage_pink_cocktail.jpg",
         width: 640,
         height: 960,
@@ -83,7 +83,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 8,
-        src: "/images/portfolio_food_hummus_platter.jpg",
+        src: "/images/portfolio_food_hummus_platter.webp",
         fallback: "/images/portfolio_food_hummus_platter.jpg",
         width: 960,
         height: 640,
@@ -93,7 +93,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 9,
-        src: "/images/portfolio_lifestyle_bathtub_mango.jpg",
+        src: "/images/portfolio_lifestyle_bathtub_mango.webp",
         fallback: "/images/portfolio_lifestyle_bathtub_mango.jpg",
         width: 1024,
         height: 682,
@@ -103,7 +103,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 10,
-        src: "/images/portfolio_product_golden_buddha.jpg",
+        src: "/images/portfolio_product_golden_buddha.webp",
         fallback: "/images/portfolio_product_golden_buddha.jpg",
         width: 682,
         height: 1024,
@@ -113,7 +113,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 11,
-        src: "/images/portfolio_spa_facial_treatment.jpg",
+        src: "/images/portfolio_spa_facial_treatment.webp",
         fallback: "/images/portfolio_spa_facial_treatment.jpg",
         width: 682,
         height: 1024,
@@ -123,7 +123,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 12,
-        src: "/images/portfolio_medical_10town_group.jpg",
+        src: "/images/portfolio_medical_10town_group.webp",
         fallback: "/images/portfolio_medical_10town_group.jpg",
         width: 1024,
         height: 682,
@@ -133,7 +133,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 13,
-        src: "/images/portfolio_bartender_kiwi_pour.jpg",
+        src: "/images/portfolio_bartender_kiwi_pour.webp",
         fallback: "/images/portfolio_bartender_kiwi_pour.jpg",
         width: 640,
         height: 960,
@@ -143,7 +143,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 14,
-        src: "/images/portfolio_food_curry_soup.jpg",
+        src: "/images/portfolio_food_curry_soup.webp",
         fallback: "/images/portfolio_food_curry_soup.jpg",
         width: 682,
         height: 1024,
@@ -153,7 +153,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 15,
-        src: "/images/portfolio_medical_10town_promo.jpg",
+        src: "/images/portfolio_medical_10town_promo.webp",
         fallback: "/images/portfolio_medical_10town_promo.jpg",
         width: 682,
         height: 1024,
